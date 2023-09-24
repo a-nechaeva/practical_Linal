@@ -20,8 +20,8 @@
 \pagestyle{fancy}
 \fancypagestyle{style}{ % создание нового стиля style
 	\fancyhf{} % очистка колонтитулов
-	\fancyhead[LO, RE]{<КРАТКОЕ НАЗВАНИЕ>} % название документа наверху
-	\fancyhead[RO, LE]{\leftmark} % название section наверху
+	\fancyhead[LO, RE]{Лабораторная работа № 1 } % название документа наверху
+	\fancyhead[RO, LE]{ Кодирование и шифрование} % название section наверху
 	\fancyfoot[RO, LE]{\thepage} % номер страницы справа внизу на нечетных и слева внизу на четных
 	\renewcommand{\headrulewidth}{0.25pt} % толщина линии сверху
 	\renewcommand{\footrulewidth}{0pt} % толцина линии снизу
@@ -37,7 +37,7 @@
 			Федеральное государственное автономное образовательное учреждение высшего образования
 	}}
 	\fancyfoot[C]{{\large 
-			Санкт-Петербург, 2022-2023
+			Санкт-Петербург, 2023-2024
 	}}
 	\renewcommand{\headrulewidth}{0pt}
 }
@@ -91,7 +91,7 @@
 		\vspace*{6ex}
 		
 		{\small
-			САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ, МЕХАНИКИ И ОПТИКИ	
+			САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИТМО	
 		}
 		
 		\vspace*{2ex}
@@ -103,22 +103,33 @@
 		\vspace*{15ex}
 		
 		{\Large \bfseries 
-			<ЗАГОЛОВОК ДОКУМЕНТА>
+			Лабораторная работа № 1
 		}
+\vspace*{2ex}
+	{\Large \bfseries 
+			
+"Кодирование и шифрование"
+		}
+\vspace*{2ex}
+		
+		{\normalsize
+			по дисциплине Практическая линейная алгебра
+		}
+
 	\end{center}
 	\vspace*{20ex}
 	\begin{flushright}
 		{\large 
-			\underline{Выполнил}: студент гр. \textbf{R32353}\\
+			\underline{Выполнила}: студентка гр. \textbf{R3238}\\
 			\begin{flushright}
-				\textbf{Магазенков Е. Н.}\\
+				\textbf{Нечаева А. А.}\\
 			\end{flushright}
 		}
 		
 		\vspace*{5ex}
 		
 		{\large 
-			\underline{Преподаватель}: \textit{<ФИО ПРЕПОДАВАТЕЛЯ>}
+			\underline{Преподаватель}: \textit{Перегудин Алексей Алексеевич}
 		}
 	\end{flushright}	
 	\newpage
@@ -128,7 +139,66 @@
 \begin{document}
 	\titlePage
 	\pagestyle{style}
-	
+\newpage
+
+\section{Задание 1. Шифр Хилла}
+\subsection{Задание алфавита и сообщения}
+
+
+%\caption{\label{tab:canonsummary}Используемый алфавит .}
+
+\begin{center}
+Таблица 1 -- Используемый алфавит\\
+\begin{tabular}{ |c|c|c|c|c|c| } 
+ \hline
+Символ & Код & Символ & Код & Символ & Код\\
+\hline
+А & 0 & З  & 4 & Ы  & 8 \\
+ \hline
+В & 1 & Л & 5& Ь  & 9  \\
+ \hline
+Д & 2 & Н & 6& Я  & 10  \\
+ \hline
+Ё & 3 & П & 7&   &   \\
+ \hline
+\end{tabular}
+\end{center}
+
+Зашифрованное сообщение: \textbf{\textit{ЗВЁЗДНАЯПЫЛЬ}}
+
+Размер алфавита в нашем случае: $$n = 11 $$
+
+У числа  \textbf{11} нет делителей, кроме единицы и самого числа.
+
+\subsection{Задание матриц-ключей}
+Матрица A $2 \times 2$
+\begin{equation}
+\begin{vmatrix}
+ 4 & 1\\
+ 2 & 3
+\end{vmatrix}
+= 4 * 3 - 1 * 2 = 12 - 2 = 10
+\end{equation}
+
+Матрица B $3 \times 3$
+\begin{multline}
+\begin{vmatrix}
+ 5 & 1 & 4\\
+ 8 & 6 & 5 \\
+ 12 & 14 & 19
+\end{vmatrix}
+= 5 * 6 * 19 + 1 * 5 * 12 + 8 * 14 * 4 - 12 * 6 * 4 - 5 * 5 * 14 - 8 * 1 * 19 =\\
+= 
+\end{multline}
+
+
+
+
+\section{Задание 2. Взлом шифра Хилла}	
+
+\section{Задание 3. Код Хэмминга}
+
+\section{Задание 4. Код Хэмминг?}
 \end{document}
 
 
