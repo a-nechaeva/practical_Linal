@@ -170,27 +170,238 @@
 
 У числа  \textbf{11} нет делителей, кроме единицы и самого числа.
 
-\subsection{Задание матриц-ключей}
-Матрица A $2 \times 2$
+\subsection{Шифрование с помощью матрицы-ключа $2 \times 2$}
+Матрица A $2 \times 2$ соотвествует ключевому слову: \textbf{\textit{ЛАНЬ}}
 \begin{equation}
 \begin{vmatrix}
- 4 & 1\\
- 2 & 3
+ 5 & 0\\
+ 6 & 9
 \end{vmatrix}
-= 4 * 3 - 1 * 2 = 12 - 2 = 10
+= 5 * 9 - 0 * 6 = 45
+\end{equation}
+Запишем фразу, подлежащую шифрования с помощью кодов символов алфавита и разобьем наше сообщение на векторы. \\
+Далее представлены фрагменты сообщения и соотвествующие векторы кодов:
+\begin{center}
+\textbf{\textit{ЗВ}} $\to \begin{pmatrix}
+ 4\\
+1
+\end{pmatrix}$ ;
+\textbf{\textit{ЁЗ}}  $\to \begin{pmatrix}
+ 3\\
+4
+\end{pmatrix}$ ;
+\textbf{\textit{ДН}}  $\to \begin{pmatrix}
+ 2\\
+6
+\end{pmatrix}$ ;
+\textbf{\textit{АЯ}}  $\to \begin{pmatrix}
+ 0\\
+10
+\end{pmatrix}$ \\
+\textbf{\textit{ПЫ}}  $\to \begin{pmatrix}
+ 7\\
+8
+\end{pmatrix}$ ;
+\textbf{\textit{ЛЬ}}  $\to \begin{pmatrix}
+ 5\\
+9
+\end{pmatrix}$ \\
+\end{center}
+
+Теперь зашифруем сообщение: матрично умножим ключ на каждый вектор и найдем остаток от деления на размер алфавита от результата:
+\begin{equation}
+\begin{pmatrix}
+ 5 & 0\\
+ 6 & 9
+\end{pmatrix}
+ \times
+\begin{pmatrix}
+ 4\\
+1
+\end{pmatrix}
+(mod \text{ }11)
+= 
+\begin{pmatrix}
+ 20\\
+33
+\end{pmatrix}
+(mod \text{ }11)
+= \begin{pmatrix}
+ 9\\
+0
+\end{pmatrix}
 \end{equation}
 
-Матрица B $3 \times 3$
-\begin{multline}
-\begin{vmatrix}
- 5 & 1 & 4\\
- 8 & 6 & 5 \\
- 12 & 14 & 19
-\end{vmatrix}
-= 5 * 6 * 19 + 1 * 5 * 12 + 8 * 14 * 4 - 12 * 6 * 4 - 5 * 5 * 14 - 8 * 1 * 19 =\\
+\begin{equation}
+\begin{pmatrix}
+ 5 & 0\\
+ 6 & 9
+\end{pmatrix}
+ \times
+\begin{pmatrix}
+ 3\\
+4
+\end{pmatrix}
+(mod \text{ }11)
 = 
-\end{multline}
+\begin{pmatrix}
+ 15\\
+54
+\end{pmatrix}
+(mod \text{ }11)
+= \begin{pmatrix}
+ 4\\
+10
+\end{pmatrix}
+\end{equation}
 
+\begin{equation}
+\begin{pmatrix}
+ 5 & 0\\
+ 6 & 9
+\end{pmatrix}
+ \times
+\begin{pmatrix}
+ 2\\
+6
+\end{pmatrix}
+(mod \text{ }11)
+= 
+\begin{pmatrix}
+ 10\\
+66
+\end{pmatrix}
+(mod \text{ }11)
+= \begin{pmatrix}
+ 10\\
+0
+\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{pmatrix}
+ 5 & 0\\
+ 6 & 9
+\end{pmatrix}
+ \times
+\begin{pmatrix}
+ 0\\
+10
+\end{pmatrix}
+(mod \text{ }11)
+= 
+\begin{pmatrix}
+ 0\\
+90
+\end{pmatrix}
+(mod \text{ }11)
+= \begin{pmatrix}
+ 0\\
+2
+\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{pmatrix}
+ 5 & 0\\
+ 6 & 9
+\end{pmatrix}
+ \times
+\begin{pmatrix}
+ 7\\
+8
+\end{pmatrix}
+(mod \text{ }11)
+= 
+\begin{pmatrix}
+ 35\\
+114
+\end{pmatrix}
+(mod \text{ }11)
+= \begin{pmatrix}
+ 2\\
+4
+\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{pmatrix}
+ 5 & 0\\
+ 6 & 9
+\end{pmatrix}
+ \times
+\begin{pmatrix}
+ 5\\
+9
+\end{pmatrix}
+(mod \text{ }11)
+= 
+\begin{pmatrix}
+ 25\\
+111
+\end{pmatrix}
+(mod \text{ }11)
+= \begin{pmatrix}
+ 3\\
+1
+\end{pmatrix}
+\end{equation}
+
+Декодируем полученный результат:
+\begin{center}
+ $ \begin{pmatrix}
+ 9\\
+0
+\end{pmatrix} \to$ \textbf{\textit{ЬА}} ;
+ $ \begin{pmatrix}
+ 4\\
+10
+\end{pmatrix} \to$ \textbf{\textit{ЗЯ}} ;
+ $ \begin{pmatrix}
+ 10\\
+0
+\end{pmatrix} \to$ \textbf{\textit{ЯА}} ;
+ $ \begin{pmatrix}
+ 0\\
+2
+\end{pmatrix} \to$ \textbf{\textit{АД}} ; \\
+ $ \begin{pmatrix}
+ 2\\
+4
+\end{pmatrix} \to$ \textbf{\textit{ДЗ}} ;
+$\begin{pmatrix}
+ 3\\
+1
+\end{pmatrix} \to$ \textbf{\textit{ЁВ}}  \\
+\end{center}
+Полученное сообщение:  \textbf{\textit{ЬАЗЯЯААДДЗЁВ}}
+
+
+\subsection{Шифрование с помощью матрицы-ключа $3 \times 3$}
+Матрица B $3 \times 3$ соотвествует ключевому слову: \textbf{\textit{ВЛАДАНАДЯ}}
+\begin{equation}
+\begin{vmatrix}
+ 1 & 5 & 0\\
+ 2 & 0 & 6 \\
+ 0 & 2 & 10
+\end{vmatrix}
+ = -112
+\end{equation}
+
+\subsection{Шифрование с помощью матрицы-ключа $2 \times 2$}
+Матрица С $4 \times 4$  \\
+соотвествует ключевому слову: \textbf{\textit{ЛЁДЗАЛЁНВЫДАЛПАН}}
+\begin{equation}
+\begin{vmatrix}
+ 5 & 3 & 2 & 4 \\
+ 0 & 5 & 3 & 6 \\
+1& 8 & 2 & 0\\
+ 5 & 7 & 0 & 6
+\end{vmatrix}
+= -866
+\end{equation}
+
+\subsection{Шифрование сообщений с помощью шифра Хилла}
 
 
 
