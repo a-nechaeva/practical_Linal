@@ -1152,33 +1152,172 @@ B^{-1} =
 Таблица 3 -- Повреждение третьего результата\\
 \begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c|c| } 
  \hline
-Исходные символы & В & Л & П & П & Д  & Д & Н  & Д & Н  & Я & З  & Д\\
+Исходные символы & Ь & Ё & А & Л & П  & А & В  & Ы & Д  & Л & Я  & З\\
 \hline
-После атаки  & В & Л & Ы & П & Ь  & Д & Н  & Д & Н  & Я & З  & А \\
+После атаки & В & П & А & Д & П  & А & В  & Ы & Д  & Л & Я  & З\\
  \hline
-Коды после атаки & 1 & 5 & 8 & 7 & 9  & 2 & 6  & 2 & 6  & 10 & 4  & 0  \\
+Коды после атаки & 1 & 7 & 0 & 2 & 7  & 0 & 1  & 8 & 2  & 5 & 10  & 4  \\
  \hline
 \end{tabular}
 \end{center}
 Найдем обратную матрицу от третьеого ключа:
 \begin{equation}
+C^{-1} = 
 \begin{pmatrix}
- 5 & 3 & 2 & 4 \\
- 0 & 5 & 3 & 6 \\
-1& 8 & 2 & 0\\
- 5 & 7 & 0 & 6
+1 & 1 & 0 & 1\\
+0 & 0 & 1 & 0 \\
+1 & 0 & 1 & 1 \\
+1 & 1 & 0 & 0
 \end{pmatrix}^{-1}
-=  \frac{1}{433}\begin{pmatrix}
-  84 & -58 & 3 & 2 \\
-\\
- -39 & -4 & 45 & 30 \\
-\\
-114 & 45 & 35 & -121\\
-\\
- - \frac{49}{2} & 53 & -55 &  \frac{71}{2}
+=  \begin{pmatrix}
+-1 & -1 & 1 & 1\\
+1 & 1 & -1 & 0 \\
+0 & 1 & 0 & 0 \\
+1 & 0 & 0 & -1
 \end{pmatrix}
 \end{equation}
 
+Разобьем сообщение на фрагменты по 4 символа и предствим векторы полученных кодов:
+\begin{center}
+\textbf{\textit{ВПАД}} $\to \begin{pmatrix}
+1\\
+7\\
+0\\
+2
+\end{pmatrix}$ ;
+
+\textbf{\textit{ПАВЫ}}  $\to \begin{pmatrix}
+7\\
+0\\
+1\\
+8
+\end{pmatrix}$ ;
+
+\textbf{\textit{ДЛЯЗ}}  $\to \begin{pmatrix}
+2\\
+5\\
+10\\
+4
+\end{pmatrix}$ \\
+\end{center}
+
+Повторим привычные действия для расшифровки сообщения:
+\begin{equation}
+\begin{pmatrix}
+-1 & -1 & 1 & 1\\
+1 & 1 & -1 & 0 \\
+0 & 1 & 0 & 0 \\
+1 & 0 & 0 & -1
+\end{pmatrix}
+ \times
+\begin{pmatrix}
+1\\
+7\\
+0\\
+2
+\end{pmatrix}
+(mod \text{ }11)
+= 
+\begin{pmatrix}
+-6\\
+8\\
+7\\
+-1
+\end{pmatrix}
+(mod \text{ }11)
+= \begin{pmatrix}
+5\\
+8\\
+7\\
+10
+\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{pmatrix}
+-1 & -1 & 1 & 1\\
+1 & 1 & -1 & 0 \\
+0 & 1 & 0 & 0 \\
+1 & 0 & 0 & -1
+\end{pmatrix}
+ \times
+\begin{pmatrix}
+7\\
+0\\
+1\\
+8
+\end{pmatrix}
+(mod \text{ }11)
+= 
+\begin{pmatrix}
+2\\
+6\\
+0\\
+-1
+\end{pmatrix}
+(mod \text{ }11)
+= \begin{pmatrix}
+2\\
+6\\
+0\\
+10
+\end{pmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{pmatrix}
+-1 & -1 & 1 & 1\\
+1 & 1 & -1 & 0 \\
+0 & 1 & 0 & 0 \\
+1 & 0 & 0 & -1
+\end{pmatrix}
+ \times
+\begin{pmatrix}
+2\\
+5\\
+10\\
+4
+\end{pmatrix}
+(mod \text{ }11)
+= 
+\begin{pmatrix}
+7\\
+-3\\
+5\\
+-2
+\end{pmatrix}
+(mod \text{ }11)
+= \begin{pmatrix}
+7\\
+8\\
+6\\
+9
+\end{pmatrix}
+\end{equation}
+
+Декодируем полученный результат:
+\begin{center}
+ $ \begin{pmatrix}
+5\\
+8\\
+7\\
+10
+\end{pmatrix} \to$ \textbf{\textit{ЛЫПЯ}} ;
+ $ \begin{pmatrix}
+2\\
+6\\
+0\\
+10
+\end{pmatrix} \to$ \textbf{\textit{ДНАЯ}} ;
+ $ \begin{pmatrix}
+7\\
+8\\
+6\\
+9
+\end{pmatrix} \to$ \textbf{\textit{ПЫЛЬ}} ;
+\end{center}
+Полученное сообщение:  \textbf{\textit{\colorbox{red! 50}{ЛЫПЯ}\colorbox{green! 50}{ДНАЯПЫЛЬ}}}\\
+\subsection{Вывод НУЖЕН ЛИ?}
 \section{Задание 2. Взлом шифра Хилла}	
 
 \section{Задание 3. Код Хэмминга}
