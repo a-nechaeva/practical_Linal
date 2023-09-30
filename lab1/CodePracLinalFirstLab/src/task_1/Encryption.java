@@ -36,6 +36,62 @@ public class Encryption {
         }
 
     }
+    public static void destroy(ArrayList<Character> alphabet, String truePhrase, String encodePhrase, int[][] key) {
+        System.out.println("Начальная фраза: " + ANSI_BLUE + truePhrase + ANSI_RESET);
+        System.out.println("Зашифрованная фраза: " + ANSI_BLUE + encodePhrase + ANSI_RESET);
+        System.out.println("Введите поврежденную фразу:");
+        String hurt = in.next();
+        System.out.println("Расшифровать (1 / 0)? " + ANSI_BLUE + hurt + ANSI_RESET);
+        int choice = in.nextInt();
+
+        switch (choice) {
+            case 1 -> decipher(alphabet, truePhrase, hurt, key);
+        }
+    }
+    public static void decipher(ArrayList<Character> alphabet, String truePhrase, String hurt, int[][] key) {
+        switch (key.length) {
+            case 2 -> decipherWith2(alphabet, truePhrase, hurt, key);
+            case 3 -> decipherWith3(alphabet, truePhrase, hurt, key);
+            case 4 -> decipherWith4(alphabet, truePhrase, hurt, key);
+        }
+    }
+
+    public static void decipherWith2(ArrayList<Character> alphabet, String truePhrase, String hurt, int[][] key) {
+        System.out.println("Разобьем фразу " + ANSI_BLUE + hurt + ANSI_RESET + " на фрагменты по 2 символа и" +
+                " запишем соотвествующие коды:");
+
+        int kostyl = 0;
+        int[][] phraseMatrix = new int[hurt.length() / 2][2];
+        for (int i = 0; i < hurt.length() / 2; i++) {
+            char frst = hurt.charAt(kostyl);
+            phraseMatrix[i][0] = alphabet.indexOf(frst);
+            char scnd = hurt.charAt(kostyl + 1);
+            phraseMatrix[i][1] = alphabet.indexOf(scnd);
+            System.out.println(ANSI_BLUE + frst + scnd + ANSI_RESET + " -> " +
+                    ANSI_BRIGHT + phraseMatrix[i][0] + " " + phraseMatrix[i][1] + ANSI_RESET);
+            kostyl += 2;
+        }
+        System.out.println("Найдем обратную по модулю " + ANSI_PINK + alphabet.size() + ANSI_RESET + " матрицу ключа.");
+        System.out.println("Матрица ключа выглядела так:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.println(ANSI_PINK + key[i][j] + ANSI_RESET);
+            }
+        }
+        int[][] reversedMatrix = reverseModeMatrix2(key, alphabet.size());
+
+    }
+
+    public static int[][] reverseModeMatrix2(int[][] key, int mode) {
+
+    }
+
+    public static void decipherWith3(ArrayList<Character> alphabet, String truePhrase, String hurt, int[][] key) {
+
+    }
+    public static void decipherWith4(ArrayList<Character> alphabet, String truePhrase, String hurt, int[][] key) {
+
+    }
     public static void encryptWith4(String phrase, ArrayList<Character> alphabet) {
         boolean success = false;
         int[][] keyMatrix = new int[4][4];
@@ -99,10 +155,12 @@ public class Encryption {
         }
         System.out.println("В результате шифрования получим фразу: " + ANSI_BLUE+ encodedPhrase + ANSI_RESET);
 
-        System.out.println("Выберите дальнейшие действия: \n" + ANSI_BRIGHT + "1 -- Расшифровать полученное сообщение;" +
+        System.out.println("Выберите дальнейшие действия: \n" + ANSI_PINK + "1 -- Расшифровать полученное сообщение;" +
                 "\n2 -- Повредить полученное сообщение;\n3 -- Зашифровать фразу другим ключем;" + ANSI_RESET);
         int choice = in.nextInt();
-
+        switch (choice) {
+            case 2 -> destroy(alphabet, phrase, encodedPhrase, keyMatrix);
+        }
         System.out.println(Arrays.deepToString(keyMatrix));
     }
     public static void encryptWith3(String phrase, ArrayList<Character> alphabet) {
@@ -165,10 +223,12 @@ public class Encryption {
         }
         System.out.println("В результате шифрования получим фразу: " + ANSI_BLUE+ encodedPhrase + ANSI_RESET);
 
-        System.out.println("Выберите дальнейшие действия: \n" + ANSI_BRIGHT + "1 -- Расшифровать полученное сообщение;" +
+        System.out.println("Выберите дальнейшие действия: \n" + ANSI_PINK + "1 -- Расшифровать полученное сообщение;" +
                 "\n2 -- Повредить полученное сообщение;\n3 -- Зашифровать фразу другим ключем;"  + ANSI_RESET);
         int choice = in.nextInt();
-
+        switch (choice) {
+            case 2 -> destroy(alphabet, phrase, encodedPhrase, keyMatrix);
+        }
         System.out.println(Arrays.deepToString(keyMatrix));
 
     }
@@ -230,9 +290,12 @@ public class Encryption {
         }
         System.out.println("В результате шифрования получим фразу: " + ANSI_BLUE+ encodedPhrase + ANSI_RESET);
 
-        System.out.println("Выберите дальнейшие действия: \n" + ANSI_BRIGHT + "1 -- Расшифровать полученное сообщение;" +
+        System.out.println("Выберите дальнейшие действия: \n" + ANSI_PINK + "1 -- Расшифровать полученное сообщение;" +
                 "\n2 -- Повредить полученное сообщение;\n3 -- Зашифровать фразу другим ключем;" + ANSI_RESET);
         int choice = in.nextInt();
+        switch (choice) {
+            case 2 -> destroy(alphabet, phrase, encodedPhrase, keyMatrix);
+        }
         System.out.println(Arrays.deepToString(keyMatrix));
 
     }
