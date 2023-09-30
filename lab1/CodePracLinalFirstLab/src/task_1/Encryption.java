@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
+import static task_1.evklid.extEvklyd;
+
 
 public class Encryption {
     public static Scanner in = new Scanner(System.in);
@@ -36,6 +38,17 @@ public class Encryption {
         }
 
     }
+    public static int correctRemainder(int numb, int mode) {
+        if (numb >= 0)
+            return numb % mode;
+        else {
+            while (numb < 0) {
+                numb += mode;
+            }
+            return numb;
+        }
+    }
+
     public static void destroy(ArrayList<Character> alphabet, String truePhrase, String encodePhrase, int[][] key) {
         System.out.println("Начальная фраза: " + ANSI_BLUE + truePhrase + ANSI_RESET);
         System.out.println("Зашифрованная фраза: " + ANSI_BLUE + encodePhrase + ANSI_RESET);
@@ -75,11 +88,21 @@ public class Encryption {
         System.out.println("Матрица ключа выглядела так:");
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
-                System.out.println(ANSI_PINK + key[i][j] + ANSI_RESET);
+                System.out.print(ANSI_PINK + key[i][j] + ANSI_RESET + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("Обратная по модулю " + ANSI_PINK + alphabet.size() + ANSI_RESET + " матрица ключа:");
+        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
+        int[][] reversedMatrix = transModeMatrix(key, alphabet.size());
+
+        // ОБРАТНЫЙ ЭЛЕМЕНТ ДЕТЕРМИНАНТА В КОЛЬЦЕ ПО МОДУЛЮ ДЛИНЫ АЛФАВИТА
+        int reverseDet = revDet(det2(key), alphabet.size());
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                reversedMatrix[i][j] = correctRemainder(reversedMatrix[i][j] * reverseDet, alphabet.size());
             }
         }
-        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
-        int[][] reversedMatrix = transMatrix(key, alphabet.size());
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
                 System.out.print(reversedMatrix[i][j] + " ");
@@ -88,8 +111,18 @@ public class Encryption {
         }
 
     }
-
-    public static int[][] transMatrix(int[][] key, int mode) {
+    public static int revDet(int det, int alphabetLen) {
+        int x =  extEvklyd(det, alphabetLen);
+        if ((det != 0) && (x > 0))
+            return x;
+        if ((det > 0) && (x < 0))
+            return x + alphabetLen;
+        if((det < 0) && (x < 0))
+            return -x;
+        return 1;
+    }
+// ТРАНСПОНИРОВАННАЯ МАТРИЦА АЛГЕБРАИЧЕСКИХ ДОПОЛНЕНИЙ, ВЗЯТЫХ ПО МОДУЛЮ
+    public static int[][] transModeMatrix(int[][] key, int mode) {
         int det = 1;
         switch (key.length) {
             case 2 -> det = det2(key);
@@ -98,13 +131,19 @@ public class Encryption {
         }
         int[][] matrix = algebraicAdditionsMatrix(key);
         for (int i = 0; i < key.length; i++) {
+            for (int j = 0; j < key.length; j++) {
+                matrix[i][j] = correctRemainder(matrix[i][j], mode);
+            }
+        }
+
+        for (int i = 0; i < key.length; i++) {
            for (int j = i + 1; j < key.length; j++) {
                int t = matrix[i][j];
                matrix[i][j] = matrix[j][i];
                matrix[j][i] = t;
            }
         }
-        System.out.println(Arrays.deepToString(matrix));
+       // System.out.println(Arrays.deepToString(matrix));
         return matrix;
     }
 
@@ -197,11 +236,21 @@ public class Encryption {
         System.out.println("Матрица ключа выглядела так:");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                System.out.println(ANSI_PINK + key[i][j] + ANSI_RESET);
+                System.out.print(ANSI_PINK + key[i][j] + ANSI_RESET + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("Обратная по модулю " + ANSI_PINK + alphabet.size() + ANSI_RESET + " матрица ключа:");
+        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
+        int[][] reversedMatrix = transModeMatrix(key, alphabet.size());
+
+        // ОБРАТНЫЙ ЭЛЕМЕНТ ДЕТЕРМИНАНТА В КОЛЬЦЕ ПО МОДУЛЮ ДЛИНЫ АЛФАВИТА
+        int reverseDet = revDet(det3(key), alphabet.size());
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                reversedMatrix[i][j] = correctRemainder(reversedMatrix[i][j] * reverseDet, alphabet.size());
             }
         }
-        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
-        int[][] reversedMatrix = transMatrix(key, alphabet.size());
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 System.out.print(reversedMatrix[i][j] + " ");
@@ -234,11 +283,20 @@ public class Encryption {
         System.out.println("Матрица ключа выглядела так:");
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
-                System.out.println(ANSI_PINK + key[i][j] + ANSI_RESET);
+                System.out.print(ANSI_PINK + key[i][j] + ANSI_RESET + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("Обратная по модулю " + ANSI_PINK + alphabet.size() + ANSI_RESET + " матрица ключа:");
+        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
+        int[][] reversedMatrix = transModeMatrix(key, alphabet.size());
+        // ОБРАТНЫЙ ЭЛЕМЕНТ ДЕТЕРМИНАНТА В КОЛЬЦЕ ПО МОДУЛЮ ДЛИНЫ АЛФАВИТА
+        int reverseDet = revDet(det4(key), alphabet.size());
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                reversedMatrix[i][j] = correctRemainder(reversedMatrix[i][j] * reverseDet, alphabet.size());
             }
         }
-        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
-        int[][] reversedMatrix = transMatrix(key, alphabet.size());
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 System.out.print(reversedMatrix[i][j] + " ");
