@@ -130,11 +130,14 @@ public class Encryption {
             case 4 -> det = det4(key);
         }
         int[][] matrix = algebraicAdditionsMatrix(key);
+        /*
         for (int i = 0; i < key.length; i++) {
             for (int j = 0; j < key.length; j++) {
                 matrix[i][j] = correctRemainder(matrix[i][j], mode);
             }
         }
+
+         */
 
         for (int i = 0; i < key.length; i++) {
            for (int j = i + 1; j < key.length; j++) {
@@ -143,7 +146,7 @@ public class Encryption {
                matrix[j][i] = t;
            }
         }
-       // System.out.println(Arrays.deepToString(matrix));
+        System.out.println(Arrays.deepToString(matrix));
         return matrix;
     }
 
