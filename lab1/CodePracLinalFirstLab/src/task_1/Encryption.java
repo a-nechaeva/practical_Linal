@@ -78,19 +78,173 @@ public class Encryption {
                 System.out.println(ANSI_PINK + key[i][j] + ANSI_RESET);
             }
         }
-        int[][] reversedMatrix = reverseModeMatrix2(key, alphabet.size());
+        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
+        int[][] reversedMatrix = transMatrix(key, alphabet.size());
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(reversedMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }
 
     }
 
-    public static int[][] reverseModeMatrix2(int[][] key, int mode) {
+    public static int[][] transMatrix(int[][] key, int mode) {
+        int det = 1;
+        switch (key.length) {
+            case 2 -> det = det2(key);
+            case 3 -> det = det3(key);
+            case 4 -> det = det4(key);
+        }
+        int[][] matrix = algebraicAdditionsMatrix(key);
+        for (int i = 0; i < key.length; i++) {
+           for (int j = i + 1; j < key.length; j++) {
+               int t = matrix[i][j];
+               matrix[i][j] = matrix[j][i];
+               matrix[j][i] = t;
+           }
+        }
+        System.out.println(Arrays.deepToString(matrix));
+        return matrix;
+    }
 
+    public static int[][] algebraicAdditionsMatrix(int[][] matrix) {
+        int n = matrix.length;
+        // System.out.println(Arrays.deepToString(matrix));
+        int[][] answer = new int[n][n];
+        switch (n) {
+            case 2 -> {
+                for (int i = 0; i < 2; i++) {
+                    for (int j = 0; j < 2; j++) {
+                        if (((i + j) % 2) == 0)
+                            answer[i][j] = matrix[1 - i][1 - j];
+                        else
+                            answer[i][j] = -matrix[1 - i][1 - j];
+                    }
+                }
+            }
+            case 3 -> {
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < 3; j++) {
+                        int[][] minor = new int[2][2];
+                        int row = 0;
+                        for (int k = 0; k < 3; k++) {
+                            int col = 0;
+                            if (k != i) {
+                                for (int l = 0; l < 3; l++) {
+                                    if ((l != j)) {
+                                        minor[row][col] = matrix[k][l];
+                                        ++col;
+                                    }
+                                }
+                                ++row;
+                            }
+                        }
+                        if ((i + j) % 2 == 0)
+                            answer[i][j] = det2(minor);
+                        else
+                            answer[i][j] = -det2(minor);
+                    }
+                }
+            }
+            case 4 -> {
+                for (int i = 0; i < 4; i++) {
+                    for (int j = 0; j < 4; j++) {
+                        int[][] minor = new int[3][3];
+                        int row = 0;
+                        for (int k = 0; k < 4; k++) {
+                            int col = 0;
+                            if(k != i) {
+                                for (int l = 0; l < 4; l++) {
+                                    if ((l != j)) {
+                                        minor[row][col] = matrix[k][l];
+                                        ++col;
+                                    }
+                                }
+                            ++row;
+                            }
+                        }
+                        if ((i + j) % 2 == 0)
+                            answer[i][j] = det3(minor);
+                        else
+                            answer[i][j] = -det3(minor);
+                    }
+                }
+            }
+        }
+
+        return answer;
     }
 
     public static void decipherWith3(ArrayList<Character> alphabet, String truePhrase, String hurt, int[][] key) {
+        System.out.println("Разобьем фразу " + ANSI_BLUE + hurt + ANSI_RESET + " на фрагменты по 3 символа и" +
+                " запишем соотвествующие коды:");
+
+        int kostyl = 0;
+        int[][] phraseMatrix = new int[hurt.length() / 3][3];
+        for (int i = 0; i < hurt.length() / 3; i++) {
+            char frst = hurt.charAt(kostyl);
+            phraseMatrix[i][0] = alphabet.indexOf(frst);
+            char scnd = hurt.charAt(kostyl + 1);
+            phraseMatrix[i][1] = alphabet.indexOf(scnd);
+            char thrd = hurt.charAt(kostyl + 2);
+            phraseMatrix[i][2] = alphabet.indexOf(thrd);
+            System.out.println(ANSI_BLUE + frst + scnd + thrd + ANSI_RESET + " -> " +
+                    ANSI_BRIGHT + phraseMatrix[i][0] + " " + phraseMatrix[i][1] + " " + phraseMatrix[i][2] + ANSI_RESET);
+            kostyl += 3;
+        }
+        System.out.println("Найдем обратную по модулю " + ANSI_PINK + alphabet.size() + ANSI_RESET + " матрицу ключа.");
+        System.out.println("Матрица ключа выглядела так:");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.println(ANSI_PINK + key[i][j] + ANSI_RESET);
+            }
+        }
+        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
+        int[][] reversedMatrix = transMatrix(key, alphabet.size());
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(reversedMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }
 
     }
     public static void decipherWith4(ArrayList<Character> alphabet, String truePhrase, String hurt, int[][] key) {
+        System.out.println("Разобьем фразу " + ANSI_BLUE + hurt + ANSI_RESET + " на фрагменты по 2 символа и" +
+                " запишем соотвествующие коды:");
 
+        int kostyl = 0;
+        int[][] phraseMatrix = new int[hurt.length() / 4][4];
+        for (int i = 0; i < hurt.length() / 4; i++) {
+            char frst = hurt.charAt(kostyl);
+            phraseMatrix[i][0] = alphabet.indexOf(frst);
+            char scnd = hurt.charAt(kostyl + 1);
+            phraseMatrix[i][1] = alphabet.indexOf(scnd);
+            char thrd = hurt.charAt(kostyl + 2);
+            phraseMatrix[i][2] = alphabet.indexOf(thrd);
+            char frth = hurt.charAt(kostyl + 3);
+            phraseMatrix[i][3] = alphabet.indexOf(frth);
+            System.out.println(ANSI_BLUE + frst + scnd + thrd + ANSI_RESET + " -> " +
+                    ANSI_BRIGHT + phraseMatrix[i][0] + " " + phraseMatrix[i][1] + " " + phraseMatrix[i][2] +
+                    " " + phraseMatrix[i][3] + ANSI_RESET);
+            kostyl += 4;
+        }
+        System.out.println("Найдем обратную по модулю " + ANSI_PINK + alphabet.size() + ANSI_RESET + " матрицу ключа.");
+        System.out.println("Матрица ключа выглядела так:");
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.println(ANSI_PINK + key[i][j] + ANSI_RESET);
+            }
+        }
+        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
+        int[][] reversedMatrix = transMatrix(key, alphabet.size());
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(reversedMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
     public static void encryptWith4(String phrase, ArrayList<Character> alphabet) {
         boolean success = false;
@@ -325,9 +479,10 @@ public class Encryption {
         return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
     }
     public static int det3(int[][] ar) {
-        return ar[0][0] * ar[1][1] * ar[2][2] + ar[0][1] * ar[1][2] * ar[2][0] +
+        int ans = ar[0][0] * ar[1][1] * ar[2][2] + ar[0][1] * ar[1][2] * ar[2][0] +
                 ar[1][0] * ar[2][1] * ar[0][2] - ar[2][0] * ar[1][1] * ar[0][2] -
                 ar[0][0] * ar[2][1] * ar[1][2] - ar[0][1] * ar[1][0] * ar[2][2];
+        return ans;
     }
 
     public static int det4(int[][] a) {
