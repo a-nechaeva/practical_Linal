@@ -1,15 +1,10 @@
 package task_1;
 
-import java.util.concurrent.atomic.AtomicInteger;
-
 import static task_1.Encryption.correctRemainder;
 
 public class evklid {
-
     public static void main(String[] args)
     {
-        //int a = -1;
-       // int b = 11;
         int a = -1;
         int b = 11;
         //System.out.println((16 * (-7)) % 31 + 31);
@@ -17,17 +12,13 @@ public class evklid {
     }
 
     public static int extEvklyd(int a, int b) {
-
-
         int detMode = correctRemainder(a, b);
-        // System.out.println(detMode);
         int newMode = detMode;
         int n = 1;
 
         while ((newMode * n % b) != 1) {
             n++;
         }
-
         return n;
 
 
