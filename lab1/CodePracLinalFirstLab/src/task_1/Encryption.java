@@ -15,7 +15,7 @@ public class Encryption {
     public static final String ANSI_PINK = "\u001B[35m";
     public static final String ANSI_BRIGHT = "\u001B[38;5;198m";
     public static void main(String[] args) {
-        System.out.println("Добро пожаловать " + ANSI_BRIGHT + "^. .^" + ANSI_RESET +  "\nВведите фразу для шифрования:");
+        System.out.println("Добро пожаловать " + ANSI_BRIGHT + "^. .^" + ANSI_RESET +  "\nВведите фразу из 12 символов для шифрования:");
         String phraseForEncryption = in.nextLine();
         char[] inputLetters = phraseForEncryption.toCharArray();
         Character[] letters;
@@ -93,10 +93,9 @@ public class Encryption {
             System.out.println();
         }
         System.out.println("Обратная по модулю " + ANSI_PINK + alphabet.size() + ANSI_RESET + " матрица ключа:");
-        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
+
         int[][] reversedMatrix = transModeMatrix(key, alphabet.size());
 
-        // ОБРАТНЫЙ ЭЛЕМЕНТ ДЕТЕРМИНАНТА В КОЛЬЦЕ ПО МОДУЛЮ ДЛИНЫ АЛФАВИТА
         int reverseDet = revDet(det2(key), alphabet.size());
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
@@ -121,28 +120,18 @@ public class Encryption {
 
     }
     public static int revDet(int det, int alphabetLen) {
-        int x =  extEvklyd(det, alphabetLen);
-
-        return x;
+        return extEvklyd(det, alphabetLen);
     }
-// ТРАНСПОНИРОВАННАЯ МАТРИЦА АЛГЕБРАИЧЕСКИХ ДОПОЛНЕНИЙ, ВЗЯТЫХ ПО МОДУЛЮ
+
     public static int[][] transModeMatrix(int[][] key, int mode) {
-        int det = 1;
-        switch (key.length) {
-            case 2 -> det = det2(key);
-            case 3 -> det = det3(key);
-            case 4 -> det = det4(key);
-        }
+
         int[][] matrix = algebraicAdditionsMatrix(key);
 
         for (int i = 0; i < key.length; i++) {
             for (int j = 0; j < key.length; j++) {
-                //matrix[i][j] = correctRemainder(matrix[i][j], mode);
-                matrix[i][j] = matrix[i][j] % mode;
+                matrix[i][j] = correctRemainder(matrix[i][j], mode);
             }
         }
-
-
 
         for (int i = 0; i < key.length; i++) {
            for (int j = i + 1; j < key.length; j++) {
@@ -151,13 +140,12 @@ public class Encryption {
                matrix[j][i] = t;
            }
         }
-        // System.out.println(Arrays.deepToString(matrix));
+
         return matrix;
     }
 
     public static int[][] algebraicAdditionsMatrix(int[][] matrix) {
         int n = matrix.length;
-        // System.out.println(Arrays.deepToString(matrix));
         int[][] answer = new int[n][n];
         switch (n) {
             case 2 -> {
@@ -249,10 +237,9 @@ public class Encryption {
             System.out.println();
         }
         System.out.println("Обратная по модулю " + ANSI_PINK + alphabet.size() + ANSI_RESET + " матрица ключа:");
-        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
+
         int[][] reversedMatrix = transModeMatrix(key, alphabet.size());
 
-        // ОБРАТНЫЙ ЭЛЕМЕНТ ДЕТЕРМИНАНТА В КОЛЬЦЕ ПО МОДУЛЮ ДЛИНЫ АЛФАВИТА
         int reverseDet = revDet(det3(key), alphabet.size());
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -305,14 +292,12 @@ public class Encryption {
             System.out.println();
         }
         System.out.println("Обратная по модулю " + ANSI_PINK + alphabet.size() + ANSI_RESET + " матрица ключа:");
-        //ЭТО СОЮЗНАЯ МАТРИЦА ПОКА ЧТО!!!!
+
         int[][] reversedMatrix = transModeMatrix(key, alphabet.size());
-        // ОБРАТНЫЙ ЭЛЕМЕНТ ДЕТЕРМИНАНТА В КОЛЬЦЕ ПО МОДУЛЮ ДЛИНЫ АЛФАВИТА
         int reverseDet = revDet(det4(key), alphabet.size());
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 reversedMatrix[i][j] = correctRemainder(reversedMatrix[i][j] * reverseDet, alphabet.size());
-                //reversedMatrix[i][j] = correctRemainder(reversedMatrix[i][j], alphabet.size());
             }
         }
         for (int i = 0; i < 4; i++) {
@@ -400,7 +385,6 @@ public class Encryption {
         switch (choice) {
             case 2 -> destroy(alphabet, phrase, encodedPhrase, keyMatrix);
         }
-        //System.out.println(Arrays.deepToString(keyMatrix));
     }
     public static void encryptWith3(String phrase, ArrayList<Character> alphabet) {
         boolean success = false;
@@ -468,8 +452,6 @@ public class Encryption {
         switch (choice) {
             case 2 -> destroy(alphabet, phrase, encodedPhrase, keyMatrix);
         }
-       // System.out.println(Arrays.deepToString(keyMatrix));
-
     }
     public static void encryptWith2(String phrase, ArrayList<Character> alphabet) {
         boolean success = false;
@@ -535,8 +517,6 @@ public class Encryption {
         switch (choice) {
             case 2 -> destroy(alphabet, phrase, encodedPhrase, keyMatrix);
         }
-       // System.out.println(Arrays.deepToString(keyMatrix));
-
     }
     public static String mulMatrixMode(int[][] a, int[] b, int len, int mode, ArrayList<Character> alphabet) {
         int[][] answer = new int[len][1];
