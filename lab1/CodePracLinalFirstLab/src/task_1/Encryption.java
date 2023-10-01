@@ -110,6 +110,14 @@ public class Encryption {
             System.out.println();
         }
 
+        System.out.println("Проведем матричное умножение обратной матрицы ключа на каждый вектор-фрагмент фразы и возьмем результат по модулю " +
+                ANSI_BRIGHT + alphabet.size() + ANSI_RESET + ":");
+        String encodedPhrase = "";
+        for (int i = 0; i < hurt.length() / 2; i++) {
+            encodedPhrase += mulMatrixMode(reversedMatrix, phraseMatrix[i], 2, alphabet.size(), alphabet);
+        }
+        System.out.println("В результате дешифрования получим фразу: " + ANSI_BLUE+ encodedPhrase + ANSI_RESET);
+        System.out.println("Начальная фраза: " + ANSI_BLUE + truePhrase + ANSI_RESET);
 
     }
     public static int revDet(int det, int alphabetLen) {
@@ -258,6 +266,15 @@ public class Encryption {
             System.out.println();
         }
 
+        System.out.println("Проведем матричное умножение обратной матрицы ключа на каждый вектор-фрагмент фразы и возьмем результат по модулю " +
+                ANSI_BRIGHT + alphabet.size() + ANSI_RESET + ":");
+        String encodedPhrase = "";
+        for (int i = 0; i < hurt.length() / 3; i++) {
+            encodedPhrase += mulMatrixMode(reversedMatrix, phraseMatrix[i], 3, alphabet.size(), alphabet);
+        }
+        System.out.println("В результате дешифрования получим фразу: " + ANSI_BLUE+ encodedPhrase + ANSI_RESET);
+        System.out.println("Начальная фраза: " + ANSI_BLUE + truePhrase + ANSI_RESET);
+
     }
     public static void decipherWith4(ArrayList<Character> alphabet, String truePhrase, String hurt, int[][] key) {
         System.out.println("Разобьем фразу " + ANSI_BLUE + hurt + ANSI_RESET + " на фрагменты по 2 символа и" +
@@ -383,7 +400,7 @@ public class Encryption {
         switch (choice) {
             case 2 -> destroy(alphabet, phrase, encodedPhrase, keyMatrix);
         }
-        System.out.println(Arrays.deepToString(keyMatrix));
+        //System.out.println(Arrays.deepToString(keyMatrix));
     }
     public static void encryptWith3(String phrase, ArrayList<Character> alphabet) {
         boolean success = false;
@@ -451,7 +468,7 @@ public class Encryption {
         switch (choice) {
             case 2 -> destroy(alphabet, phrase, encodedPhrase, keyMatrix);
         }
-        System.out.println(Arrays.deepToString(keyMatrix));
+       // System.out.println(Arrays.deepToString(keyMatrix));
 
     }
     public static void encryptWith2(String phrase, ArrayList<Character> alphabet) {
@@ -518,7 +535,7 @@ public class Encryption {
         switch (choice) {
             case 2 -> destroy(alphabet, phrase, encodedPhrase, keyMatrix);
         }
-        System.out.println(Arrays.deepToString(keyMatrix));
+       // System.out.println(Arrays.deepToString(keyMatrix));
 
     }
     public static String mulMatrixMode(int[][] a, int[] b, int len, int mode, ArrayList<Character> alphabet) {
