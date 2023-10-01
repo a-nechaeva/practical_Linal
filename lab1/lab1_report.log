@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  1 OCT 2023 21:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  1 OCT 2023 23:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1461,55 +1461,163 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [10]
+Underfull \hbox (badness 10000) in paragraph at lines 1336--1342
+
+ []
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [11]
-<Р»Р°РЅСЊ1.png, id=177, 363.60844pt x 639.89063pt>
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[12]
+Overfull \hbox (3.13902pt too wide) in paragraph at lines 1450--1453
+\T2A/cmr/m/n/10 Далее убе-дим-ся, что в осталь-ных фраг-мен-тах со-об-ще-ния, н
+е до-пу-ще-на ошиб-
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[13]
+Overfull \hbox (2.98418pt too wide) in paragraph at lines 1537--1540
+\T2A/cmr/m/n/10 и че-тыр-на-дца-тый би-ты на про-ти-во-по-лож-ные \T2A/cmr/bx/i
+t/10 10[][][][][][]0011 101101[][][][][][] 1000011
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1537--1540
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1558--1560
+
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 1578--1580
+
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 1666--1668
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1686--1688
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1706--1708
+
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 1771--1773
+
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 1791--1793
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1811--1813
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1851--1853
+
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[18]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[19]
+<Р»Р°РЅСЊ1.png, id=251, 363.60844pt x 639.89063pt>
 File: Р»Р°РЅСЊ1.png Graphic file (type png)
 <use Р»Р°РЅСЊ1.png>
-Package pdftex.def Info: Р»Р°РЅСЊ1.png  used on input line 1344.
+Package pdftex.def Info: Р»Р°РЅСЊ1.png  used on input line 1862.
 (pdftex.def)             Requested size: 210.87285pt x 371.10753pt.
 
-Overfull \hbox (42.17456pt too wide) in paragraph at lines 1344--1344
+Overfull \hbox (42.17456pt too wide) in paragraph at lines 1862--1862
  [] 
  []
 
-<Р»Р°РЅСЊ2.png, id=178, 794.97pt x 635.37375pt>
+<Р»Р°РЅСЊ2.png, id=252, 794.97pt x 635.37375pt>
 File: Р»Р°РЅСЊ2.png Graphic file (type png)
 <use Р»Р°РЅСЊ2.png>
-Package pdftex.def Info: Р»Р°РЅСЊ2.png  used on input line 1352.
+Package pdftex.def Info: Р»Р°РЅСЊ2.png  used on input line 1870.
 (pdftex.def)             Requested size: 337.39658pt x 269.6667pt.
 
-Overfull \hbox (168.69829pt too wide) in paragraph at lines 1352--1352
+Overfull \hbox (168.69829pt too wide) in paragraph at lines 1870--1870
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Р»Р°РЅСЊ3.png, id=179, 651.93562pt x 641.39626pt>
+<Р»Р°РЅСЊ3.png, id=253, 651.93562pt x 641.39626pt>
 File: Р»Р°РЅСЊ3.png Graphic file (type png)
 <use Р»Р°РЅСЊ3.png>
-Package pdftex.def Info: Р»Р°РЅСЊ3.png  used on input line 1360.
+Package pdftex.def Info: Р»Р°РЅСЊ3.png  used on input line 1878.
 (pdftex.def)             Requested size: 337.39658pt x 331.95227pt.
 
-Overfull \hbox (168.69829pt too wide) in paragraph at lines 1360--1360
+Overfull \hbox (168.69829pt too wide) in paragraph at lines 1878--1878
  [] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Р»Р°РЅСЊ4.png, id=180, 930.47626pt x 645.16031pt>
+<Р»Р°РЅСЊ4.png, id=254, 930.47626pt x 645.16031pt>
 File: Р»Р°РЅСЊ4.png Graphic file (type png)
 <use Р»Р°РЅСЊ4.png>
-Package pdftex.def Info: Р»Р°РЅСЊ4.png  used on input line 1368.
+Package pdftex.def Info: Р»Р°РЅСЊ4.png  used on input line 1886.
 (pdftex.def)             Requested size: 337.39658pt x 233.93106pt.
 
-Overfull \hbox (168.69829pt too wide) in paragraph at lines 1368--1368
+Overfull \hbox (168.69829pt too wide) in paragraph at lines 1886--1886
  [] 
  []
 
@@ -1521,25 +1629,25 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[12 <./Р»Р°РЅСЊ1.png>]
+[20 <./Р»Р°РЅСЊ1.png>]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[13 <./Р»Р°РЅСЊ2.png>]
+[21 <./Р»Р°РЅСЊ2.png>]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[14 <./Р»Р°РЅСЊ3.png>]
+[22 <./Р»Р°РЅСЊ3.png>]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[15 <./Р»Р°РЅСЊ4.png>] (./lab1_report.aux)
+[23 <./Р»Р°РЅСЊ4.png>] (./lab1_report.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
@@ -1549,39 +1657,38 @@ L3 programming layer <2023-06-05>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `lab1_report.out' has not changed.
-(rerunfilecheck)             Checksum: 8D21750254C4F7DA1BB1483E5757D2EA;3566.
+(rerunfilecheck)             Checksum: C58641B7DF00C61ED48D66913C9626C2;5746.
  ) 
 Here is how much of TeX's memory you used:
- 51755 strings out of 475734
- 1292935 string characters out of 5786229
+ 51796 strings out of 475734
+ 1293436 string characters out of 5786229
  2000667 words of memory out of 5000000
- 71803 multiletter control sequences out of 15000+600000
+ 71807 multiletter control sequences out of 15000+600000
  534608 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,89p,764b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texl
-ive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2023/t
-exmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb><c:/texlive/2023/texmf-dist/
-fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2023/texmf-dist/fonts/type
-1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/c
-m-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
-rm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb
-><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texli
-ve/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/te
-xmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2023/texmf-dist/f
-onts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1
-/public/cm-super/sfti1200.pfb>
-Output written on lab1_report.pdf (16 pages, 471185 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texl
+ive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb><c:/texlive/2023/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2023/texmf-dist/
+fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type
+1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/c
+m-super/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
+rm0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
+><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texli
+ve/2023/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2023/te
+xmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/f
+onts/type1/public/cm-super/sfti1200.pfb>
+Output written on lab1_report.pdf (24 pages, 488808 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 246 compressed objects within 3 object streams
- 77 named destinations out of 1000 (max. 500000)
- 153 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 390 PDF objects out of 1000 (max. 8388607)
+ 316 compressed objects within 4 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 185 words of extra memory for PDF output out of 10000 (max. 10000000)
 
