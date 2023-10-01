@@ -39,7 +39,7 @@ public class Encryption {
 
     }
     public static int correctRemainder(int numb, int mode) {
-        if (numb >= 0)
+          if (numb >= 0)
             return numb % mode;
         else {
             while (numb < 0) {
@@ -110,16 +110,12 @@ public class Encryption {
             System.out.println();
         }
 
+
     }
     public static int revDet(int det, int alphabetLen) {
         int x =  extEvklyd(det, alphabetLen);
-        if ((det != 0) && (x > 0))
-            return x;
-        if ((det > 0) && (x < 0))
-            return x + alphabetLen;
-        if((det < 0) && (x < 0))
-            return -x;
-        return 1;
+
+        return x;
     }
 // ТРАНСПОНИРОВАННАЯ МАТРИЦА АЛГЕБРАИЧЕСКИХ ДОПОЛНЕНИЙ, ВЗЯТЫХ ПО МОДУЛЮ
     public static int[][] transModeMatrix(int[][] key, int mode) {
@@ -130,14 +126,15 @@ public class Encryption {
             case 4 -> det = det4(key);
         }
         int[][] matrix = algebraicAdditionsMatrix(key);
-        /*
+
         for (int i = 0; i < key.length; i++) {
             for (int j = 0; j < key.length; j++) {
-                matrix[i][j] = correctRemainder(matrix[i][j], mode);
+                //matrix[i][j] = correctRemainder(matrix[i][j], mode);
+                matrix[i][j] = matrix[i][j] % mode;
             }
         }
 
-         */
+
 
         for (int i = 0; i < key.length; i++) {
            for (int j = i + 1; j < key.length; j++) {
@@ -146,7 +143,7 @@ public class Encryption {
                matrix[j][i] = t;
            }
         }
-        System.out.println(Arrays.deepToString(matrix));
+        // System.out.println(Arrays.deepToString(matrix));
         return matrix;
     }
 
@@ -298,6 +295,7 @@ public class Encryption {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 reversedMatrix[i][j] = correctRemainder(reversedMatrix[i][j] * reverseDet, alphabet.size());
+                //reversedMatrix[i][j] = correctRemainder(reversedMatrix[i][j], alphabet.size());
             }
         }
         for (int i = 0; i < 4; i++) {
@@ -306,6 +304,15 @@ public class Encryption {
             }
             System.out.println();
         }
+
+        System.out.println("Проведем матричное умножение обратной матрицы ключа на каждый вектор-фрагмент фразы и возьмем результат по модулю " +
+                ANSI_BRIGHT + alphabet.size() + ANSI_RESET + ":");
+        String encodedPhrase = "";
+        for (int i = 0; i < hurt.length() / 4; i++) {
+            encodedPhrase += mulMatrixMode(reversedMatrix, phraseMatrix[i], 4, alphabet.size(), alphabet);
+        }
+        System.out.println("В результате дешифрования получим фразу: " + ANSI_BLUE+ encodedPhrase + ANSI_RESET);
+        System.out.println("Начальная фраза: " + ANSI_BLUE + truePhrase + ANSI_RESET);
     }
     public static void encryptWith4(String phrase, ArrayList<Character> alphabet) {
         boolean success = false;
