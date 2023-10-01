@@ -6,6 +6,7 @@ import java.util.Scanner;
 import java.util.stream.IntStream;
 
 import static task_1.evklid.extEvklyd;
+import static task_2.Hack.*;
 
 
 public class Encryption {
@@ -132,7 +133,7 @@ public class Encryption {
                 matrix[i][j] = correctRemainder(matrix[i][j], mode);
             }
         }
-
+/*
         for (int i = 0; i < key.length; i++) {
            for (int j = i + 1; j < key.length; j++) {
                int t = matrix[i][j];
@@ -141,6 +142,18 @@ public class Encryption {
            }
         }
 
+ */
+
+        return transMatrix(matrix, key.length);
+    }
+    public static int[][] transMatrix(int[][] matrix, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int t = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = t;
+            }
+        }
         return matrix;
     }
 
@@ -456,39 +469,47 @@ public class Encryption {
     public static void encryptWith2(String phrase, ArrayList<Character> alphabet) {
         boolean success = false;
         int[][] keyMatrix = new int[2][2];
-        while (!success) {
-            System.out.println("Введите фразу для ключа из " + ANSI_BRIGHT + "4" + ANSI_RESET + " символов алфавита выше");
-            String keyWorld = in.next();
-            if (keyWorld.length() == 4) {
-                success = true;
-                boolean inpSuccess = true;
-                for (int i = 0; i < 4; i++) {
-                    keyMatrix[i / 2][i % 2] = alphabet.indexOf(keyWorld.charAt(i));
-                    if (keyMatrix[i / 2][i % 2] == -1) {
-                        success = false;
-                        inpSuccess = false;
-                        System.out.println(ANSI_BRIGHT + "Ошибка :( Символа " + ANSI_BLUE + keyWorld.charAt(i) +
-                                ANSI_BRIGHT + " нет в алфавите" + ANSI_RESET);
-                    }
-                }
-                if (inpSuccess) {
-                    // проверяем, что определитель не ноль и не имеет общих делителей с длинной алфавита
-                    int det = det2(keyMatrix);
-                    if (det == 0) {
-                        System.out.println(ANSI_BRIGHT + "Ошибка :( Введенный ключ запрещен (определитель равен 0)"
-                                + ANSI_RESET);
-                        success = false;
-                    } else {
-                        if (!checkDividers(alphabet.size(), det)) {
-                            System.out.println(ANSI_BRIGHT + "Ошибка :( Введенный ключ запрещен (определитель и размер " +
-                                    "алфавита имеют общие делители)"
-                                    + ANSI_RESET);
-                            success = false;
+        System.out.println("Выберите опцию: \n1 -- Ввести ключ самому; \n2 -- Использовать сгенерированный ключ;");
+        int ch = in.nextInt();
+        switch (ch) {
+            case 1 -> {
+                while (!success) {
+                    System.out.println("Введите фразу для ключа из " + ANSI_BRIGHT + "4" + ANSI_RESET + " символов алфавита выше");
+                    String keyWorld = in.next();
+                    if (keyWorld.length() == 4) {
+                        success = true;
+                        boolean inpSuccess = true;
+                        for (int i = 0; i < 4; i++) {
+                            keyMatrix[i / 2][i % 2] = alphabet.indexOf(keyWorld.charAt(i));
+                            if (keyMatrix[i / 2][i % 2] == -1) {
+                                success = false;
+                                inpSuccess = false;
+                                System.out.println(ANSI_BRIGHT + "Ошибка :( Символа " + ANSI_BLUE + keyWorld.charAt(i) +
+                                        ANSI_BRIGHT + " нет в алфавите" + ANSI_RESET);
+                            }
+                        }
+                        if (inpSuccess) {
+                            // проверяем, что определитель не ноль и не имеет общих делителей с длинной алфавита
+                            int det = det2(keyMatrix);
+                            if (det == 0) {
+                                System.out.println(ANSI_BRIGHT + "Ошибка :( Введенный ключ запрещен (определитель равен 0)"
+                                        + ANSI_RESET);
+                                success = false;
+                            } else {
+                                if (!checkDividers(alphabet.size(), det)) {
+                                    System.out.println(ANSI_BRIGHT + "Ошибка :( Введенный ключ запрещен (определитель и размер " +
+                                            "алфавита имеют общие делители)"
+                                            + ANSI_RESET);
+                                    success = false;
+                                }
+                            }
                         }
                     }
                 }
             }
+            case 2 -> keyMatrix = generateKey2(alphabet);
         }
+
         // дальше умножаем ключ на каждую из частей
         System.out.println("Разобьем фразу " + ANSI_BLUE + phrase + ANSI_RESET + " на фрагменты по 2 символа и" +
                 " запишем соотвествующие коды:");
@@ -511,10 +532,15 @@ public class Encryption {
         }
         System.out.println("В результате шифрования получим фразу: " + ANSI_BLUE+ encodedPhrase + ANSI_RESET);
 
+        if (ch == 2) {
+            tryToFindKey2(alphabet, phrase, encodedPhrase, keyMatrix);
+        }
+
         System.out.println("Выберите дальнейшие действия: \n" + ANSI_PINK + "1 -- Расшифровать полученное сообщение;" +
                 "\n2 -- Повредить полученное сообщение;\n3 -- Зашифровать фразу другим ключем;" + ANSI_RESET);
         int choice = in.nextInt();
         switch (choice) {
+            case 1 -> decipherWith2(alphabet, phrase, encodedPhrase, keyMatrix);
             case 2 -> destroy(alphabet, phrase, encodedPhrase, keyMatrix);
         }
     }
