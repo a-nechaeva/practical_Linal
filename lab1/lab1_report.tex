@@ -142,6 +142,26 @@
 \newpage
 
 \section{Задание 1. Шифр Хилла}
+\subsection{Теоретическая справка}
+\textit{Шифр Хилла} -- полиграммный шифр подстановки, основанные на линейной алгебре и модульной арифметике.\\\\
+1. Сначала составляется используемый алфавит, используемые символы нумеруются, размер алфавита $n$;\\
+2. Задается сообщение, которое нужно зашифровать;\\
+3. Задается матрица ключа размера $m \times m$, удовлетворяющая требованиям: \\
+\indent    а) определитель не может быть равным 0, то есть матрица ключа должна быть обратима;\\
+ \indent   б) определитель не может иметь общих делителей с $n$ -- размером алфавита;\\
+4. Заданное ранее сообщение разбивается на блоки по $m$ символов и рассматривается как  $m$ - мерный вектор;\\
+5. Матрица ключа последовательно умножается по модулю $n$ на каждый из полученных векторов.\\
+
+Общая формула шифрования:\\
+Пусть $P$ и $C$ -- векторы столбцы высоты $m$, представляющие открытый и зашифрованный текст соотвественно, $K$ -- матрица  $m \times m$, представляющая ключ шифрования. Операции выполняются по модулю $n$.
+\begin{equation}
+K P (mod \textit{ n}) = C
+\end{equation}
+Общая формула расшифрования:
+\begin{equation}
+K^{-1} C (mod \textit{ n}) = P
+\end{equation}
+здесь обратная матрица ключа $K^{-1}$ вычисляется по модулю  $n$.
 \subsection{Задание алфавита и сообщения}
 
 
@@ -159,12 +179,12 @@
  \hline
 Д & 2 & Н & 6& Я  & 10  \\
  \hline
-Ё & 3 & П & 7&   &   \\
+Е & 3 & П & 7&   &   \\
  \hline
 \end{tabular}
 \end{center}
 
-Зашифрованное сообщение: \textbf{\textit{ЗВЁЗДНАЯПЫЛЬ}}
+Сообщение для шифрования: \textbf{\textit{ЗВЕЗДНАЯПЫЛЬ}}
 
 Размер алфавита в нашем случае: $$n = 11 $$
 
@@ -195,7 +215,7 @@ A =
  4\\
 1
 \end{pmatrix}$ ;
-\textbf{\textit{ЁЗ}}  $\to \begin{pmatrix}
+\textbf{\textit{ЕЗ}}  $\to \begin{pmatrix}
  3\\
 4
 \end{pmatrix}$ ;
@@ -361,7 +381,7 @@ A =
  $ \begin{pmatrix}
  6\\
 3
-\end{pmatrix} \to$ \textbf{\textit{НЁ}} ;
+\end{pmatrix} \to$ \textbf{\textit{НЕ}} ;
  $ \begin{pmatrix}
  0\\
 4
@@ -369,7 +389,7 @@ A =
  $ \begin{pmatrix}
  3\\
 7
-\end{pmatrix} \to$ \textbf{\textit{ЁП}} ;
+\end{pmatrix} \to$ \textbf{\textit{ЕП}} ;
  $ \begin{pmatrix}
 9\\
 2
@@ -383,7 +403,7 @@ $\begin{pmatrix}
 2
 \end{pmatrix} \to$ \textbf{\textit{ВД}}  \\
 \end{center}
-Полученное сообщение:  \textbf{\textit{НЁАЗЁПЬДВВВД}}
+Полученное сообщение:  \textbf{\textit{НЕАЗЕПЬДВВВД}}
 
 
 \subsection{Шифрование с помощью матрицы-ключа $3 \times 3$}
@@ -407,7 +427,7 @@ B =
 \end{equation}
 Разобьем сообщение на фрагменты длины 3 и запишем соотвествующие им векторы кодов:
 \begin{center}
-\textbf{\textit{ЗВЁ}} $\to \begin{pmatrix}
+\textbf{\textit{ЗВЕ}} $\to \begin{pmatrix}
  4\\
 1\\
 3
@@ -545,7 +565,7 @@ B =
 5 \\
 3\\
 7
-\end{pmatrix} \to$ \textbf{\textit{ЛЁП}} ;
+\end{pmatrix} \to$ \textbf{\textit{ЛЕП}} ;
  $ \begin{pmatrix}
 6 \\
 6\\
@@ -563,7 +583,7 @@ B =
 \end{pmatrix} \to$ \textbf{\textit{ДЬН}}  \\
 
 \end{center}
-Полученное сообщение:  \textbf{\textit{ЛЁПННЯЯППДЬН}}
+Полученное сообщение:  \textbf{\textit{ЛЕПННЯЯППДЬН}}
 
 \subsection{Шифрование с помощью матрицы-ключа $4 \times 4$}
 Матрица-ключ размера  $4 \times 4$ :
@@ -589,7 +609,7 @@ C =
 
 Разобьем сообщение на фрагменты по 4 символа и предствим векторы полученных кодов:
 \begin{center}
-\textbf{\textit{ЗВЁЗ}} $\to \begin{pmatrix}
+\textbf{\textit{ЗВЕЗ}} $\to \begin{pmatrix}
  4\\
 1\\
 3\\
@@ -711,7 +731,7 @@ C =
 3\\
 0\\
 5
-\end{pmatrix} \to$ \textbf{\textit{ЬЁАЛ}} ;
+\end{pmatrix} \to$ \textbf{\textit{ЬЕАЛ}} ;
  $ \begin{pmatrix}
 7\\
 0\\
@@ -727,7 +747,7 @@ C =
  \\
 
 \end{center}
-Полученное сообщение:  \textbf{\textit{ЬЁАЛПАВЫДЛЯЗ}}
+Полученное сообщение:  \textbf{\textit{ЬЕАЛПАВЫДЛЯЗ}}
 
 \subsection{Имитация вредоносного вмешательства}
  a) Повредим фразу, полученную в пункте 1.2
@@ -735,7 +755,7 @@ C =
 Таблица 2 -- Повреждение первого результата\\
 \begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c|c| } 
  \hline
-Исходные символы & Н & Ё & А & З & Ё  & П & Ь  & Д & В  & В & В  & Д\\
+Исходные символы & Н & Ё & А & З & Е  & П & Ь  & Д & В  & В & В  & Д\\
 \hline
 После атаки  & Н & Л & А & З & Ь  & П & Ь  & Д & Ы  & В & В  & Д\\
  \hline
@@ -749,11 +769,11 @@ A^{-1} =
 \begin{pmatrix}
 1 & 2 \\
 4 & 9
-\end{pmatrix} ^{-1}
+\end{pmatrix} ^{-1} (mod \text{ }11)
 = 
 \begin{pmatrix}
- 9 & -2\\
- -4 &  1
+ 9 & 9\\
+ 7 &  1
 \end{pmatrix}
 \end{equation}
 Разобьем фразу  \textbf{\textit{НЛАЗЬПЬДЫВВД}} на фрагменты:
@@ -788,19 +808,13 @@ A^{-1} =
 Расшифруем сообщение:
 \begin{equation}
 \begin{pmatrix}
- 9 & -2\\
- -4 &  1
+ 9 & 9\\
+ 7 &  1
 \end{pmatrix}
  \times
 \begin{pmatrix}
  6\\
 5
-\end{pmatrix}
-(mod \text{ }11)
-= 
-\begin{pmatrix}
- 44\\
--19
 \end{pmatrix}
 (mod \text{ }11)
 = \begin{pmatrix}
@@ -811,18 +825,12 @@ A^{-1} =
 
 \begin{equation}
 \begin{pmatrix}
- 9 & -2\\
- -4 &  1
+ 9 & 9\\
+ 7 &  1
 \end{pmatrix}
  \times
 \begin{pmatrix}
  0\\
-4
-\end{pmatrix}
-(mod \text{ }11)
-= 
-\begin{pmatrix}
- -8\\
 4
 \end{pmatrix}
 (mod \text{ }11)
@@ -834,19 +842,13 @@ A^{-1} =
 
 \begin{equation}
 \begin{pmatrix}
- 9 & -2\\
- -4 &  1
+ 9 & 9\\
+ 7 &  1
 \end{pmatrix}
  \times
 \begin{pmatrix}
  9\\
 7
-\end{pmatrix}
-(mod \text{ }11)
-= 
-\begin{pmatrix}
- 67\\
--29
 \end{pmatrix}
 (mod \text{ }11)
 = \begin{pmatrix}
@@ -857,19 +859,13 @@ A^{-1} =
 
 \begin{equation}
 \begin{pmatrix}
- 9 & -2\\
- -4 &  1
+ 9 & 9\\
+ 7 &  1
 \end{pmatrix}
  \times
 \begin{pmatrix}
 9\\
 2
-\end{pmatrix}
-(mod \text{ }11)
-= 
-\begin{pmatrix}
- 77\\
--34
 \end{pmatrix}
 (mod \text{ }11)
 = \begin{pmatrix}
@@ -880,19 +876,13 @@ A^{-1} =
 
 \begin{equation}
 \begin{pmatrix}
- 9 & -2\\
- -4 &  1
+  9 & 9\\
+ 7 &  1
 \end{pmatrix}
  \times
 \begin{pmatrix}
  8\\
 1
-\end{pmatrix}
-(mod \text{ }11)
-= 
-\begin{pmatrix}
- 70\\
--31
 \end{pmatrix}
 (mod \text{ }11)
 = \begin{pmatrix}
@@ -904,19 +894,13 @@ A^{-1} =
 
 \begin{equation}
 \begin{pmatrix}
- 9 & -2\\
- -4 &  1
+ 9 & 9\\
+ 7 &  1
 \end{pmatrix}
  \times
 \begin{pmatrix}
  1\\
 2
-\end{pmatrix}
-(mod \text{ }11)
-= 
-\begin{pmatrix}
- 5\\
--2
 \end{pmatrix}
 (mod \text{ }11)
 = \begin{pmatrix}
@@ -931,11 +915,11 @@ A^{-1} =
  $ \begin{pmatrix}
 0\\
 3
-\end{pmatrix} \to$ \textbf{\textit{АЁ}} ;
+\end{pmatrix} \to$ \textbf{\textit{АЕ}} ;
  $ \begin{pmatrix}
 3\\
 4
-\end{pmatrix} \to$ \textbf{\textit{ЁЗ}} ;
+\end{pmatrix} \to$ \textbf{\textit{ЕЗ}} ;
  $ \begin{pmatrix}
 1\\
 4
@@ -953,7 +937,7 @@ $\begin{pmatrix}
 9
 \end{pmatrix} \to$ \textbf{\textit{ЛЬ}}  \\
 \end{center}
-Полученное сообщение:  \textbf{\textit{\colorbox{red! 50}{АЁ}\colorbox{green! 50}{ЁЗ}\colorbox{red! 50}{ВЗ}\colorbox{green! 50}{АЯ}\colorbox{red! 50}{ЗД}\colorbox{green! 50}{ЛЬ}}}\\
+Полученное сообщение:  \textbf{\textit{\colorbox{red! 50}{АЕ}\colorbox{green! 50}{ЕЗ}\colorbox{red! 50}{ВЗ}\colorbox{green! 50}{АЯ}\colorbox{red! 50}{ЗД}\colorbox{green! 50}{ЛЬ}}}\\
 Заметим, что поврежденными участками после расшифровки оказались те пары букв, в которых мы провели подмену символов.\\
 
  б) Повредим фразу, полученную в пункте 1.3
@@ -961,9 +945,9 @@ $\begin{pmatrix}
 Таблица 2 -- Повреждение  второго результата\\
 \begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c|c| } 
  \hline
-Исходные символы & Л & Ё & П & Н & Н  & Я & Я  & П & П  & Д & Ь  & Н\\
+Исходные символы & Л & Е & П & Н & Н  & Я & Я  & П & П  & Д & Ь  & Н\\
 \hline
-После атаки & Л & Ё & П & Н & Ы  & А & Я  & В & П  & Д & Ь  & Н\\
+После атаки & Л & Е & П & Н & Ы  & А & Я  & В & П  & Д & Ь  & Н\\
  \hline
 Коды после атаки & 5 & 3 & 7 & 6 & 8  & 0 & 10  & 1 & 7  & 2 & 9  & 6  \\
  \hline
@@ -976,17 +960,17 @@ B^{-1} =
   1 & 1 & 0 \\
 0 & 0 & 1\\
 1 & 0 & 1
-\end{pmatrix}^{-1}
+\end{pmatrix}^{-1} (mod \text{ }11)
  = 
 \begin{pmatrix}
- 0 & -1 & 1 \\
-1 & 1 & -1\\
+ 0 & 10 & 1 \\
+1 & 1 & 10\\
 0 & 1 & 0
 \end{pmatrix}
 \end{equation}
-Разобьем фразу  \textbf{\textit{ЛЁПНЫАЯВПДЬН}} на фрагменты:
+Разобьем фразу  \textbf{\textit{ЛЕПНЫАЯВПДЬН}} на фрагменты:
 \begin{center}
-\textbf{\textit{ЛЁП}} $\to \begin{pmatrix}
+\textbf{\textit{ЛЕП}} $\to \begin{pmatrix}
  5\\
 3\\
 7
@@ -1013,8 +997,8 @@ B^{-1} =
 Расшифруем сообщение:
 \begin{equation}
 \begin{pmatrix}
- 0 & -1 & 1 \\
-1 & 1 & -1\\
+ 0 & 10 & 1 \\
+1 & 1 & 10\\
 0 & 1 & 0
 \end{pmatrix}
  \times
@@ -1022,13 +1006,6 @@ B^{-1} =
  5\\
 3\\
 7
-\end{pmatrix}
-(mod \text{ }11)
-= 
-\begin{pmatrix}
-4\\
-1\\
-3
 \end{pmatrix}
 (mod \text{ }11)
 = \begin{pmatrix}
@@ -1040,8 +1017,8 @@ B^{-1} =
 
 \begin{equation}
 \begin{pmatrix}
- 0 & -1 & 1 \\
-1 & 1 & -1\\
+  0 & 10 & 1 \\
+1 & 1 & 10\\
 0 & 1 & 0
 \end{pmatrix}
  \times
@@ -1049,13 +1026,6 @@ B^{-1} =
 6\\
 8\\
 0
-\end{pmatrix}
-(mod \text{ }11)
-= 
-\begin{pmatrix}
--8\\
-14\\
-8
 \end{pmatrix}
 (mod \text{ }11)
 = \begin{pmatrix}
@@ -1067,8 +1037,8 @@ B^{-1} =
 
 \begin{equation}
 \begin{pmatrix}
- 0 & -1 & 1 \\
-1 & 1 & -1\\
+ 0 & 10 & 1 \\
+1 & 1 & 10\\
 0 & 1 & 0
 \end{pmatrix}
  \times
@@ -1076,13 +1046,6 @@ B^{-1} =
  10\\
 1\\
 7
-\end{pmatrix}
-(mod \text{ }11)
-= 
-\begin{pmatrix}
-6\\
-4\\
-1
 \end{pmatrix}
 (mod \text{ }11)
 = \begin{pmatrix}
@@ -1094,8 +1057,8 @@ B^{-1} =
 
 \begin{equation}
 \begin{pmatrix}
- 0 & -1 & 1 \\
-1 & 1 & -1\\
+ 0 & 10 & 1 \\
+1 & 1 & 10\\
 0 & 1 & 0
 \end{pmatrix}
  \times
@@ -1103,13 +1066,6 @@ B^{-1} =
 2\\
 9\\
 6
-\end{pmatrix}
-(mod \text{ }11)
-= 
-\begin{pmatrix}
--3\\
-5\\
-9
 \end{pmatrix}
 (mod \text{ }11)
 = \begin{pmatrix}
@@ -1125,12 +1081,12 @@ B^{-1} =
 4 \\
 1\\
 3
-\end{pmatrix} \to$ \textbf{\textit{ЗВЁ}} ;
+\end{pmatrix} \to$ \textbf{\textit{ЗВЕ}} ;
  $ \begin{pmatrix}
 3 \\
 3\\
 8
-\end{pmatrix} \to$ \textbf{\textit{ЁЁЫ}} ;
+\end{pmatrix} \to$ \textbf{\textit{ЕЕЫ}} ;
  $ \begin{pmatrix}
 6 \\
 4\\
@@ -1143,7 +1099,7 @@ B^{-1} =
 \end{pmatrix} \to$ \textbf{\textit{ЫЛЬ}}  \\
 
 \end{center}
-Полученное сообщение:  \textbf{\textit{\colorbox{green! 50}{ЗВЁ}\colorbox{red! 50}{ЁЁЫ}\colorbox{red! 50}{НЗВ}\colorbox{green! 50}{ЫЛЬ}}}\\
+Полученное сообщение:  \textbf{\textit{\colorbox{green! 50}{ЗВЕ}\colorbox{red! 50}{ЕЕЫ}\colorbox{red! 50}{НЗВ}\colorbox{green! 50}{ЫЛЬ}}}\\
 Аналогично предыдущему пункту ошибки проявились только в тех фрагментах, в которых были заменены символы.\\
 
 
@@ -1152,7 +1108,7 @@ B^{-1} =
 Таблица 3 -- Повреждение третьего результата\\
 \begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c|c| } 
  \hline
-Исходные символы & Ь & Ё & А & Л & П  & А & В  & Ы & Д  & Л & Я  & З\\
+Исходные символы & Ь & Е & А & Л & П  & А & В  & Ы & Д  & Л & Я  & З\\
 \hline
 После атаки & В & П & А & Д & П  & А & В  & Ы & Д  & Л & Я  & З\\
  \hline
@@ -1168,12 +1124,12 @@ C^{-1} =
 0 & 0 & 1 & 0 \\
 1 & 0 & 1 & 1 \\
 1 & 1 & 0 & 0
-\end{pmatrix}^{-1}
+\end{pmatrix}^{-1} (mod \text{ }11)
 =  \begin{pmatrix}
--1 & -1 & 1 & 1\\
-1 & 1 & -1 & 0 \\
+10 & 10 & 1 & 1\\
+1 & 1 & 10 & 0 \\
 0 & 1 & 0 & 0 \\
-1 & 0 & 0 & -1
+1 & 0 & 0 & 10
 \end{pmatrix}
 \end{equation}
 
@@ -1204,10 +1160,10 @@ C^{-1} =
 Повторим привычные действия для расшифровки сообщения:
 \begin{equation}
 \begin{pmatrix}
--1 & -1 & 1 & 1\\
-1 & 1 & -1 & 0 \\
+10 & 10 & 1 & 1\\
+1 & 1 & 10 & 0 \\
 0 & 1 & 0 & 0 \\
-1 & 0 & 0 & -1
+1 & 0 & 0 & 10
 \end{pmatrix}
  \times
 \begin{pmatrix}
@@ -1217,14 +1173,6 @@ C^{-1} =
 2
 \end{pmatrix}
 (mod \text{ }11)
-= 
-\begin{pmatrix}
--6\\
-8\\
-7\\
--1
-\end{pmatrix}
-(mod \text{ }11)
 = \begin{pmatrix}
 5\\
 8\\
@@ -1235,10 +1183,10 @@ C^{-1} =
 
 \begin{equation}
 \begin{pmatrix}
--1 & -1 & 1 & 1\\
-1 & 1 & -1 & 0 \\
+10 & 10 & 1 & 1\\
+1 & 1 & 10 & 0 \\
 0 & 1 & 0 & 0 \\
-1 & 0 & 0 & -1
+1 & 0 & 0 & 10
 \end{pmatrix}
  \times
 \begin{pmatrix}
@@ -1248,14 +1196,6 @@ C^{-1} =
 8
 \end{pmatrix}
 (mod \text{ }11)
-= 
-\begin{pmatrix}
-2\\
-6\\
-0\\
--1
-\end{pmatrix}
-(mod \text{ }11)
 = \begin{pmatrix}
 2\\
 6\\
@@ -1266,10 +1206,10 @@ C^{-1} =
 
 \begin{equation}
 \begin{pmatrix}
--1 & -1 & 1 & 1\\
-1 & 1 & -1 & 0 \\
+10 & 10 & 1 & 1\\
+1 & 1 & 10 & 0 \\
 0 & 1 & 0 & 0 \\
-1 & 0 & 0 & -1
+1 & 0 & 0 & 10
 \end{pmatrix}
  \times
 \begin{pmatrix}
@@ -1277,14 +1217,6 @@ C^{-1} =
 5\\
 10\\
 4
-\end{pmatrix}
-(mod \text{ }11)
-= 
-\begin{pmatrix}
-7\\
--3\\
-5\\
--2
 \end{pmatrix}
 (mod \text{ }11)
 = \begin{pmatrix}
@@ -1317,8 +1249,13 @@ C^{-1} =
 \end{pmatrix} \to$ \textbf{\textit{ПЫЛЬ}} ;
 \end{center}
 Полученное сообщение:  \textbf{\textit{\colorbox{red! 50}{ЛЫПЯ}\colorbox{green! 50}{ДНАЯПЫЛЬ}}}\\
-\subsection{Вывод НУЖЕН ЛИ?}
 
+\subsection{Программное решение}
+Также для решения задания 1 была написана программа на \textit{Java}, которая предназначена для шифрования и расшифровки заданных сообщений и ключей размером $2 \times 2$,  $3 \times 3$, $4 \times 4$. 
+В конце документа в приложении 1 приведены примеры работы программы с заданными "красивыми" ключами:  \textbf{\textit{ЛАНЬ}},  \textbf{\textit{ИВАНЯВАНЯ}},  \textbf{\textit{ЛЕДЗАЛЕНВЫДАЛПАН}}
+
+\subsection{Вывод}
+На практике убедилась в том, что алгоритм Хилла работает. На мой взгляд, эффективнее разбивать сообщение на блоки минимального размера, так как в случае "взлома" сообщения и изменения какого-то конкретного символа не удается расшифровать целый блок символов, в котором была повреждена 1 буква.
 
 \section{Задание 2. Взлом шифра Хилла}	
 
@@ -1400,6 +1337,39 @@ H =
 Проведем кодирование слова \textbf{\textit{СОВА}} (  \textbf{\textit{10001 01110 00010 00000}} )
 
 \section{Задание 4. Код Хэмминг?}
+\newpage
+\section{Приложение 1}
+\begin{figure}[h!]
+\begin{minipage}[h!]{0.49\linewidth}
+\center{\includegraphics[width=1.25\linewidth]{лань1.png} \\ а)}
+\end{minipage}
+%\caption{Результат работы программы для ключа $2 \times 2$ .}
+\label{ris:image1}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{minipage}[h!]{0.49\linewidth}
+\center{\includegraphics[width=2\linewidth]{лань2.png} \\ б)}
+\end{minipage}
+%\caption{Результат работы программы для ключа $2 \times 2$ .}
+\label{ris:image1}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{minipage}[h!]{0.49\linewidth}
+\center{\includegraphics[width=2\linewidth]{лань3.png} \\ в)}
+\end{minipage}
+%\caption{Результат работы программы для ключа $2 \times 2$ .}
+\label{ris:image1}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{minipage}[h!]{0.49\linewidth}
+\center{\includegraphics[width=2\linewidth]{лань4.png} \\ г)}
+\end{minipage}
+\caption{Результаты работы программы для ключа $2 \times 2$ .}
+\label{ris:image1}
+\end{figure}
 \end{document}
 
 

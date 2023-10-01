@@ -581,7 +581,7 @@ public class Encryption {
     }
 
     public static void inputMessage(String input, ArrayList<Character> alphabet) {
-        System.out.println("Фраза для шифрования: " + ANSI_BLUE + input + ANSI_RESET +  "\n");
+        System.out.println("Фраза для шифрования: " + ANSI_BLUE + input + ANSI_RESET );
         System.out.println("В алфавите символов: " + ANSI_PINK + alphabet.size() + ANSI_RESET);
         System.out.println("| Код | Символ |");
         System.out.println("----------------");
