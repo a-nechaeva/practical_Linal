@@ -237,6 +237,68 @@ m_{1 1} = 0.6
 0.8 & 0.6
 \end{bmatrix}
 \end{equation}
+\\\\
+\textit{2. Отображение всей плоскости в прямую $y=bx$  $(y=8x)$.}
+Предположим, что все точки плоскости сохраняют координату $x$ и меняют только координату $y$ по закону $y=8x$. Рассмотрим также преобразование для двух точек.\\
+Для точки $A (1; 5)$:
+\begin{equation}
+\begin{bmatrix}
+m_{0 0} & m_{0 1}\\
+m_{1 0} & m_{1 1}
+\end{bmatrix}
+\begin{bmatrix}
+1\\
+5
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\
+8
+\end{bmatrix}
+\to
+\begin{cases}
+m_{0 0} +  5m_{0 1} = 1\\
+m_{1 0} + 5 m_{1 1} = 8
+\end{cases}
+\end{equation}
+И, соотвественно, для точки $B(3;7)$:
+\begin{equation}
+\begin{bmatrix}
+m_{0 0} & m_{0 1}\\
+m_{1 0} & m_{1 1}
+\end{bmatrix}
+\begin{bmatrix}
+3\\
+7
+\end{bmatrix}
+=
+\begin{bmatrix}
+3\\
+24
+\end{bmatrix}
+\to
+\begin{cases}
+3m_{0 0} +  7m_{0 1} = 3\\
+3m_{1 0} + 7m_{1 1} = 24
+\end{cases}
+\end{equation}
+Заметим, что решением будет: 
+\begin{equation}
+\begin{cases}
+m_{0 0} = 1\\
+m_{0 1} = 0\\
+m_{1 0} = 8\\
+m_{1 1} = 0
+\end{cases}
+\end{equation}
+\textit{\textbf{Искомая матрица}}:
+\begin{equation}
+\begin{bmatrix}
+1 & 0\\
+8 & 0
+\end{bmatrix}
+\end{equation}
+\\\\
 \end{document}
 
 
