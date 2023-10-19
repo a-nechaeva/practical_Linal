@@ -765,6 +765,115 @@ v_2 =
 \end{bmatrix}
 \end{equation}
 
+
+\subsection{}
+\textit{Пару отображений, последовательное применение которых дает различные результаты в зависимости от порядка $AB \neq BA$.}\\
+
+\textit{\textbf{Искомые матрицы}}:
+\begin{equation}
+A=
+\begin{bmatrix}
+1 & 2\\
+3 & 4
+\end{bmatrix}
+, \, \, \, 
+B=
+\begin{bmatrix}
+5 & 6\\
+7 & 8
+\end{bmatrix}
+\end{equation}
+
+\newpage
+\subsection{}
+\textit{Пару отображений, последовательное применение которых дает одинаковый результат независимо от порядка $AB = BA$.}\\
+Пусть матрица $A$:
+
+\begin{equation}
+A=
+\begin{bmatrix}
+1 & 4\\
+0 & 2
+\end{bmatrix}
+\end{equation}
+Найдем какую-нибудь коммутативную к ней матрицу $B$:
+\begin{equation}
+B=
+\begin{bmatrix}
+b_{0 0} & b_{0 1}\\
+b_{1 0} & b_{1 1}
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+AB= BA \to
+\begin{bmatrix}
+1 & 4\\
+0 & 2
+\end{bmatrix}
+\begin{bmatrix}
+b_{0 0} & b_{0 1}\\
+b_{1 0} & b_{1 1}
+\end{bmatrix}
+=
+\begin{bmatrix}
+b_{0 0} & b_{0 1}\\
+b_{1 0} & b_{1 1}
+\end{bmatrix}
+\begin{bmatrix}
+1 & 4\\
+0 & 2
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+b_{0 0} + 4b_{1 0} = b_{0 0}\\
+b_{0 1} + 4 b_{1 1} = 4b_{0 0} + 2b_{0 1}\\
+2b_{1 0} = b_{1 0}\\
+2 b_{1 1} = 2b_{1 1}
+\end{cases}
+\to
+\begin{cases}
+b_{1 0} = 0\\
+b_{0 0} = b_{0 0}\\
+b_{0 1} + 4 b_{1 1} = 4b_{0 0} + 2b_{0 1}\\
+2 b_{1 1} = 2b_{1 1}
+\end{cases}
+\end{equation}
+Пусть $b_{0 0} = 9$ и $b_{1 1} = 11$
+
+\begin{equation}
+\begin{cases}
+b_{1 0} = 0\\
+b_{0 0} = 9\\
+b_{0 1} + 4 b_{1 1} = 4b_{0 0} + 2b_{0 1}\\
+ b_{1 1} = 11
+\end{cases}
+\to
+\begin{cases}
+b_{1 0} = 0\\
+b_{0 0} = 9\\
+b_{0 1} = 8\\
+ b_{1 1} = 11
+\end{cases}
+\end{equation}
+
+
+\textit{\textbf{Искомые матрицы}}:
+\begin{equation}
+A=
+\begin{bmatrix}
+1 & 4\\
+0 & 2
+\end{bmatrix}
+, \, \, \, 
+B=
+\begin{bmatrix}
+9 & 8\\
+0 & 11
+\end{bmatrix}
+\end{equation}
+
 \end{document}
 
 
