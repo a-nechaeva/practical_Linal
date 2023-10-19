@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  19 OCT 2023 12:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  19 OCT 2023 12:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1379,6 +1379,10 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [7]
+Underfull \hbox (badness 10000) in paragraph at lines 758--759
+
+ []
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
@@ -1390,13 +1394,13 @@ LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
 Package rerunfilecheck Info: File `lab2_report.out' has not changed.
-(rerunfilecheck)             Checksum: 92FC8B3EFBA8A7F66FE381532159C7B3;750.
+(rerunfilecheck)             Checksum: 4D5B4E1AE2BB7B045733413AE66D6C4F;801.
  ) 
 Here is how much of TeX's memory you used:
- 51677 strings out of 475734
- 1291723 string characters out of 5786229
+ 51680 strings out of 475734
+ 1291768 string characters out of 5786229
  1992487 words of memory out of 5000000
- 71741 multiletter control sequences out of 15000+600000
+ 71742 multiletter control sequences out of 15000+600000
  528830 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,89p,764b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1415,10 +1419,10 @@ e1/public/cm-super/sfrm0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
 cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/s
 frm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1000.pf
 b><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on lab2_report.pdf (9 pages, 253172 bytes).
+Output written on lab2_report.pdf (9 pages, 253354 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
- 125 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 260 PDF objects out of 1000 (max. 8388607)
+ 212 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
