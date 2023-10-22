@@ -846,7 +846,8 @@ B=
 \section{Анализ}
 \subsection{}
 \textit{Найти образ и ядро придуманных отображений из пунктов 1, 2, 13, 14.}\\
-
+\\
+Для пункта 1:
 \begin{equation}
 A =
 \begin{bmatrix}
@@ -854,6 +855,303 @@ A =
 0.8 & 0.6
 \end{bmatrix}
 \end{equation}
+Найдем образ, для этого приведем матрицу к приведённому ступенчатому виду:
+\begin{equation}
+\begin{bmatrix}
+-0.6 & 0.8\\
+0.8 & 0.6
+\end{bmatrix}
+\to
+\begin{bmatrix}
+0.2 & 1.4\\
+0.8 & 0.6
+\end{bmatrix}
+\to
+\begin{bmatrix}
+1 & 7\\
+4 & 3
+\end{bmatrix}
+\to
+\begin{bmatrix}
+1 & 7\\
+0 & -25
+\end{bmatrix}
+\to
+\begin{bmatrix}
+1 & 0\\
+0 & 1
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+Range(A) = Span
+\left\{\
+\begin{bmatrix}
+-0.6\\
+0.8
+\end{bmatrix}
+,
+\begin{bmatrix}
+0.8\\
+0.6
+\end{bmatrix}
+\right\}\
+\end{equation}
+
+Найдем ядро отображения -- множество векторов, отображающихся в ноль:
+\begin{equation}
+\begin{bmatrix}
+-0.6 & 0.8\\
+0.8 & 0.6
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{bmatrix}
+-0.6 & 0.8 & | & 0\\
+0.8 & 0.6 & | & 0
+\end{bmatrix}
+\to
+\begin{bmatrix}
+1 & 7 & | & 0\\
+0 & -25 & | & 0
+\end{bmatrix}
+\to
+\begin{cases}
+x_1 = 0\\
+x_2 = 0
+\end{cases}
+\end{equation}
+
+\begin{equation}
+Nullspace (A) = \varnothing
+\end{equation}
+
+
+
+
+
+
+
+Для пункта 2:
+\begin{equation}
+B =
+\begin{bmatrix}
+1 & 0\\
+8 & 0
+\end{bmatrix}
+\end{equation}
+
+Найдем образ, для этого приведем матрицу к приведённому ступенчатому виду:
+\begin{equation}
+\begin{bmatrix}
+1 & 0\\
+8 & 0
+\end{bmatrix}
+\to
+\begin{bmatrix}
+1 & 0\\
+0 & 0
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+Range(B) =  Span
+\left\{\
+\begin{bmatrix}
+1\\
+8
+\end{bmatrix}
+\right\}\
+\end{equation}
+
+Найдем ядро отображения -- множество векторов, отображающихся в ноль:
+\begin{equation}
+\begin{bmatrix}
+1 & 0\\
+8 & 0
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{bmatrix}
+1 & 0 & | & 0\\
+8 & 0 & | & 0
+\end{bmatrix}
+\to
+\begin{cases}
+x_1 = 0\\
+x_2 = x_2
+\end{cases}
+\end{equation}
+
+\begin{equation}
+Nullspace (B) = Span
+\left\{\
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+\right\}\
+\end{equation}
+
+
+
+Для пункта 13:
+\begin{equation}
+C =
+\begin{bmatrix}
+0 & -1\\
+4 & 0
+\end{bmatrix}
+\end{equation}
+
+
+Найдем образ, для этого приведем матрицу к приведённому ступенчатому виду:
+\begin{equation}
+\begin{bmatrix}
+1 & 0\\
+0 & 1
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+Range(C) = Span
+\left\{\
+\begin{bmatrix}
+0\\
+4
+\end{bmatrix}
+,
+\begin{bmatrix}
+-1\\
+0
+\end{bmatrix}
+\right\}\
+\end{equation}
+
+Найдем ядро отображения -- множество векторов, отображающихся в ноль:
+\begin{equation}
+\begin{bmatrix}
+0 & -1\\
+4 & 0
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{bmatrix}
+0 & -1 & | & 0\\
+4 & 0 & | & 0
+\end{bmatrix}
+\to
+\begin{cases}
+x_1 = 0\\
+x_2 = 0
+\end{cases}
+\end{equation}
+
+\begin{equation}
+Nullspace (С) = \varnothing
+\end{equation}
+
+
+Для пункта 14:
+\begin{equation}
+D =
+\begin{bmatrix}
+0 & 0\\
+0 & 0
+\end{bmatrix}
+\end{equation}
+
+
+Найдем образ, для этого приведем матрицу к приведённому ступенчатому виду:
+\begin{equation}
+\begin{bmatrix}
+0 & 0\\
+0 & 0
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+Range(D) = \varnothing
+\end{equation}
+
+Найдем ядро отображения -- множество векторов, отображающихся в ноль:
+\begin{equation}
+\begin{bmatrix}
+0 & 0\\
+0 & 0
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+0
+\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+\begin{bmatrix}
+0 & 0 & | & 0\\
+0 & 0 & | & 0
+\end{bmatrix}
+\to
+\begin{cases}
+x_1 = x_1\\
+x_2 = x_2
+\end{cases}
+\end{equation}
+
+\begin{equation}
+Nullspace (D) = Span
+ \left\{\
+\begin{bmatrix}
+a\\
+b
+\end{bmatrix}
+,
+\begin{bmatrix}
+c\\
+d
+\end{bmatrix}
+\right\}\
+, \,\,  a, \, b, \, c, \, d \in \mathbb{R}
+\end{equation}
+
+
+
+\subsection{}
 
 \end{document}
 
