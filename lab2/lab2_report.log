@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  23 OCT 2023 22:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  23 OCT 2023 22:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1170,12 +1170,7 @@ File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count348
 \l__pdf_internal_box=\box116
 )
-(./lab2_report.aux
-LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 1
-9.
- (c:/texlive/2023/texmf-dist/tex/latex/cyrillic/t2acmr.fd
-File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-))
+No file lab2_report.aux.
 \openout1 = `lab2_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
@@ -1193,6 +1188,11 @@ LaTeX Font Info:    ... okay on input line 139.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
 LaTeX Font Info:    ... okay on input line 139.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 139.
+LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 1
+39.
+(c:/texlive/2023/texmf-dist/tex/latex/cyrillic/t2acmr.fd
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
 LaTeX Font Info:    ... okay on input line 139.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 139.
 LaTeX Font Info:    ... okay on input line 139.
@@ -1267,13 +1267,11 @@ your preamble.
  on input line 139.
 
 Package hyperref Info: Link coloring OFF on input line 139.
-(./lab2_report.out) (./lab2_report.out)
 \@outlinefile=\write4
 \openout4 = `lab2_report.out'.
 
 LaTeX Font Info:    Trying to load font information for U+msa on input line 140
 .
-
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1516,7 +1514,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [15]
-<pic/orig.png, id=360, 642.4pt x 481.8pt>
+<pic/orig.png, id=225, 642.4pt x 481.8pt>
 File: pic/orig.png Graphic file (type png)
 <use pic/orig.png>
 Package pdftex.def Info: pic/orig.png  used on input line 1607.
@@ -1528,7 +1526,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [16 <./pic/orig.png (PNG copy)>]
-<pic/1.png, id=367, 642.4pt x 481.8pt>
+<pic/1.png, id=233, 642.4pt x 481.8pt>
 File: pic/1.png Graphic file (type png)
 <use pic/1.png>
 Package pdftex.def Info: pic/1.png  used on input line 1622.
@@ -1540,7 +1538,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [17 <./pic/1.png (PNG copy)>]
-<pic/2.png, id=374, 642.4pt x 481.8pt>
+<pic/2.png, id=241, 642.4pt x 481.8pt>
 File: pic/2.png Graphic file (type png)
 <use pic/2.png>
 Package pdftex.def Info: pic/2.png  used on input line 1638.
@@ -1552,7 +1550,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [18 <./pic/2.png (PNG copy)>]
-<pic/3.png, id=382, 642.4pt x 481.8pt>
+<pic/3.png, id=250, 642.4pt x 481.8pt>
 File: pic/3.png Graphic file (type png)
 <use pic/3.png>
 Package pdftex.def Info: pic/3.png  used on input line 1655.
@@ -1564,7 +1562,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [19 <./pic/3.png (PNG copy)>]
-<pic/4.png, id=389, 642.4pt x 481.8pt>
+<pic/4.png, id=259, 642.4pt x 481.8pt>
 File: pic/4.png Graphic file (type png)
 <use pic/4.png>
 Package pdftex.def Info: pic/4.png  used on input line 1671.
@@ -1576,7 +1574,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [20 <./pic/4.png (PNG copy)>]
-<pic/5.png, id=396, 642.4pt x 481.8pt>
+<pic/5.png, id=267, 642.4pt x 481.8pt>
 File: pic/5.png Graphic file (type png)
 <use pic/5.png>
 Package pdftex.def Info: pic/5.png  used on input line 1687.
@@ -1588,7 +1586,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [21 <./pic/5.png (PNG copy)>]
-<pic/6.png, id=403, 642.4pt x 481.8pt>
+<pic/6.png, id=275, 642.4pt x 481.8pt>
 File: pic/6.png Graphic file (type png)
 <use pic/6.png>
 Package pdftex.def Info: pic/6.png  used on input line 1702.
@@ -1600,7 +1598,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [22 <./pic/6.png (PNG copy)>]
-<pic/7.png, id=411, 642.4pt x 481.8pt>
+<pic/7.png, id=283, 642.4pt x 481.8pt>
 File: pic/7.png Graphic file (type png)
 <use pic/7.png>
 Package pdftex.def Info: pic/7.png  used on input line 1718.
@@ -1612,7 +1610,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [23 <./pic/7.png (PNG copy)>]
-<pic/8.png, id=418, 642.4pt x 481.8pt>
+<pic/8.png, id=291, 642.4pt x 481.8pt>
 File: pic/8.png Graphic file (type png)
 <use pic/8.png>
 Package pdftex.def Info: pic/8.png  used on input line 1733.
@@ -1624,7 +1622,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [24 <./pic/8.png (PNG copy)>]
-<pic/9.png, id=426, 642.4pt x 481.8pt>
+<pic/9.png, id=300, 642.4pt x 481.8pt>
 File: pic/9.png Graphic file (type png)
 <use pic/9.png>
 Package pdftex.def Info: pic/9.png  used on input line 1748.
@@ -1636,7 +1634,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [25 <./pic/9.png (PNG copy)>]
-<pic/10.png, id=433, 642.4pt x 481.8pt>
+<pic/10.png, id=308, 642.4pt x 481.8pt>
 File: pic/10.png Graphic file (type png)
 <use pic/10.png>
 Package pdftex.def Info: pic/10.png  used on input line 1763.
@@ -1648,7 +1646,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [26 <./pic/10.png (PNG copy)>]
-<pic/11.png, id=440, 642.4pt x 481.8pt>
+<pic/11.png, id=316, 642.4pt x 481.8pt>
 File: pic/11.png Graphic file (type png)
 <use pic/11.png>
 Package pdftex.def Info: pic/11.png  used on input line 1778.
@@ -1660,7 +1658,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [27 <./pic/11.png (PNG copy)>]
-<pic/12.png, id=447, 642.4pt x 481.8pt>
+<pic/12.png, id=324, 642.4pt x 481.8pt>
 File: pic/12.png Graphic file (type png)
 <use pic/12.png>
 Package pdftex.def Info: pic/12.png  used on input line 1793.
@@ -1672,7 +1670,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [28 <./pic/12.png (PNG copy)>]
-<pic/13.png, id=454, 642.4pt x 481.8pt>
+<pic/13.png, id=332, 642.4pt x 481.8pt>
 File: pic/13.png Graphic file (type png)
 <use pic/13.png>
 Package pdftex.def Info: pic/13.png  used on input line 1809.
@@ -1684,7 +1682,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [29 <./pic/13.png (PNG copy)>]
-<pic/14.png, id=461, 642.4pt x 481.8pt>
+<pic/14.png, id=340, 642.4pt x 481.8pt>
 File: pic/14.png Graphic file (type png)
 <use pic/14.png>
 Package pdftex.def Info: pic/14.png  used on input line 1825.
@@ -1696,7 +1694,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [30 <./pic/14.png (PNG copy)>]
-<pic/15_a.png, id=469, 642.4pt x 481.8pt>
+<pic/15_a.png, id=349, 642.4pt x 481.8pt>
 File: pic/15_a.png Graphic file (type png)
 <use pic/15_a.png>
 Package pdftex.def Info: pic/15_a.png  used on input line 1846.
@@ -1708,7 +1706,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [31 <./pic/15_a.png (PNG copy)>]
-<pic/15_b.png, id=478, 642.4pt x 481.8pt>
+<pic/15_b.png, id=359, 642.4pt x 481.8pt>
 File: pic/15_b.png Graphic file (type png)
 <use pic/15_b.png>
 Package pdftex.def Info: pic/15_b.png  used on input line 1852.
@@ -1720,7 +1718,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [32 <./pic/15_b.png (PNG copy)>]
-<pic/15_ab.png, id=484, 642.4pt x 481.8pt>
+<pic/15_ab.png, id=365, 642.4pt x 481.8pt>
 File: pic/15_ab.png Graphic file (type png)
 <use pic/15_ab.png>
 Package pdftex.def Info: pic/15_ab.png  used on input line 1858.
@@ -1732,7 +1730,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [33 <./pic/15_ab.png (PNG copy)>]
-<pic/15_ba.png, id=490, 642.4pt x 481.8pt>
+<pic/15_ba.png, id=371, 642.4pt x 481.8pt>
 File: pic/15_ba.png Graphic file (type png)
 <use pic/15_ba.png>
 Package pdftex.def Info: pic/15_ba.png  used on input line 1864.
@@ -1744,7 +1742,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [34 <./pic/15_ba.png (PNG copy)>]
-<pic/16_a.png, id=496, 642.4pt x 481.8pt>
+<pic/16_a.png, id=377, 642.4pt x 481.8pt>
 File: pic/16_a.png Graphic file (type png)
 <use pic/16_a.png>
 Package pdftex.def Info: pic/16_a.png  used on input line 1885.
@@ -1756,7 +1754,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [35 <./pic/16_a.png (PNG copy)>]
-<pic/16_b.png, id=503, 642.4pt x 481.8pt>
+<pic/16_b.png, id=385, 642.4pt x 481.8pt>
 File: pic/16_b.png Graphic file (type png)
 <use pic/16_b.png>
 Package pdftex.def Info: pic/16_b.png  used on input line 1892.
@@ -1768,7 +1766,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [36 <./pic/16_b.png (PNG copy)>]
-<pic/16_ab.png, id=510, 642.4pt x 481.8pt>
+<pic/16_ab.png, id=392, 642.4pt x 481.8pt>
 File: pic/16_ab.png Graphic file (type png)
 <use pic/16_ab.png>
 Package pdftex.def Info: pic/16_ab.png  used on input line 1898.
@@ -1780,7 +1778,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [37 <./pic/16_ab.png (PNG copy)>]
-<pic/16_ba.png, id=516, 642.4pt x 481.8pt>
+<pic/16_ba.png, id=399, 642.4pt x 481.8pt>
 File: pic/16_ba.png Graphic file (type png)
 <use pic/16_ba.png>
 Package pdftex.def Info: pic/16_ba.png  used on input line 1904.
@@ -1796,14 +1794,21 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
-Package rerunfilecheck Info: File `lab2_report.out' has not changed.
-(rerunfilecheck)             Checksum: D0450F07DA9A01F10437677913F268E1;4433.
+
+
+Package rerunfilecheck Warning: File `lab2_report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `lab2_report.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D0450F07DA9A01F10437677913F268E1;4433.
  ) 
 Here is how much of TeX's memory you used:
- 52044 strings out of 475734
- 1297293 string characters out of 5786229
- 1992489 words of memory out of 5000000
- 71944 multiletter control sequences out of 15000+600000
+ 51996 strings out of 475734
+ 1296516 string characters out of 5786229
+ 1991436 words of memory out of 5000000
+ 71902 multiletter control sequences out of 15000+600000
  531249 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,89p,764b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1817,18 +1822,19 @@ m/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texl
 ive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/
 2023/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb><c:/texlive/2023/texmf
--dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/font
-s/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pu
-blic/cm-super/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-su
-per/sfrm0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm10
-00.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:
-/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2
-023/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2023/texmf-
-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on lab2_report.pdf (39 pages, 699535 bytes).
+-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2023/texmf-dist/font
+s/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/pu
+blic/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-su
+per/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm09
+00.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:
+/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2
+023/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2023/texmf-
+dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts
+/type1/public/cm-super/sfti1200.pfb>
+Output written on lab2_report.pdf (39 pages, 715743 bytes).
 PDF statistics:
- 661 PDF objects out of 1000 (max. 8388607)
- 551 compressed objects within 6 object streams
+ 548 PDF objects out of 1000 (max. 8388607)
+ 437 compressed objects within 5 object streams
  229 named destinations out of 1000 (max. 500000)
- 440 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 128 words of extra memory for PDF output out of 10000 (max. 10000000)
 
