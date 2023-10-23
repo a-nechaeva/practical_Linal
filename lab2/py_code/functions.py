@@ -38,6 +38,60 @@ m_16_a = np.array([[1, 4], [0, 2]])
 m_16_b = np.array([[9, 8], [0, 11]])
 
 
+# НАДО ФИКСИТЬ, ПОТОМУ ЧТО ЭТО ПОВОРОТ
 def f_1(vect):
     total = m_1.dot(vect)
     return total
+
+def f_2(vect):
+    total = m_2.dot(vect)
+    return total
+
+def f_3(vect):
+    total = m_3.dot(vect)
+    return total
+
+def f_4(vect):
+    total = m_4.dot(vect)
+    return total
+
+def f_5(vect):
+    total = m_5.dot(vect)
+    return total
+
+def f_6(vect):
+    total = m_6.dot(vect)
+    return total
+
+def f_7(vect):
+    total = m_7.dot(vect)
+    return total
+
+def f_8(vect):
+    total = m_8.dot(vect)
+    return total
+
+def f_9(vect):
+    total = m_9.dot(vect)
+    return total
+
+def f_10(vect):
+    total = m_10.dot(vect)
+    return total
+
+def f_11(vect):
+    total = m_11.dot(vect)
+    return total
+
+def f_12(vect):
+    total = m_12.dot(vect)
+    return total
+
+def f_13(vect):
+    total = m_13.dot(vect)
+    return total
+
+def f_14(vect):
+    total = m_14.dot(vect)
+    return total
+
