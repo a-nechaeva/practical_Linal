@@ -38,3 +38,6 @@ m_16_a = np.array([[1, 4], [0, 2]])
 m_16_b = np.array([[9, 8], [0, 11]])
 
 
+def f_1(vect):
+    total = m_1.dot(vect)
+    return total

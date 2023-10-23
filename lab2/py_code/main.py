@@ -4,6 +4,8 @@ import matplotlib.patches
 import matplotlib.path
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
+import numpy as np
+from functions import *
 
 
 def drawLine(axes):
@@ -59,5 +61,6 @@ if __name__ == "__main__":
 
     drawLine(axes)
     drawPolygons(axes)
-
+    #a = np.array([[5], [2]])
+    #print(f_1(a)[0][0])
     plt.show()
