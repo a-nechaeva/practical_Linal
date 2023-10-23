@@ -1152,6 +1152,460 @@ d
 
 
 \subsection{}
+\textit{Найти собственные числа и собственные векторы придуманных отображений из пунктов 1, 2, 3, 4, 8, 11, 12, 13, 14, 15, 16.}\\
+\\
+Для пункта 1:
+\begin{equation}
+A =
+\begin{bmatrix}
+-0.6 & 0.8\\
+0.8 & 0.6
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+det(A - \lambda E) =
+\begin{vmatrix}
+-0.6 - \lambda & 0.8\\
+0.8 & 0.6 - \lambda
+\end{vmatrix}
+ = \lambda^2 - 1 = 0 \, \, \to \lambda_1 = 1, \, \, \lambda_2 = -1
+\end{equation}
+
+Найдем собственный вектор, соответствующий $\lambda_1 = 1$:
+\begin{equation}
+\begin{bmatrix}
+-0.6 & 0.8\\
+0.8 & 0.6
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix}
+\, \, \to 
+\begin{cases}
+x_1 = \frac{1}{2} \\
+x_2 = 1
+\end{cases}
+\end{equation}
+
+Найдем собственный вектор, соответствующий $\lambda_2 = -1$:
+\begin{equation}
+\begin{bmatrix}
+-0.6 & 0.8\\
+0.8 & 0.6
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_1 \\
+x_2
+\end{bmatrix}
+\, \, \to 
+\begin{cases}
+x_1 = 2 \\
+x_2 = 1
+\end{cases}
+\end{equation}
+
+Аналогично найдем собственные числа  и собственные векторы для остальных отображений.\\
+\\
+Для пункта 2:
+\begin{equation}
+B =
+\begin{bmatrix}
+1 & 0\\
+8 & 0
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 = 0, \, \,
+v_1 =
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+, \, \,
+\lambda_2 = 1, \, \,
+v_2 =
+\begin{bmatrix}
+\frac{1}{8}\\
+1
+\end{bmatrix}
+\end{equation}
+\\
+
+Для пункта 3:
+\begin{equation}
+C =
+\begin{bmatrix}
+\cos \frac{5\pi}{18} & -\sin \frac{5\pi}{18}\\
+\\
+\sin \frac{5\pi}{18} & \cos \frac{5\pi}{18}
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 \approx 0.643 - i 0.766, \, \,
+v_1 =
+\begin{bmatrix}
+-i\\
+1
+\end{bmatrix}
+, \, \,
+\lambda_2 \approx 0.643 + i 0.766, \, \,
+v_2 =
+\begin{bmatrix}
+i\\
+1
+\end{bmatrix}
+\end{equation}
+\\
+
+Для пункта 4:
+\begin{equation}
+D =
+\begin{bmatrix}
+-1 & 0\\
+0 & -1
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 = -1, \, \,
+v_1 =
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+, \, \,
+\lambda_2 =  -1, \, \,
+v_2 =
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+\end{equation}
+\\
+
+Для пункта 8:
+\begin{equation}
+F =
+\begin{bmatrix}
+1 & 0\\
+10 & -1
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 = 1, \, \,
+v_1 =
+\begin{bmatrix}
+\frac{1}{5}\\
+1
+\end{bmatrix}
+, \, \,
+\lambda_2 =  -1, \, \,
+v_2 =
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+\end{equation}
+\\
+
+Для пункта 11:
+\begin{equation}
+G =
+\begin{bmatrix}
+\frac{6}{5} & \frac{2}{5}\\
+\\
+\frac{2}{5} & \frac{9}{5}
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 = 1, \, \,
+v_1 =
+\begin{bmatrix}
+-2\\
+1
+\end{bmatrix}
+, \, \,
+\lambda_2 =  2, \, \,
+v_2 =
+\begin{bmatrix}
+\frac{1}{2}\\
+1
+\end{bmatrix}
+\end{equation}
+\\
+
+Для пункта 12:
+\begin{equation}
+H =
+\begin{bmatrix}
+4 & 1\\
+0 & 4
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 = 4, \, \,
+v_1 =
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+, \, \,
+\lambda_2 =  4, \, \,
+v_2 =
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+\end{equation}
+\\
+
+Для пункта 13:
+\begin{equation}
+K =
+\begin{bmatrix}
+0 & -1\\
+4 & 0
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 = 2i, \, \,
+v_1 =
+\begin{bmatrix}
+\frac{i}{2}\\
+1
+\end{bmatrix}
+, \, \,
+\lambda_2 =  -2i, \, \,
+v_2 =
+\begin{bmatrix}
+-\frac{i}{2}\\
+1
+\end{bmatrix}
+\end{equation}
+\\
+
+Для пункта 14:
+\begin{equation}
+L =
+\begin{bmatrix}
+0 & 0\\
+0 & 0
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 = 0, \, \,
+v_1 =
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+, \, \,
+\lambda_2 =  0, \, \,
+v_2 =
+\begin{bmatrix}
+0\\
+1
+\end{bmatrix}
+\end{equation}
+\\
+
+Для пункта 15:
+\begin{equation}
+M_1 =
+\begin{bmatrix}
+1 & 2\\
+3 & 4
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 = \frac{-\sqrt{33} + 5}{2}, \, \,
+v_1 =
+\begin{bmatrix}
+\frac{-\sqrt{33} - 3}{6}\\
+1
+\end{bmatrix}
+, \, \,
+\lambda_2 =  \frac{\sqrt{33} + 5}{2}, \, \,
+v_2 =
+\begin{bmatrix}
+\frac{\sqrt{33} - 3}{6}\\
+1
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+M_2 =
+\begin{bmatrix}
+5 & 6\\
+7 & 8
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 = \frac{-\sqrt{177} + 13}{2}, \, \,
+v_1 =
+\begin{bmatrix}
+\frac{-\sqrt{177} - 3}{14}\\
+1
+\end{bmatrix}
+, \, \,
+\lambda_2 =  \frac{\sqrt{177} + 13}{2}, \, \,
+v_2 =
+\begin{bmatrix}
+\frac{\sqrt{177} - 3}{14}\\
+1
+\end{bmatrix}
+\end{equation}
+\\
+
+Для пункта 16:
+\begin{equation}
+N_1 =
+\begin{bmatrix}
+1 & 4\\
+\\
+0 & 2
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 = 1, \, \,
+v_1 =
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+, \, \,
+\lambda_2 =  2, \, \,
+v_2 =
+\begin{bmatrix}
+4\\
+1
+\end{bmatrix}
+N_2 =
+\begin{bmatrix}
+9 & 8\\
+\\
+0 & 11
+\end{bmatrix}
+\end{equation}
+\begin{equation}
+\lambda_1 = 9, \, \,
+v_1 =
+\begin{bmatrix}
+1\\
+0
+\end{bmatrix}
+, \, \,
+\lambda_2 =  11, \, \,
+v_2 =
+\begin{bmatrix}
+4\\
+1
+\end{bmatrix}
+\end{equation}
+
+\subsection{}
+\textit{Найти определитель матриц из пунктов 1, 2, 3, 4, 5, 9, 10}\\
+\\
+Для пункта 1:
+\begin{equation}
+detA =
+\begin{vmatrix}
+-0.6 & 0.8\\
+0.8 & 0.6
+\end{vmatrix}
+= -1 
+\end{equation}
+\\
+Для пункта 2:
+\begin{equation}
+detB =
+\begin{vmatrix}
+1 & 0\\
+8 & 0
+\end{vmatrix}
+= 0
+\end{equation}
+\\
+Для пункта 3:
+\begin{equation}
+detC =
+\begin{vmatrix}
+\cos \frac{5\pi}{18} & -\sin \frac{5\pi}{18}\\
+\\
+\sin \frac{5\pi}{18} & \cos \frac{5\pi}{18}
+\end{vmatrix}
+= 1 
+\end{equation}
+\\
+Для пункта 4:
+\begin{equation}
+detD =
+\begin{vmatrix}
+-1 & 0\\
+0 & -1
+\end{vmatrix}
+= 1 
+\end{equation}
+\\
+Для пункта 5:
+\begin{equation}
+detF =
+\begin{vmatrix}
+-0.3\sqrt{3} + 0.4 & 0.4\sqrt{3} + 0.3 \\
+0.4\sqrt{3} + 0.3  & 0.3\sqrt{3} - 0.4 
+\end{vmatrix}
+= -1
+\end{equation}
+\\
+Для пункта 9:
+\begin{equation}
+detG =
+\begin{vmatrix}
+\sqrt{5} & 0\\
+0 & \sqrt{5}
+\end{vmatrix}
+= 5
+\end{equation}
+\\
+Для пункта 10:
+\begin{equation}
+detH =
+\begin{vmatrix}
+3 & 0\\
+0 & 1
+\end{vmatrix}
+= 3 
+\end{equation}
+
+
+
+
+
+\subsection{}
+\textit{В каких пунктах матрица обязательно получается симметричной?}\\
+\\
+\textbf{\textit{Ответ:}} в пунктах 1, 4, 5, 9, 10, 11, 14.
+
+
+
+
+
+\newpage
+\section{Визуализация}
+
+
+
+
+
 
 \end{document}
 
