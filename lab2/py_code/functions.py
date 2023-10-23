@@ -17,7 +17,7 @@ m_7 = np.array([[4/3, -1/6], [-8/3, 4/3]])
 
 m_8 = np.array([[1, 0], [10, -1]])
 
-m_9 = np.array([[sqrt(5), 0], [sqrt(5), 0]])
+m_9 = np.array([[sqrt(5), 0], [0, sqrt(5)]])
 
 m_10 = np.array([[3, 0], [0, 1]])
 
@@ -94,4 +94,37 @@ def f_13(vect):
 def f_14(vect):
     total = m_14.dot(vect)
     return total
+
+def f_15_a(vect):
+    total = m_15_a.dot(vect)
+    return total
+
+def f_15_b(vect):
+    total = m_15_b.dot(vect)
+    return total
+
+def f_15_ab(vect):
+    total = m_15_a.dot(m_15_b.dot(vect))
+    return total
+
+def f_15_ba(vect):
+    total = m_15_b.dot(m_15_a.dot(vect))
+    return total
+
+def f_16_a(vect):
+    total = m_16_a.dot(vect)
+    return total
+
+def f_16_b(vect):
+    total = m_16_b.dot(vect)
+    return total
+
+def f_16_ab(vect):
+    total = m_16_a.dot(m_16_b.dot(vect))
+    return total
+
+def f_16_ba(vect):
+    total = m_16_b.dot(m_16_a.dot(vect))
+    return total
+
 
