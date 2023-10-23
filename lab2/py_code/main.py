@@ -15,20 +15,20 @@ def drawLine(axes):
     x0 = 0
     y0 = 0
 
-    x1 = (-sqrt(177) - 3)/14
+    x1 = (-sqrt(4745) - 23)/62
     y1 = 1
 
-    x2 = (sqrt(177) - 3)/14
+    x2 = (sqrt(4745) - 23)/62
     y2 = 1.0
 
-    line1 = Line2D([0, x1], [0, y1], color="k")
-    axes.add_line(line1)
+    line1 = Line2D([-30, 30], [0, 0], color="k")
+    #axes.add_line(line1)
 
-    line2 = Line2D([0, x2], [0, y2], color="k")
-    axes.add_line(line2)
+    line2 = Line2D([-28, 28], [-7, 7], color="k")
+    #axes.add_line(line2)
 
-    plt.text(-1.4, 1.1, "v1", horizontalalignment="center")
-    plt.text(0.5, 1.3, "v2", horizontalalignment="center")
+    #plt.text(12, -1.5, "v1", horizontalalignment="center")
+    #plt.text(23, 6.5, "v2", horizontalalignment="center")
 
 
 def drawPolygons(axes):
@@ -45,10 +45,10 @@ def drawPolygons(axes):
                                             (p_4[0][0], p_4[1][0])], color='c')
     axes.add_patch(polygon_1)
 
-    r_1 = f_15_b(p_1)
-    r_2 = f_15_b(p_2)
-    r_3 = f_15_b(p_3)
-    r_4 = f_15_b(p_4)
+    r_1 = f_7(p_1)
+    r_2 = f_7(p_2)
+    r_3 = f_7(p_3)
+    r_4 = f_7(p_4)
 
     polygon_2 = matplotlib.patches.Polygon([(r_1[0][0], r_1[1][0]),
                                             (r_2[0][0], r_2[1][0]),
@@ -62,8 +62,8 @@ def drawPolygons(axes):
 
 
 if __name__ == "__main__":
-    plt.xlim(-6, 6)
-    plt.ylim(-7.5, 7.5)
+    plt.xlim(-2, 2)
+    plt.ylim(-3, 3)
     plt.grid()
 
     # Получим текущие оси
