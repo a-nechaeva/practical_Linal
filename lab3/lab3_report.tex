@@ -319,7 +319,8 @@ DrawShape (newVertices, facesCube, 'c')
 \end{lstlisting}
 \textit{Листинг 3. Часть кода, отвечающая за масштабирование и перемещение кубика.}
 \end{center}
-Заметим, что для получения корректного результата важен порядок умножения матриц: сначала кубик масшабируется, а затем сдвигается, то есть $newVertices = moveMatrix * (sizeMatrix * verticesCube) = moveMatrix *sizeMatrix * verticesCube$.
+Заметим, что для получения корректного результата важен порядок умножения матриц: сначала кубик масшабируется, а затем сдвигается, то есть $newVertices = moveMatrix * (sizeMatrix * verticesCube) = moveMatrix *sizeMatrix * verticesCube$.\\
+Если сначала выполнить сдвиг, а после -- масшабирование, то матрица сдвига тоже будет влиять на масштаб результата.
 
 \newpage
 \section{Задание. Выполнить вращение кубика.}
@@ -330,7 +331,7 @@ DrawShape (newVertices, facesCube, 'c')
 \begin{bmatrix}
 1 & 0 & 0 & 0\\
 0 & \cos \phi & - \sin \phi & 0 \\
-0 & 0 & 1 & b_3\\
+0 & \sin \phi & \cos \phi & 0\\
 0 & 0 & 0 & 1
 \end{bmatrix}
 \begin{bmatrix}
@@ -341,12 +342,107 @@ z\\
 \end{bmatrix}
 =
 \begin{bmatrix}
-x + b_1\\
-y + b_2\\
-z + b_3\\
+x \\
+y \cos \phi - z \sin \phi \\
+y \sin \phi + z \cos \phi\\
 1
 \end{bmatrix}
 \end{equation}
+
+Матрица вращения вокруг оси $Y$:
+
+\begin{equation}
+\begin{bmatrix}
+ \cos \phi & 0 & \sin \phi & 0\\
+0 & 1 & 0 & 0 \\
+- \sin \phi & 0 & \cos \phi & 0\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y\\
+z\\
+1
+\end{bmatrix}
+=
+\begin{bmatrix}
+x \cos \phi + z \sin \phi \\
+y \\
+-x \sin \phi + z \cos \phi\\
+1
+\end{bmatrix}
+\end{equation}
+
+Матрица вращения вокруг оси $Z$:
+
+\begin{equation}
+\begin{bmatrix}
+ \cos \phi & - \sin \phi & 0 & 0\\
+\sin \phi & \cos \phi & 0 & 0 \\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+x\\
+y\\
+z\\
+1
+\end{bmatrix}
+=
+\begin{bmatrix}
+x \cos \phi - y \sin \phi \\
+x \sin \phi + y \cos \phi \\
+ z \\
+1
+\end{bmatrix}
+\end{equation}
+
+Вращение по нескольким осям может привести к \textit{проблеме шарнирного замка}, поэтому обычно используется вращение вокруг конкретной оси, например заданную вектором $ \left( \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}} \right) $, ось должна быть задана единичным вектором.\\
+В данной работе будем проводить вращение относительно осей  $X$,  $Y$,  $Z$:
+
+\begin{center}
+\begin{lstlisting}
+phi = pi/3;
+
+rotateXMatrix = [
+    1, 0, 0, 0;
+    0, cos(phi), -sin(phi), 0;
+    0, sin(phi), cos(phi), 0;
+    0, 0, 0, 1 ];
+
+newVertices = rotateXMatrix * verticesCube;
+DrawShape (newVertices, facesCube, 'c')
+\end{lstlisting}
+\textit{Листинг 4. Часть кода, вращение кубика вокруг оси $X$ на 60\textdegree}
+\end{center}
+
+\begin{figure}[h!]
+\center{\includegraphics[width=0.75\linewidth]{pic/task_4_1.png}}
+\caption{Вращение кубика вокруг оси $X$ на 60\textdegree.}
+\end{figure}
+
+\begin{figure}[h!]
+\center{\includegraphics[width=0.75\linewidth]{pic/task_4_2.png}}
+\caption{Вращение кубика вокруг оси $Y$ на 60\textdegree.}
+\end{figure}
+
+\begin{figure}[h!]
+\center{\includegraphics[width=0.5\linewidth]{pic/task_4_3.png}}
+\caption{Вращение кубика вокруг оси $Z$ на 60\textdegree.}
+\end{figure}
+
+Построить комбинации поворотов. Относительно оси $X$, затем $Y$:
+\begin{figure}[h!]
+\center{\includegraphics[width=0.75\linewidth]{pic/task_4_4.png}}
+\caption{Вращение кубика вокруг оси $X$ на 60\textdegree, затем $Y$ на 30\textdegree .}
+\end{figure}
+
+\newpage
+Теперь поменяем порядок:
+\begin{figure}[h!]
+\center{\includegraphics[width=0.75\linewidth]{pic/task_4_5.png}}
+\caption{Вращение кубика вокруг оси $Y$ на 30\textdegree, затем $X$ 60\textdegree.}
+\end{figure}
 
 \newpage
 \section{Задание. Выполнить вращение кубика около одной вершины.}
