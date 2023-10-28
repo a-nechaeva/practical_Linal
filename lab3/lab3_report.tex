@@ -6,6 +6,9 @@
 \usepackage{indentfirst} % красная строка в первом параграфе в главе
 % Отображение страниц
 \usepackage{geometry} % размеры листа и отступов
+\usepackage{listings}
+\usepackage{color}
+
 \geometry{
 	left=12mm,
 	top=25mm,
@@ -147,9 +150,27 @@
 \section{Задание. Создайте кубик.}
 
 \subsection{Как работает код?}
+В первой части кода (рисунок 1) задаются координаты вершин куба: каждый столбец -- вершина и сверху вниз в нем заданы координаты $x$, $y$, $z$ в пространстве и $w$ (последняя отвечает за перспективу).
+\begin{figure}[h!]
+\center{\includegraphics[width=0.5\linewidth]{pic/code1.png}}
+\caption{Исходный код кубика, часть 1.}
+\end{figure}
 
+Вторая часть (рисунок 2) отвечает за задание плоскостей граней куба, в каждой строчке записаны 4 вершины куба, по которым строится грань.
+\begin{figure}[h!]
+\center{\includegraphics[width=0.5\linewidth]{pic/code2.png}}
+\caption{Исходный код кубика, часть 2.}
+\end{figure}
 
+Функция $DrawShape$ отвечает за отрисовку кубика, сначала строятся точки вершин по 3 координатам и с учетом перспективы, затем изображаются грани.
+\begin{figure}[h!]
+\center{\includegraphics[width=1\linewidth]{pic/code3.png}}
+\caption{Исходный код кубика, часть 3.}
+\end{figure}
+
+\newpage
 \subsection{Почему используется четырехкомпонентный вектор, а не трех?}
+Четвертый компонент в векторе позволяет реализовывать перспективную проекцию, а не только отображать ортогональную проекцию. Кроме того, с помощью матрицы $4 \times 4$ реализуются такие преобразования как сдвиги, повороты и т.д. в трехмерном пространстве.
 
 \subsection{Как задать другие фигуры?}
 
@@ -160,6 +181,54 @@
 
 \newpage
 \section{Задание. Изменить масштаб кубика.}
+Для изменения масштаба кубика использовалась матрица вида:
+\begin{equation}
+\begin{bmatrix}
+a_1 & 0 & 0 & 0\\
+0 & a_2 & 0 & 0 \\
+0 & 0 & a_3 & 0\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\end{equation}
+
+Где, $a_1$, $a_2$, $a_3$ отвечают за изменение масштаба по $x$, $y$ и $z$ соответственно.
+\begin{figure}[h!]
+\center{\includegraphics[width=1\linewidth]{pic/task_2_1.png}}
+\caption{Оригинальный масштаб,при $a_i = 1$ .}
+\end{figure}
+
+\begin{figure}[h!]
+\center{\includegraphics[width=0.75\linewidth]{pic/task_2_2.png}}
+\caption{Результат при $a_i = 2$ .}
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+\center{\includegraphics[width=0.75\linewidth]{pic/task_2_3.png}}
+\caption{Результат при $a_i = 0.5$ .}
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+\center{\includegraphics[width=0.75\linewidth]{pic/task_2_4.png}}
+\caption{Результат при $a_i = 5$ .}
+\end{figure}
+
+\begin{center}
+\begin{lstlisting}
+sizeMatrix = [
+    5, 0, 0, 0;
+    0, 5, 0, 0;
+    0, 0, 5, 0;
+    0, 0, 0, 1
+    ];
+
+newVertices = sizeMatrix * verticesCube;
+
+DrawShape (newVertices, facesCube, 'y')
+\end{lstlisting}
+\textit{Листинг 1. Часть кода, отвечающая за масшабирование кубика.}
+\end{center}
 
 
 
