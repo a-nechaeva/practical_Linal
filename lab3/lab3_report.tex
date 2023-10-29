@@ -446,8 +446,90 @@ DrawShape (newVertices, facesCube, 'c')
 
 Рисунки $13-14$ иллюстрируют отсутствие коммутативности у преобразований поворота в трехмерном пространстве.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 \newpage
 \section{Задание. Выполнить вращение кубика около одной вершины.}
+Для того, чтобы выполнить вращение кубика около одной вершины, выполним последовательно операции перемещения кубика так, чтобы вершина, около которой будет происходить вращение оказалась в начале координат, дальше выполним поворот вокруг оси $x, \, y$ или $z$, после переместим кубик в исходное положение.
+
+\begin{center}
+\begin{lstlisting}
+phi = pi/3;
+teta = pi/6;
+
+rotateYMatrix = [
+    cos(teta), 0, sin(teta), 0;
+    0, 1, 0, 0;
+    -sin(teta), 0, cos(teta), 0;
+    0, 0, 0, 1
+    ];
+
+rotateZMatrix = [
+    cos(phi), -sin(phi), 0, 0;
+    sin(phi), cos(phi), 0, 0;
+    0, 0, 1, 0;
+    0, 0, 0, 1
+    ];
+
+rotateXMatrix = [
+    1, 0, 0, 0;
+    0, cos(phi), -sin(phi), 0;
+    0, sin(phi), cos(phi), 0;
+    0, 0, 0, 1
+    ];
+
+moveMatrix1 = [
+    1, 0, 0, 1;
+    0, 1, 0, 1;
+    0, 0, 1, 1;
+    0, 0, 0, 1
+    ];
+moveMatrix2 = [
+    1, 0, 0, -1;
+    0, 1, 0, -1;
+    0, 0, 1, -1;
+    0, 0, 0, 1
+    ];
+
+
+newVertices = moveMatrix1 * rotateXMatrix *
+	 moveMatrix2 * verticesCube;
+
+DrawShape (newVertices, facesCube, 'c')
+\end{lstlisting}
+\textit{Листинг 5. Часть кода, вращение кубика около вершины $(1, 1, 1)$ вокруг оси параллельной $X$ на 60\textdegree}
+\end{center}
+
+\begin{figure}[h!]
+\center{\includegraphics[width=0.75\linewidth]{pic/task_5_1.png}}
+\caption{Вращение кубика около вершины $(1, 1, 1)$ вокруг оси параллельной $X$ на 60\textdegree.}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{pic/task_5_0.png}} a) \\
+\end{minipage}
+\hfill
+\begin{minipage}[h]{0.47\linewidth}
+\center{\includegraphics[width=1\linewidth]{pic/task_5_2.png}} \\b)
+\end{minipage}
+\caption{a) Исходное положение кубика, b) Вращение кубика около вершины $(1, 1, 1)$ вокруг оси параллельной $X$ на 60\textdegree, затем -- $Z$ на 60\textdegree.}
+
+\end{figure}
+
+
 
 
 
