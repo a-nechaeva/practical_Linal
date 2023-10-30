@@ -541,19 +541,42 @@ DrawShape (newVertices, facesCube, 'c')
 \,
 \newpage
 \section{Задание. Реализация камеры.}
-Матрица камеры осуществляет преобразование точек из мировых координат в координаты камеры и наоборот. Матрица камеры задается с помощью матрицы смещения и матриц поворота:
+Матрица камеры осуществляет преобразование точек из мировых координат в координаты камеры и наоборот. Матрица камеры задается как обратная к действиям камеры, так как мы производим преобразования пространства. То есть, для того, чтобы продемонстрировать тот вид, который мы получим при смещении камеры влево, мы должны преобразовать пространство как будто оно сдвинулось от нас вправо. 
+\\Матрицу камеры можно задать так:
+\begin{equation}
+M_{camera} = \left( M_{rotation} \cdot M_{move} \right)^{-1},
+\end{equation}
+где $M_{rotation}$ -- матрица, задающая поворот камеры, $M_{move}$ -- матрица, задающая смещение камеры.\\
+
+Реализуем камеру для сцены из 3 кубиков (рисунок 18).
+
+\begin{figure}[h!]
+\center{\includegraphics[width=1\linewidth]{pic/t_6_1.png}}
+\caption{Исходная сцена при $view(0, 90)$.}
+\end{figure}
+Переместим камеру в точку $(1, 2, 3)$.
+\begin{figure}[h!]
+\center{\includegraphics[width=0.7\linewidth]{pic/t_6_2.png}}
+\caption{Сцена после перемещения камеры в точку $(1, 2, 3)$.}
+\end{figure}
+
+Повернем камеру вокруг оси $X$ на $30$\textdegree.
+
+\begin{figure}[h!]
+\center{\includegraphics[width=0.7\linewidth]{pic/t_6_3.png}}
+\caption{Сцена после поворота камеры относительно  $X$ на $30$\textdegree.}
+\end{figure}
+
 \begin{center}
 \begin{lstlisting}
-moveCamera = [
-    1, 0, 0, 2;
-    0, 1, 0, 2;
-    0, 0, 1, 2;
+move1 = [
+    1, 0, 0, 0;
+    0, 1, 0, 0;
+    0, 0, 1, 0;
     0, 0, 0, 1;
-]; 
+    ];
 
-phi = 0;
-teta = 0;
-
+teta = pi/4;
 rotateYMatrix = [
     cos(teta), 0, sin(teta), 0;
     0, 1, 0, 0;
@@ -561,35 +584,34 @@ rotateYMatrix = [
     0, 0, 0, 1
     ];
 
+phi1 = pi/6;
+rotateXMatrix = [
+    1, 0, 0, 0;
+    0, cos(phi1), -sin(phi1), 0;
+    0, sin(phi1), cos(phi1), 0;
+    0, 0, 0, 1
+    ];
+
+phi = 0;
 rotateZMatrix = [
     cos(phi), -sin(phi), 0, 0;
     sin(phi), cos(phi), 0, 0;
     0, 0, 1, 0;
     0, 0, 0, 1
     ];
-rotateXMatrix = [
-    1, 0, 0, 0;
-    0, cos(phi), -sin(phi), 0;
-    0, sin(phi), cos(phi), 0;
-    0, 0, 0, 1
-    ];
 
-newVertices = (moveCamera * rotateZMatrix *
-	 rotateXMatrix)^(-1) * verticesCube;
-DrawShape (newVertices, facesCube, 'm')
+nv1 = (rotateXMatrix * move1)^(-1) * verticesCube1;
+nv2 = (rotateXMatrix * move1)^(-1) * verticesCube2;
+nv3 = (rotateXMatrix * move1)^(-1) * verticesCube3;
+
+DrawShape (nv1, facesCube, 'c')
+DrawShape (nv2, facesCube, 'w')
+DrawShape (nv3, facesCube, 'g')
 \end{lstlisting}
-\textit{Листинг 6. Часть кода, отвечающая за реализацию камеры}
+\textit{Листинг 6. Часть кода для реализации камеры.}
 \end{center}
 
-\begin{figure}[h!]
-\center{\includegraphics[width=0.75\linewidth]{pic/task_6_1.png}}
-\caption{Реализация камеры (на основе листинга 6).}
-\end{figure}
 
-\begin{figure}[h!]
-\center{\includegraphics[width=0.75\linewidth]{pic/task_6_2.png}}
-\caption{Реализация камеры на основе листинга 6 при $\phi = \frac{\pi}{4}$, $\theta = \frac{\pi}{4}$.}
-\end{figure}
 
 \newpage
 \section{Задание. Реализация перспективы.}
