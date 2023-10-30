@@ -444,7 +444,7 @@ DrawShape (newVertices, facesCube, 'c')
 \caption{Вращение кубика вокруг оси $Y$ на 30\textdegree, затем $X$ 60\textdegree.}
 \end{figure}
 
-Рисунки $13-14$ иллюстрируют отсутствие коммутативности у преобразований поворота в трехмерном пространстве.
+Рисунки $13-14$ иллюстрируют отсутствие коммутативности у преобразований поворота в трехмерном пространстве. То есть порядок вращения вокруг осей имеет значение. Когда мы вращаем куб относительно, например, оси $X$, его оси $Y$ и $Z$ должны были бы сместиться, но с помощью матриц мы задаем вращение только относительно начальных осей, они не сдвигаются вместе с изменением положения кубика.
 
 
 
@@ -529,13 +529,67 @@ DrawShape (newVertices, facesCube, 'c')
 
 \end{figure}
 
+\begin{figure}[h!]
+\center{\includegraphics[width=0.75\linewidth]{pic/task_5_3.png}}
+\caption{Оригинал (синий) и кубик после поворота (фиолетовый), случай изображенный на рисунке 16.}
+\end{figure}
 
 
 
 
 \newpage
+\,
+\newpage
 \section{Задание. Реализация камеры.}
+Матрица камеры осуществляет преобразование точек из мировых координат в координаты камеры и наоборот. Матрица камеры задается с помощью матрицы смещения и матриц поворота:
+\begin{center}
+\begin{lstlisting}
+moveCamera = [
+    1, 0, 0, 2;
+    0, 1, 0, 2;
+    0, 0, 1, 2;
+    0, 0, 0, 1;
+]; 
 
+phi = 0;
+teta = 0;
+
+rotateYMatrix = [
+    cos(teta), 0, sin(teta), 0;
+    0, 1, 0, 0;
+    -sin(teta), 0, cos(teta), 0;
+    0, 0, 0, 1
+    ];
+
+rotateZMatrix = [
+    cos(phi), -sin(phi), 0, 0;
+    sin(phi), cos(phi), 0, 0;
+    0, 0, 1, 0;
+    0, 0, 0, 1
+    ];
+rotateXMatrix = [
+    1, 0, 0, 0;
+    0, cos(phi), -sin(phi), 0;
+    0, sin(phi), cos(phi), 0;
+    0, 0, 0, 1
+    ];
+
+newVertices = (moveCamera * rotateZMatrix *
+	 rotateXMatrix)^(-1) * verticesCube;
+DrawShape (newVertices, facesCube, 'm')
+\end{lstlisting}
+\textit{Листинг 6. Часть кода, отвечающая за реализацию камеры}
+\end{center}
+
+\begin{figure}[h!]
+\center{\includegraphics[width=0.75\linewidth]{pic/task_6_1.png}}
+\caption{Реализация камеры (на основе листинга 6).}
+\end{figure}
+
+\begin{figure}[h!]
+\center{\includegraphics[width=0.75\linewidth]{pic/task_6_2.png}}
+\caption{Реализация камеры на основе листинга 6 при $\phi = \frac{\pi}{4}$, $\theta = \frac{\pi}{4}$.}
+\end{figure}
 
 \newpage
 \section{Задание. Реализация перспективы.}
