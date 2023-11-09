@@ -1,0 +1,233 @@
+\documentclass[a5paper, 10pt]{article}
+
+% Текст
+\usepackage[utf8]{inputenc} % UTF-8 кодировка
+\usepackage[russian]{babel} % Русский язык
+\usepackage{indentfirst} % красная строка в первом параграфе в главе
+% Отображение страниц
+\usepackage{geometry} % размеры листа и отступов
+\usepackage{listings}
+\usepackage{color}
+
+\geometry{
+	left=12mm,
+	top=25mm,
+	right=15mm,
+	bottom=17mm,
+	marginparsep=0mm,
+	marginparwidth=0mm,
+	headheight=10mm,
+	headsep=7mm,
+	nofoot}
+\usepackage{afterpage,fancyhdr} % настройка колонтитулов
+\pagestyle{fancy}
+\fancypagestyle{style}{ % создание нового стиля style
+	\fancyhf{} % очистка колонтитулов
+	\fancyhead[LO, RE]{Лабораторная работа № 4 } % название документа наверху
+	\fancyhead[RO, LE]{Динамические системы} % название section наверху
+	\fancyfoot[RO, LE]{\thepage} % номер страницы справа внизу на нечетных и слева внизу на четных
+	\renewcommand{\headrulewidth}{0.25pt} % толщина линии сверху
+	\renewcommand{\footrulewidth}{0pt} % толцина линии снизу
+}
+\fancypagestyle{plain}{ % создание нового стиля plain -- полностью пустого
+	\fancyhf{}
+	\renewcommand{\headrulewidth}{0pt}
+}
+\fancypagestyle{title}{ % создание нового стиля title -- для титульной страницы
+	\fancyhf{}
+	\fancyhead[C]{{\footnotesize
+			Министерство образования и науки Российской Федерации\\
+			Федеральное государственное автономное образовательное учреждение высшего образования
+	}}
+	\fancyfoot[C]{{\large 
+			Санкт-Петербург, 2023-2024
+	}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+
+% Математика
+\usepackage{amsmath, amsfonts, amssymb, amsthm} % Набор пакетов для математических текстов
+%\usepackage{dmvnbase} % мехматовский пакет latex-сокращений
+\usepackage{cancel} % зачеркивание для сокращений
+% Рисунки и фигуры
+\usepackage[pdftex]{graphicx} % вставка рисунков
+\usepackage{wrapfig, subcaption} % вставка фигур, обтекая текст
+\usepackage{caption} % для настройки подписей
+\captionsetup{figurewithin=none,labelsep=period, font={small,it}} % настройка подписей к рисункам
+% Рисование
+\usepackage{tikz} % рисование
+\usepackage{circuitikz}
+\usepackage{pgfplots} % графики
+% Таблицы
+\usepackage{multirow} % объединение строк
+\usepackage{multicol} % объединение столбцов
+% Остальное
+\usepackage[unicode, pdftex]{hyperref} % гиперссылки
+\usepackage{enumitem} % нормальное оформление списков
+\setlist{itemsep=0.15cm,topsep=0.15cm,parsep=1pt} % настройки списков
+% Теоремы, леммы, определения...
+\theoremstyle{definition}
+\newtheorem{Def}{Определение}
+\newtheorem*{Axiom}{Аксиома}
+\theoremstyle{plain}
+\newtheorem{Th}{Теорема}
+\newtheorem{Lem}{Лемма}
+\newtheorem{Cor}{Следствие}
+\newtheorem{Ex}{Пример}
+\theoremstyle{remark}
+\newtheorem*{Note}{Замечание}
+\newtheorem*{Solution}{Решение}
+\newtheorem*{Proof}{Доказательство}
+% Свои команды
+\newcommand{\comb}[1]{\left[\hspace{-4pt}\begin{array}{l}#1\end{array}\right.\hspace{-5pt} } % совокупность уравнений
+% Титульный лист
+\usepackage{csvsimple-l3}
+\newcommand*{\titlePage}{
+	\thispagestyle{title}
+	\begingroup
+	\begin{center}
+		%		{\footnotesize
+			%			Министерство образования и науки Российской Федерации\\
+			%			Федеральное государственное автономное образовательное учреждение высшего образования
+			%		}
+		%		
+		\vspace*{6ex}
+		
+		{\small
+			САНКТ-ПЕТЕРБУРГСКИЙ НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ ИТМО	
+		}
+		
+		\vspace*{2ex}
+		
+		{\normalsize
+			Факультет систем управления и робототехники
+		}
+		
+		\vspace*{15ex}
+		
+		{\Large \bfseries 
+			Лабораторная работа № 4
+		}
+\vspace*{2ex}
+	{\Large \bfseries 
+			
+"Динамические системы"
+		}
+\vspace*{2ex}
+		
+		{\normalsize
+			по дисциплине Практическая линейная алгебра
+		}
+
+	\end{center}
+	\vspace*{20ex}
+	\begin{flushright}
+		{\large 
+			\underline{Выполнила}: студентка гр. \textbf{R3238}\\
+			\begin{flushright}
+				\textbf{Нечаева А. А.}\\
+			\end{flushright}
+		}
+		
+		\vspace*{5ex}
+		
+		{\large 
+			\underline{Преподаватель}: \textit{Перегудин Алексей Алексеевич}
+		}
+	\end{flushright}	
+	\newpage
+	\setcounter{page}{1}
+	\endgroup}
+
+\begin{document}
+	\titlePage
+	\pagestyle{style}
+\newpage
+\textit{В этой лабораторной мы будем работать с непрерывными $ \left( t \in \mathbb{R} \right) $ и дискретными $ \left( k \in \mathbb{Z} \right)$  линейными динамическими системами второго порядка вида}
+
+\begin{equation}
+\begin{cases}
+\dot{x}_1(t) = a_1x_1(t)+a_2x_2(t),\\
+\dot{x}_2(t) = a_3x_1(t)+a_4x_2(t)
+\end{cases}
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+x_1(k+1) = a_1x_1(k)+a_2x_2(k),\\
+x_2(k+1) = a_3x_1(k)+a_4x_2(k)
+\end{cases}
+\end{equation}
+в более компактной форме:
+\begin{equation}
+\dot{x}(t) = Ax(t),
+\end{equation}
+
+\begin{equation}
+x(k+1) = Ax(k),
+\end{equation}
+где $x(\cdot) \in  \mathbb{R}^2, \,  \mathbb{R}^{2 \times 2} $.
+
+\newpage
+\section{задание}
+Зададимся двумя неколлинеарными векторами $v_1, \, v_2 \in \mathbb{R}^2$, не лежащими на координатных осях:
+\begin{equation}
+v_1 =
+\begin{pmatrix}
+1\\
+4\\
+\end{pmatrix}
+\, \, \, \, \, \, \, \, \, \,
+v_2 =
+\begin{pmatrix}
+2\\
+3\\
+\end{pmatrix}
+\end{equation}
+Придумаем непрерывные динамические системы:
+
+% part 1
+\subsection{}
+\textit{Система ассимптотически устойчива, при этом если $x(0) = v_1$, то $x(t) \in Span{v_1}$, а если $x(0) = v_2,$ то  $x(t) \in Span{v_2}$ при всех $t \geq 0$.}
+
+
+% part 2
+\subsection{}
+\textit{Система неустойчива, при этом у матрицы $A$ не существует двух неколлинеарных собственных векторов.}
+
+
+% part 3
+\subsection{}
+\textit{Система неустойчива, при этом если $x(0) = v_1$, то $\lim\limits_{t \to \infty} x(t) = 0$.}
+
+
+% part 4
+\subsection{}
+\textit{Система асимптотически устойчива, при этом матрица $A \in \mathbb{R}^2$ имеет комплексные собственные вектора вида $v_1 \pm v_2 i \in \mathbb{C}^2$.}
+
+
+% part 5
+\subsection{}
+\textit{Система неустойчива, при этом матрица $A$ имеет такие же слбственные вектора, как в предыдущем пункте.}
+
+
+
+% part 6
+\subsection{}
+\textit{Система не является асимптотически устойчивой, но не является и неустойчивой, при этом матрица $A$ имеет собственные векторы такие же, как в пункте 4.}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
