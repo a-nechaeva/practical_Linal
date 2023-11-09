@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  10 NOV 2023 00:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  10 NOV 2023 01:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1378,18 +1378,43 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[3] (./my_report.aux)
+[3]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[4]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[5]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[6] (./my_report.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
-Package rerunfilecheck Info: File `my_report.out' has not changed.
-(rerunfilecheck)             Checksum: 55E5D21F0CF5E39F88202DAE02F92B5A;393.
+
+
+Package rerunfilecheck Warning: File `my_report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `my_report.out':
+(rerunfilecheck)             Before: 55E5D21F0CF5E39F88202DAE02F92B5A;393
+(rerunfilecheck)             After:  F4FB4BFC26B0A98B0C83D08373A84707;1799.
  ) 
 Here is how much of TeX's memory you used:
- 52980 strings out of 475734
- 1310947 string characters out of 5786229
- 2003937 words of memory out of 5000000
+ 52993 strings out of 475734
+ 1311088 string characters out of 5786229
+ 2002938 words of memory out of 5000000
  73083 multiletter control sequences out of 15000+600000
  527122 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1409,10 +1434,10 @@ ts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/p
 ublic/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-s
 uper/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1
 200.pfb>
-Output written on my_report.pdf (4 pages, 206400 bytes).
+Output written on my_report.pdf (7 pages, 215531 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 107 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 500000)
+ 173 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 
