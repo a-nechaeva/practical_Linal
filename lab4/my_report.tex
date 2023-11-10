@@ -224,23 +224,135 @@ A=
 % part 3
 \subsection{}
 \textit{Система неустойчива, при этом если $x(0) = v_1$, то $\lim\limits_{t \to \infty} x(t) = 0$.}
-
+\begin{equation}
+A=
+\begin{pmatrix}
+0 & -1\\
+-16 & 0
+\end{pmatrix}
+\end{equation}
+Собственные числа: $\lambda_1 = 4, \, \lambda_2 = -4$, собственные векторы соответственно $w_1 = \begin{pmatrix} -1 \\ 4 \end{pmatrix}$,  $w_2 = \begin{pmatrix} 1 \\ 4 \end{pmatrix}$.
 
 % part 4
 \subsection{}
-\textit{Система асимптотически устойчива, при этом матрица $A \in \mathbb{R}^2$ имеет комплексные собственные вектора вида $v_1 \pm v_2 i \in \mathbb{C}^2$.}
+\textit{Система асимптотически устойчива, при этом матрица $A \in \mathbb{R}^2$ имеет комплексные собственные вектора вида $v_1 \pm v_2 i \in \mathbb{C}^2$.}\\
+\\
+Сначала запишем собственные векторы искомой матрицы:
+\begin{equation}
+w_1 =
+\begin{pmatrix}
+1 + 2i \\
+4 + 3i
+\end{pmatrix}
+\,\,\,\,\,\,\,\,\,\,
+w_2 =
+\begin{pmatrix}
+1 - 2i \\
+4 - 3i
+\end{pmatrix}
+\end{equation}
 
+Будем искать матрицу записав ее спектральное разложение $ A = V \cdot D \cdot V^{-1}$, где $V$ -- матрица, составленная из собственных векторов матрицы $A$, $D$ -- матрица, на главной диагонали которой расположены собственные числа.
+
+\begin{equation}
+A =
+\begin{pmatrix}
+1 + 2i &  1 - 2i \\
+4 + 3i & 4 - 3i
+\end{pmatrix}
+\begin{pmatrix}
+-1 + i &  0 \\
+0 & -1 -i
+\end{pmatrix}
+\begin{pmatrix}
+1 + 2i &  1 - 2i \\
+4 + 3i & 4 - 3i
+\end{pmatrix}^{-1}
+=
+\begin{pmatrix}
+1 & -1  \\
+5 & -3
+\end{pmatrix}
+\end{equation}
+Искомая матрица:
+\begin{equation}
+A =
+\begin{pmatrix}
+1 & -1  \\
+5 & -3
+\end{pmatrix}
+\end{equation}
 
 % part 5
 \subsection{}
-\textit{Система неустойчива, при этом матрица $A$ имеет такие же слбственные вектора, как в предыдущем пункте.}
+\textit{Система неустойчива, при этом матрица $A$ имеет такие же слбственные вектора, как в предыдущем пункте.}\\
+\\
+Аналогично будем искать матрицу записав ее спектральное разложение $ A = V \cdot D \cdot V^{-1}$, где $V$ -- матрица, составленная из собственных векторов матрицы $A$, $D$ -- матрица, на главной диагонали которой расположены собственные числа.
 
+\begin{equation}
+A =
+\begin{pmatrix}
+1 + 2i &  1 - 2i \\
+4 + 3i & 4 - 3i
+\end{pmatrix}
+\begin{pmatrix}
+1+ i &  0 \\
+0 & 1 -i
+\end{pmatrix}
+\begin{pmatrix}
+1 + 2i &  1 - 2i \\
+4 + 3i & 4 - 3i
+\end{pmatrix}^{-1}
+=
+\begin{pmatrix}
+3 & -1  \\
+5 & -1
+\end{pmatrix}
+\end{equation}
+Искомая матрица:
+\begin{equation}
+A =
+\begin{pmatrix}
+3 & -1  \\
+5 & -1
+\end{pmatrix}
+\end{equation}
 
 
 % part 6
 \subsection{}
-\textit{Система не является асимптотически устойчивой, но не является и неустойчивой, при этом матрица $A$ имеет собственные векторы такие же, как в пункте 4.}
+\textit{Система не является асимптотически устойчивой, но не является и неустойчивой, при этом матрица $A$ имеет собственные векторы такие же, как в пункте 4.}\\
 
+Вновь будем искать матрицу записав ее спектральное разложение $ A = V \cdot D \cdot V^{-1}$, где $V$ -- матрица, составленная из собственных векторов матрицы $A$, $D$ -- матрица, на главной диагонали которой расположены собственные числа.
+
+\begin{equation}
+A =
+\begin{pmatrix}
+1 + 2i &  1 - 2i \\
+4 + 3i & 4 - 3i
+\end{pmatrix}
+\begin{pmatrix}
+i &  0 \\
+0 & -i
+\end{pmatrix}
+\begin{pmatrix}
+1 + 2i &  1 - 2i \\
+4 + 3i & 4 - 3i
+\end{pmatrix}^{-1}
+=
+\begin{pmatrix}
+2 & -1  \\
+5 & -2
+\end{pmatrix}
+\end{equation}
+Искомая матрица:
+\begin{equation}
+A =
+\begin{pmatrix}
+2 & -1  \\
+5 & -2
+\end{pmatrix}
+\end{equation}
 
 
 %task 2
@@ -267,6 +379,13 @@ A=
 % part 3
 \subsection{}
 \textit{Система неустойчива, при этом если $x(0) = v_1$, то $\lim\limits_{t \to \infty} x(t) = 0$.}
+\begin{equation}
+A=
+\begin{pmatrix}
+0 & -1\\
+-16 & 0
+\end{pmatrix}
+\end{equation}
 
 
 % part 4
