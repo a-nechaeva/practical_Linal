@@ -457,7 +457,7 @@ A =
 % part 5
 \newpage
 \subsection{}
-\textit{Система неустойчива, при этом матрица $A$ имеет такие же слбственные вектора, как в предыдущем пункте.}
+\textit{Система неустойчива, при этом матрица $A$ имеет такие же собственные вектора, как в предыдущем пункте.}
 \begin{equation}
 A =
 \begin{pmatrix}
@@ -466,8 +466,20 @@ A =
 \end{pmatrix}
 \end{equation}
 
+\begin{figure}[h!]
+\center{\includegraphics[width=1\linewidth]{pic/5_all.png}}
+\caption{Моделирование 5 при  $1: \, x_0 = \begin{pmatrix} 1 \\ 4 \end{pmatrix}$, $2: \, x_0 = \begin{pmatrix} -2 \\ 7 \end{pmatrix}$, $3: \, x_0 = \begin{pmatrix} 9 \\ 3 \end{pmatrix}$.}
+\end{figure}
+\begin{figure}[h!]
+\center{\includegraphics[width=1\linewidth]{pic/5_x.png}}
+\caption{Моделирование 5, только зависимости $x(t)$, \\при  $1: \, x_0 = \begin{pmatrix} 1 \\ 4 \end{pmatrix}$, $2: \, x_0 = \begin{pmatrix} -2 \\ 7 \end{pmatrix}$, $3: \, x_0 = \begin{pmatrix} 9 \\ 3 \end{pmatrix}$.}
+\end{figure}
+
+\newpage
+Заметим, что система действительно является неустойчивой, так как кривые $x_1(t), \, x_2(t)$ стремятся к $-\infty$ для заданных начальных условий.
 
 % part 6
+\newpage
 \subsection{}
 \textit{Система не является асимптотически устойчивой, но не является и неустойчивой, при этом матрица $A$ имеет собственные векторы такие же, как в пункте 4.}
 \begin{equation}

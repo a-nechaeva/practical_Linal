@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  11 NOV 2023 19:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  11 NOV 2023 23:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1522,24 +1522,50 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [12 <./pic/4_x.png (PNG copy)>]
+<pic/5_all.png, id=186, 642.4pt x 481.8pt>
+File: pic/5_all.png Graphic file (type png)
+<use pic/5_all.png>
+Package pdftex.def Info: pic/5_all.png  used on input line 470.
+(pdftex.def)             Requested size: 344.27837pt x 258.21257pt.
+<pic/5_x.png, id=187, 642.4pt x 481.8pt>
+File: pic/5_x.png Graphic file (type png)
+<use pic/5_x.png>
+Package pdftex.def Info: pic/5_x.png  used on input line 474.
+(pdftex.def)             Requested size: 344.27837pt x 258.21257pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[13]
+[13 <./pic/5_all.png (PNG copy)>]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[14]
+[14 <./pic/5_x.png (PNG copy)>]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[15] (./my_report.aux)
+[15]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[16]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[17] (./my_report.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
@@ -1548,10 +1574,10 @@ Package rerunfilecheck Info: File `my_report.out' has not changed.
 (rerunfilecheck)             Checksum: F4FB4BFC26B0A98B0C83D08373A84707;1799.
  ) 
 Here is how much of TeX's memory you used:
- 53119 strings out of 475734
- 1313229 string characters out of 5786229
+ 53137 strings out of 475734
+ 1313541 string characters out of 5786229
  2008941 words of memory out of 5000000
- 73171 multiletter control sequences out of 15000+600000
+ 73185 multiletter control sequences out of 15000+600000
  530358 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,13n,89p,762b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1576,10 +1602,10 @@ xmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/f
 onts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1
 /public/cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm
 -super/sfti1200.pfb>
-Output written on my_report.pdf (16 pages, 539523 bytes).
+Output written on my_report.pdf (18 pages, 593628 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 237 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 325 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

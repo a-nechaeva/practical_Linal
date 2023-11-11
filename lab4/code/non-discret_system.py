@@ -32,7 +32,7 @@ def m_t(m, time):
 #t = np.arange(-10, 10, 1)
 #t = 3
 t = []
-cur_time = 0.00000
+cur_time = 0.000
 x_1_1 = []
 x_2_1 = []
 x_1_2 = []
@@ -43,18 +43,20 @@ x_01 = [[1], [4]]
 x_02 = [[-2], [7]]
 x_03 = [[9], [3]]
 
-for i in range(10000):
+for i in range(200):
     t.append(cur_time)
-    x_1_1.append(np.matmul(expm(m_t(a_4, cur_time)), x_01)[0])
-    x_2_1.append(np.matmul(expm(m_t(a_4, cur_time)), x_01)[1])
+    x_1_1.append(np.matmul(expm(m_t(a_5, cur_time)), x_01)[0])
+    x_2_1.append(np.matmul(expm(m_t(a_5, cur_time)), x_01)[1])
 
-    x_1_2.append(np.matmul(expm(m_t(a_4, cur_time)), x_02)[0])
-    x_2_2.append(np.matmul(expm(m_t(a_4, cur_time)), x_02)[1])
+    x_1_2.append(np.matmul(expm(m_t(a_5, cur_time)), x_02)[0])
+    x_2_2.append(np.matmul(expm(m_t(a_5, cur_time)), x_02)[1])
 
-    x_1_3.append(np.matmul(expm(m_t(a_4, cur_time)), x_03)[0])
-    x_2_3.append(np.matmul(expm(m_t(a_4, cur_time)), x_03)[1])
-    cur_time += 0.01
+    x_1_3.append(np.matmul(expm(m_t(a_5, cur_time)), x_03)[0])
+    x_2_3.append(np.matmul(expm(m_t(a_5, cur_time)), x_03)[1])
+    cur_time += 0.005
 
+
+plt.axes().set_aspect(0.01)
 
 plt.plot(t, x_1_1, label='1:x_1')
 plt.plot(t, x_2_1, label='1:x_2')
@@ -68,10 +70,11 @@ plt.plot(t, x_1_2, label='3:x_1')
 plt.plot(t, x_2_2, label='3:x_2')
 #plt.plot(x_1_3, x_2_3, label='3:x_2 (x_1)')
 
-axes = plt.gca()
-axes.set_aspect("equal")
+#axes = plt.gca()
+#ax2 = plt.axes([0, 0.6, 1, 1])
+
 plt.grid()
-plt.legend(bbox_to_anchor=(1, 1), loc='upper left')
+plt.legend(bbox_to_anchor=(0.1, 0.7), loc='upper left')
 plt.show()
 
 
