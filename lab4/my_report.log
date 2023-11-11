@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  12 NOV 2023 00:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  12 NOV 2023 00:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1548,24 +1548,63 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [14 <./pic/5_x.png (PNG copy)>]
+<pic/6_all_1.png, id=199, 642.4pt x 481.8pt>
+File: pic/6_all_1.png Graphic file (type png)
+<use pic/6_all_1.png>
+Package pdftex.def Info: pic/6_all_1.png  used on input line 494.
+(pdftex.def)             Requested size: 344.27837pt x 258.21257pt.
+<pic/6_x.png, id=200, 642.4pt x 481.8pt>
+File: pic/6_x.png Graphic file (type png)
+<use pic/6_x.png>
+Package pdftex.def Info: pic/6_x.png  used on input line 499.
+(pdftex.def)             Requested size: 344.27837pt x 258.21257pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pic/6_t.png, id=201, 642.4pt x 481.8pt>
+File: pic/6_t.png Graphic file (type png)
+<use pic/6_t.png>
+Package pdftex.def Info: pic/6_t.png  used on input line 504.
+(pdftex.def)             Requested size: 344.27837pt x 258.21257pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[15]
+[15 <./pic/6_all_1.png (PNG copy)>]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[16]
+[16 <./pic/6_x.png (PNG copy)>]
+Overfull \hbox (5.91867pt too wide) in paragraph at lines 511--512
+[]\T2A/cmr/m/n/10 Система яв-ля-ет-ся не яв-ля-ет-ся ни асимп-то-ти-че-ски усто
+й-чи-вой, ни неустой-
+ []
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[17] (./my_report.aux)
+[17 <./pic/6_t.png (PNG copy)>]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[18]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[19] (./my_report.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
@@ -1574,10 +1613,10 @@ Package rerunfilecheck Info: File `my_report.out' has not changed.
 (rerunfilecheck)             Checksum: F4FB4BFC26B0A98B0C83D08373A84707;1799.
  ) 
 Here is how much of TeX's memory you used:
- 53137 strings out of 475734
- 1313555 string characters out of 5786229
+ 53163 strings out of 475734
+ 1314023 string characters out of 5786229
  2008939 words of memory out of 5000000
- 73185 multiletter control sequences out of 15000+600000
+ 73206 multiletter control sequences out of 15000+600000
  530358 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,13n,89p,762b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1602,10 +1641,10 @@ xmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/f
 onts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1
 /public/cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm
 -super/sfti1200.pfb>
-Output written on my_report.pdf (18 pages, 597476 bytes).
+Output written on my_report.pdf (20 pages, 726299 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 245 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 341 PDF objects out of 1000 (max. 8388607)
+ 256 compressed objects within 3 object streams
+ 71 named destinations out of 1000 (max. 500000)
+ 211 words of extra memory for PDF output out of 10000 (max. 10000000)
 
