@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  11 NOV 2023 00:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  11 NOV 2023 19:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1407,30 +1407,75 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [4]
+<pic/1_x0_1_4_single.png, id=123, 642.4pt x 481.8pt>
+File: pic/1_x0_1_4_single.png Graphic file (type png)
+<use pic/1_x0_1_4_single.png>
+Package pdftex.def Info: pic/1_x0_1_4_single.png  used on input line 374.
+(pdftex.def)             Requested size: 344.27837pt x 258.21257pt.
+<pic/1_x0_2_s.png, id=124, 642.4pt x 481.8pt>
+File: pic/1_x0_2_s.png Graphic file (type png)
+<use pic/1_x0_2_s.png>
+Package pdftex.def Info: pic/1_x0_2_s.png  used on input line 379.
+(pdftex.def)             Requested size: 240.9938pt x 180.7407pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pic/1_x0_3.png, id=125, 642.4pt x 481.8pt>
+File: pic/1_x0_3.png Graphic file (type png)
+<use pic/1_x0_3.png>
+Package pdftex.def Info: pic/1_x0_3.png  used on input line 383.
+(pdftex.def)             Requested size: 258.20877pt x 193.6576pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pic/1_all.png, id=126, 642.4pt x 481.8pt>
+File: pic/1_all.png Graphic file (type png)
+<use pic/1_all.png>
+Package pdftex.def Info: pic/1_all.png  used on input line 387.
+(pdftex.def)             Requested size: 344.27837pt x 258.21257pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[5]
+[5 <./pic/1_x0_1_4_single.png (PNG copy)>]
+
+LaTeX Warning: Text page 6 contains only floats.
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[6]
+[6 <./pic/1_x0_2_s.png (PNG copy)> <./pic/1_x0_3.png (PNG copy)>]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[7]
+[7 <./pic/1_all.png (PNG copy)>]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[8] (./my_report.aux)
+[8]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[9]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[10] (./my_report.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
@@ -1439,32 +1484,38 @@ Package rerunfilecheck Info: File `my_report.out' has not changed.
 (rerunfilecheck)             Checksum: F4FB4BFC26B0A98B0C83D08373A84707;1799.
  ) 
 Here is how much of TeX's memory you used:
- 53020 strings out of 475734
- 1311432 string characters out of 5786229
- 2008937 words of memory out of 5000000
- 73093 multiletter control sequences out of 15000+600000
- 527939 words of font info for 70 fonts, out of 8000000 for 9000
+ 53074 strings out of 475734
+ 1312447 string characters out of 5786229
+ 2008941 words of memory out of 5000000
+ 73136 multiletter control sequences out of 15000+600000
+ 530358 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,89p,762b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
-live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-bm10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><
-c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive
-/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texm
-f-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fon
-ts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/p
-ublic/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1
-000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on my_report.pdf (9 pages, 235982 bytes).
+live/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><c:/texlive/
+2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/t
+exlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/20
+23/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2023/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2023/texmf-dist/fonts/type
+1/public/cm-super/sfbx1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/c
+m-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
+bx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb
+><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texli
+ve/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/f
+onts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1
+/public/cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm
+-super/sfti1200.pfb>
+Output written on my_report.pdf (11 pages, 394096 bytes).
 PDF statistics:
- 232 PDF objects out of 1000 (max. 8388607)
- 185 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 280 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
