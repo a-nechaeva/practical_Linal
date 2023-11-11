@@ -43,34 +43,35 @@ x_01 = [[1], [4]]
 x_02 = [[-2], [7]]
 x_03 = [[9], [3]]
 
-for i in range(2500):
+for i in range(10000):
     t.append(cur_time)
-    x_1_1.append(np.matmul(expm(m_t(a_2, cur_time)), x_01)[0])
-    x_2_1.append(np.matmul(expm(m_t(a_2, cur_time)), x_01)[1])
+    x_1_1.append(np.matmul(expm(m_t(a_4, cur_time)), x_01)[0])
+    x_2_1.append(np.matmul(expm(m_t(a_4, cur_time)), x_01)[1])
 
-    x_1_2.append(np.matmul(expm(m_t(a_2, cur_time)), x_02)[0])
-    x_2_2.append(np.matmul(expm(m_t(a_2, cur_time)), x_02)[1])
+    x_1_2.append(np.matmul(expm(m_t(a_4, cur_time)), x_02)[0])
+    x_2_2.append(np.matmul(expm(m_t(a_4, cur_time)), x_02)[1])
 
-    x_1_3.append(np.matmul(expm(m_t(a_2, cur_time)), x_03)[0])
-    x_2_3.append(np.matmul(expm(m_t(a_2, cur_time)), x_03)[1])
-    cur_time += 0.0001
+    x_1_3.append(np.matmul(expm(m_t(a_4, cur_time)), x_03)[0])
+    x_2_3.append(np.matmul(expm(m_t(a_4, cur_time)), x_03)[1])
+    cur_time += 0.01
 
 
 plt.plot(t, x_1_1, label='1:x_1')
 plt.plot(t, x_2_1, label='1:x_2')
-plt.plot(x_1_1, x_2_1, label='1:x_2 (x_1)')
+#plt.plot(x_1_1, x_2_1, label='1:x_2 (x_1)')
 
 plt.plot(t, x_1_2, label='2:x_1')
 plt.plot(t, x_2_2, label='2:x_2')
-plt.plot(x_1_2, x_2_2, label='2:x_2 (x_1)')
+#plt.plot(x_1_2, x_2_2, label='2:x_2 (x_1)')
 
 plt.plot(t, x_1_2, label='3:x_1')
 plt.plot(t, x_2_2, label='3:x_2')
-plt.plot(x_1_3, x_2_3, label='3:x_2 (x_1)')
+#plt.plot(x_1_3, x_2_3, label='3:x_2 (x_1)')
+
 axes = plt.gca()
 axes.set_aspect("equal")
 plt.grid()
-plt.legend(bbox_to_anchor=(0.7, 1), loc='upper left')
+plt.legend(bbox_to_anchor=(1, 1), loc='upper left')
 plt.show()
 
 
