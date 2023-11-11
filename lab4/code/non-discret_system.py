@@ -43,16 +43,16 @@ x_01 = [[1], [4]]
 x_02 = [[-2], [7]]
 x_03 = [[9], [3]]
 
-for i in range(1000):
+for i in range(500):
     t.append(cur_time)
-    x_1_1.append(np.matmul(expm(m_t(a_6, cur_time)), x_01)[0])
-    x_2_1.append(np.matmul(expm(m_t(a_6, cur_time)), x_01)[1])
+    x_1_1.append(np.matmul(expm(m_t(a_4, cur_time)), x_01)[0])
+    x_2_1.append(np.matmul(expm(m_t(a_4, cur_time)), x_01)[1])
 
-    x_1_2.append(np.matmul(expm(m_t(a_6, cur_time)), x_02)[0])
-    x_2_2.append(np.matmul(expm(m_t(a_6, cur_time)), x_02)[1])
+    x_1_2.append(np.matmul(expm(m_t(a_4, cur_time)), x_02)[0])
+    x_2_2.append(np.matmul(expm(m_t(a_4, cur_time)), x_02)[1])
 
-    x_1_3.append(np.matmul(expm(m_t(a_6, cur_time)), x_03)[0])
-    x_2_3.append(np.matmul(expm(m_t(a_6, cur_time)), x_03)[1])
+    x_1_3.append(np.matmul(expm(m_t(a_4, cur_time)), x_03)[0])
+    x_2_3.append(np.matmul(expm(m_t(a_4, cur_time)), x_03)[1])
     cur_time += 0.01
 
 
