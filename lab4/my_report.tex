@@ -572,14 +572,40 @@ A =
 \begin{equation}
 \lambda^2 +  1 =0
 \end{equation}
-
-
+Пусть искомая матрица имеет вид:
 \begin{equation}
 A =
 \begin{pmatrix}
--\frac{1}{\sqrt{2}} & -\frac{1}{2} \\
-\\
-1 & -\frac{1}{\sqrt{2}}
+a & c \\
+1 & b
+\end{pmatrix}
+\end{equation}
+Тогда характеристический полином:
+\begin{equation}
+\left( a - \lambda \right) \left( b - \lambda \right) - c = 0
+\end{equation}
+\begin{equation}
+\lambda^ 2 - \lambda (a + b ) + ab - c = \lambda^2 +  1 =0
+\end{equation}
+
+\begin{equation}
+\begin{cases}
+a = -b\\
+ab - c = 1
+\end{cases}
+\to
+\begin{cases}
+a = -b\\
+-a^2 - c = 1
+\end{cases}
+\end{equation}
+Пусть $ a = 1$, тогда $b = -1$, $c = -2$.\\
+Искомая матрица:
+\begin{equation}
+A =
+\begin{pmatrix}
+1 & -2 \\
+1 & -1
 \end{pmatrix}
 \end{equation}
 
