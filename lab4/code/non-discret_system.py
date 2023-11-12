@@ -1,7 +1,4 @@
-import matplotlib.patches
-import matplotlib.path
 import matplotlib.pyplot as plt
-from matplotlib.lines import Line2D
 import numpy as np
 from scipy.linalg import expm
 

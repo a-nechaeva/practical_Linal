@@ -510,15 +510,78 @@ A =
 \newpage
 Система является не является ни асимптотически устойчивой, ни неустойчивой. Во-первых, функции $x_1(t)$, $x_2(t)$ не стремятся ни к нулю, ни к бесконечности при $t \to \infty$, а траектории $x_2(x_1)$ замкнуты, значит система обладает просто устойчивостью.
 
+
+
 %task 3
 \newpage
 \section{задание. Придумать дискретное.}
 \textit{Придумать дискретные динамические системы, обладающие следующими собственными числами (при этом ни одна из придуманных матриц $A$ не должна быть диагональной}:
 
+%part 1
+\subsection{$\lambda_{1, 2} = -1$}
+
+\begin{equation}
+A =
+\begin{pmatrix}
+-1&1 \\
+0& -1
+\end{pmatrix}
+\end{equation}
 
 
+%part 2
+\subsection{$\lambda_{1, 2} = -\frac{1}{\sqrt{2}} \pm \frac{1}{\sqrt{2}} i$}
+
+\begin{equation}
+\left( \lambda + \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} i \right)\left( \lambda + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} i \right)=0
+\end{equation}
+\begin{equation}
+\lambda \left( \lambda + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} i \right) + \frac{1}{\sqrt{2}} \left( \lambda + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} i \right) - \frac{1}{\sqrt{2}} i \left( \lambda + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} i \right) =0
+\end{equation}
+\begin{equation}
+  \lambda^2 + \frac{1}{\sqrt{2}}\lambda + \frac{1}{\sqrt{2}} i\lambda + \lambda\frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}}  \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}} \frac{1}{\sqrt{2}} i  - \frac{1}{\sqrt{2}} i\lambda - \frac{1}{\sqrt{2}} i \frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}} i \frac{1}{\sqrt{2}} i  =0
+\end{equation}
+
+\begin{equation}
+  \lambda^2 + \frac{2\lambda}{\sqrt{2}} + 1  =0
+\end{equation}
+\begin{equation}
+ \left( \lambda^2 + \frac{2\lambda}{\sqrt{2}} + \frac{1}{2} \right) + \frac{1}{2}  =0
+\end{equation}
+\begin{equation}
+ \left( \lambda + \frac{1}{\sqrt{2}} \right)^2 + \frac{1}{2}  =0
+\end{equation}
+Искомая матрица:
+\begin{equation}
+A =
+\begin{pmatrix}
+-\frac{1}{\sqrt{2}} & -\frac{1}{2} \\
+\\
+1 & -\frac{1}{\sqrt{2}}
+\end{pmatrix}
+\end{equation}
 
 
+%part 3
+\subsection{$\lambda_{1, 2} = \pm i$}
+
+\begin{equation}
+\left( \lambda +  i \right)\left( \lambda - i \right)=0
+\end{equation}
+
+\begin{equation}
+\lambda^2 +  1 =0
+\end{equation}
+
+
+\begin{equation}
+A =
+\begin{pmatrix}
+-\frac{1}{\sqrt{2}} & -\frac{1}{2} \\
+\\
+1 & -\frac{1}{\sqrt{2}}
+\end{pmatrix}
+\end{equation}
 
 %task 4
 \newpage
