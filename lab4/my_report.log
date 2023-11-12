@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  12 NOV 2023 22:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  12 NOV 2023 22:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1747,19 +1747,24 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 [19]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 644.
+(hyperref)                removing `math shift' on input line 646.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\lambda' on input line 644.
+(hyperref)                removing `\lambda' on input line 646.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 644.
+(hyperref)                removing `subscript' on input line 646.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 644.
+(hyperref)                removing `math shift' on input line 646.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 672--676
+
+ []
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1781,8 +1786,8 @@ Package rerunfilecheck Info: File `my_report.out' has not changed.
 (rerunfilecheck)             Checksum: 2C76DFA44A062BE36B74FE9F0AD3FD16;2416.
  ) 
 Here is how much of TeX's memory you used:
- 53198 strings out of 475734
- 1314488 string characters out of 5786229
+ 53204 strings out of 475734
+ 1314566 string characters out of 5786229
  2011941 words of memory out of 5000000
  73212 multiletter control sequences out of 15000+600000
  530358 words of font info for 77 fonts, out of 8000000 for 9000
@@ -1813,10 +1818,10 @@ m1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
 <c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/texliv
 e/2023/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2023/tex
 mf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on my_report.pdf (22 pages, 775469 bytes).
+Output written on my_report.pdf (22 pages, 776408 bytes).
 PDF statistics:
- 423 PDF objects out of 1000 (max. 8388607)
- 325 compressed objects within 4 object streams
- 100 named destinations out of 1000 (max. 500000)
+ 430 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
+ 106 named destinations out of 1000 (max. 500000)
  251 words of extra memory for PDF output out of 10000 (max. 10000000)
 
