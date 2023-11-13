@@ -1142,32 +1142,47 @@ a & b
 \begin{equation}
 \lambda \left( \lambda - b \right) - a = 0
 \end{equation}
+\begin{equation}
+\lambda^2 - b\lambda - a = 0
+\end{equation}
+\begin{equation}
+\lambda_{1, 2} = \frac{b}{2} \pm \frac{\sqrt{4a-b^2}i}{2}
+\end{equation}
 
 \textit{Проанализируем устойчивость и характер движения данной системы при}
 
 % part 1
-\section{ $a< 0, \, b = 0$}
+\subsection{ $a< 0, \, b = 0$}
 Соотвествующий характеристический полином:
 \begin{equation}
 \lambda^2 - a = 0
 \end{equation}
-Собственные значения: $\lambda_{1,2} = \pm \sqrt{a} i$, система устойчива, \\так как $Re (\lambda_{1,2} )= 0$.
+Собственные значения: $\lambda_{1,2} = \pm \sqrt{a} i$, система устойчива, \\так как $Re (\lambda_{1,2} )= 0$.\\
+Физическая система: \textit{математический маятник без трения}.
 
 
 % part 2
-\section{ $a < 0, \, b < 0$}
-
+\subsection{ $a < 0, \, b < 0$}
+Система будем неустойчивой.
+\begin{equation}
+\lambda_{1, 2} = \frac{b}{2} \pm \frac{\sqrt{4a-b^2}i}{2} = \frac{b}{2} \pm \frac{\sqrt{-\left(4|a|+b^2\right)}i}{2} = \frac{b}{2} \mp \frac{\sqrt{4|a|+b^2}}{2}
+\end{equation}
+Отсюда $Re \left( \lambda_2 \right) = \frac{b}{2} + \frac{\sqrt{4|a|+b^2}}{2} > 0$\\
+Физическая система: \textit{обратный маятник без трения}.
 
 % part 3
-\section{ $a> 0, \, b = 0$}
+\subsection{ $a> 0, \, b = 0$}
 Соотвествующий характеристический полином:
 \begin{equation}
 \lambda^2 - a = 0
 \end{equation}
-Собственные значения: $\lambda_{1,2} = \pm \sqrt{a}$, система неустойчива, так как хотя бы один из $\lambda > 0$.
+Собственные значения: $\lambda_{1,2} = \pm \sqrt{a}$, система неустойчива, так как хотя бы один из $\lambda > 0$.\\
+Физическая система: \textit{обратный маятник без трения}.
 
 % part 4
-\section{ $a> 0, \, b < 0$}
+\subsection{ $a> 0, \, b < 0$}
+Система будем асимптотически устойчивой, так как $Re (\lambda_{1,2} )= \frac{b}{2} < 0$.\\
+Физическая система: \textit{математический маятник с трением}.
 
 \end{document}
 
