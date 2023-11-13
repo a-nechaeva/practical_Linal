@@ -1119,6 +1119,55 @@ A =
 
 Графики иллюстрируют соответствие условия асимптотической устойчивости $ \left| \lambda \right| < 1$ и полученных характеристик движения систем (например, под номерами 6, 7, 8, 12).
 
+\newpage
+% task 5
+\section{задание. Осциллятор?}
+
+\textit{Рассмотрим непрерывную систему вида}
+\begin{equation}
+\begin{cases}
+ \dot{x}_1 = x_2  \\
+\dot{x}_2 = ax_1 + bx_2
+\end{cases}
+\end{equation}
+Запишем соответствующую данной системе матрицу $A$:
+\begin{equation}
+A =
+\begin{pmatrix}
+ 0 &  1  \\
+a & b
+\end{pmatrix}
+\end{equation}
+И характеристический полином:
+\begin{equation}
+\lambda \left( \lambda - b \right) - a = 0
+\end{equation}
+
+\textit{Проанализируем устойчивость и характер движения данной системы при}
+
+% part 1
+\section{ $a< 0, \, b = 0$}
+Соотвествующий характеристический полином:
+\begin{equation}
+\lambda^2 - a = 0
+\end{equation}
+Собственные значения: $\lambda_{1,2} = \pm \sqrt{a} i$, система устойчива, \\так как $Re (\lambda_{1,2} )= 0$.
+
+
+% part 2
+\section{ $a < 0, \, b < 0$}
+
+
+% part 3
+\section{ $a> 0, \, b = 0$}
+Соотвествующий характеристический полином:
+\begin{equation}
+\lambda^2 - a = 0
+\end{equation}
+Собственные значения: $\lambda_{1,2} = \pm \sqrt{a}$, система неустойчива, так как хотя бы один из $\lambda > 0$.
+
+% part 4
+\section{ $a> 0, \, b < 0$}
 
 \end{document}
 
