@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  2 DEC 2023 03:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  2 DEC 2023 04:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1383,7 +1383,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.162 \newpage
+l.160 \newpage
                [1 <./pic/gr.png>]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1391,7 +1391,13 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [2 <./pic/lap_1.png>]
-Overfull \hbox (39.17877pt too wide) detected at line 318
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[3]
+Overfull \hbox (39.17877pt too wide) detected at line 351
 [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/1
 0 089           [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10
  :\OT1/cmr/m/n/10 302           [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 0
@@ -1403,8 +1409,8 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[3]
-Overfull \hbox (49.83182pt too wide) detected at line 383
+[4]
+Overfull \hbox (49.83182pt too wide) detected at line 416
 [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/1
 0 904        [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 2\OML/cmm/m/it/10 :\
 OT1/cmr/m/n/10 423         [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 2\OML/
@@ -1412,7 +1418,7 @@ cmm/m/it/10 :\OT1/cmr/m/n/10 690
  []
 
 
-Overfull \hbox (47.80405pt too wide) detected at line 449
+Overfull \hbox (47.80405pt too wide) detected at line 482
 [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 3\OML/cmm/m/it/10 :\OT1/cmr/m/n/1
 0 368         [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 3\OML/cmm/m/it/10 :
 \OT1/cmr/m/n/10 721        [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 4\OML/
@@ -1424,8 +1430,8 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[4]
-Overfull \hbox (51.13716pt too wide) detected at line 515
+[5]
+Overfull \hbox (51.13716pt too wide) detected at line 548
 [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 4\OML/cmm/m/it/10 :\OT1/cmr/m/n/1
 0 866           [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 5\OML/cmm/m/it/10
  :\OT1/cmr/m/n/10 305           [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 5
@@ -1437,13 +1443,13 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[5]
+[6]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[6] (./my_report.aux)
+[7] (./my_report.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
@@ -1452,10 +1458,10 @@ Package rerunfilecheck Info: File `my_report.out' has not changed.
 (rerunfilecheck)             Checksum: 1015EF917B52AE3B5B89B8B31BC56C6C;398.
  ) 
 Here is how much of TeX's memory you used:
- 52993 strings out of 475734
- 1311179 string characters out of 5786229
+ 52997 strings out of 475734
+ 1311257 string characters out of 5786229
  2037949 words of memory out of 5000000
- 73100 multiletter control sequences out of 15000+600000
+ 73102 multiletter control sequences out of 15000+600000
  528813 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,89p,762b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1473,10 +1479,10 @@ texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist
 e1/public/cm-super/sfti0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
 cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/s
 fti1200.pfb>
-Output written on my_report.pdf (7 pages, 285946 bytes).
+Output written on my_report.pdf (8 pages, 288860 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
+ 142 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
  39 words of extra memory for PDF output out of 10000 (max. 10000000)
 
