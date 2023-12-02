@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  2 DEC 2023 00:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  2 DEC 2023 03:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1355,15 +1355,23 @@ less.
 (fancyhdr)                Please consider using the `twoside' option on input l
 ine 144.
 
-<pic/gr.png, id=23, 578.91281pt x 329.73187pt>
+<pic/gr.png, id=27, 578.91281pt x 329.73187pt>
 File: pic/gr.png Graphic file (type png)
 <use pic/gr.png>
 Package pdftex.def Info: pic/gr.png  used on input line 150.
 (pdftex.def)             Requested size: 344.27837pt x 196.08974pt.
+<pic/lap_1.png, id=29, 616.55344pt x 484.81125pt>
+File: pic/lap_1.png Graphic file (type png)
+<use pic/lap_1.png>
+Package pdftex.def Info: pic/lap_1.png  used on input line 155.
+(pdftex.def)             Requested size: 344.27837pt x 270.72308pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 153--159
 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -1375,36 +1383,100 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.157 \end{document}
-                     [1 <./pic/gr.png>] (./my_report.aux)
+l.162 \newpage
+               [1 <./pic/gr.png>]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[2 <./pic/lap_1.png>]
+Overfull \hbox (39.17877pt too wide) detected at line 318
+[] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/1
+0 089           [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10
+ :\OT1/cmr/m/n/10 302           [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 0
+\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 492          
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[3]
+Overfull \hbox (49.83182pt too wide) detected at line 383
+[] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/1
+0 904        [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 2\OML/cmm/m/it/10 :\
+OT1/cmr/m/n/10 423         [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 2\OML/
+cmm/m/it/10 :\OT1/cmr/m/n/10 690          
+ []
+
+
+Overfull \hbox (47.80405pt too wide) detected at line 449
+[] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 3\OML/cmm/m/it/10 :\OT1/cmr/m/n/1
+0 368         [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 3\OML/cmm/m/it/10 :
+\OT1/cmr/m/n/10 721        [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 4\OML/
+cmm/m/it/10 :\OT1/cmr/m/n/10 488          
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[4]
+Overfull \hbox (51.13716pt too wide) detected at line 515
+[] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 4\OML/cmm/m/it/10 :\OT1/cmr/m/n/1
+0 866           [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 5\OML/cmm/m/it/10
+ :\OT1/cmr/m/n/10 305           [] \OML/cmm/m/it/10 ; ^^U[] \OT1/cmr/m/n/10 = 5
+\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 363          
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[5]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[6] (./my_report.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
 Package rerunfilecheck Info: File `my_report.out' has not changed.
-(rerunfilecheck)             Checksum: 781E98DABA7757688CFAA7E96E940E05;275.
+(rerunfilecheck)             Checksum: 1015EF917B52AE3B5B89B8B31BC56C6C;398.
  ) 
 Here is how much of TeX's memory you used:
- 52964 strings out of 475734
- 1310750 string characters out of 5786229
- 1998948 words of memory out of 5000000
- 73080 multiletter control sequences out of 15000+600000
- 527114 words of font info for 63 fonts, out of 8000000 for 9000
+ 52993 strings out of 475734
+ 1311179 string characters out of 5786229
+ 2037949 words of memory out of 5000000
+ 73100 multiletter control sequences out of 15000+600000
+ 528813 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,89p,762b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texl
-ive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/t
-exmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/
-fonts/type1/public/cm-super/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type
-1/public/cm-super/sfrm0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/c
-m-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
-rm1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb
-><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texli
-ve/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on my_report.pdf (2 pages, 178953 bytes).
+ 84i,12n,89p,762b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/tex
+live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public
+/cm-super/sfbx1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/
+sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.p
+fb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><c:/tex
+live/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texlive/2023/
+texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/texmf-dist
+/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/fonts/typ
+e1/public/cm-super/sfti0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
+cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/s
+fti1200.pfb>
+Output written on my_report.pdf (7 pages, 285946 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
+ 39 words of extra memory for PDF output out of 10000 (max. 10000000)
 
