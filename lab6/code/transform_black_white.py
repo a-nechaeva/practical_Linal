@@ -24,11 +24,9 @@ black_and_white.save('bw_red.png')
 matrix_image = mpimg.imread('bw_red.png')
 
 U, s, W = np.linalg.svd(matrix_image)
-V = W.T
-D = np.zeros_like(matrix_image, dtype=float)
 s = np.diag(s)
 
-k = [1, 5, 10, 20, 50, 100, 150, 250, 1000]
+k = [20000, 4500, 1000, 250, 150, 100, 50, 20, 10, 5, 1]
 
 for i in k:
     compress = U[:, :i] @ s[0:i, :i] @ W[:i, :]

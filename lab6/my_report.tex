@@ -202,6 +202,15 @@ matrix_image = mpimg.imread('bw_red.png')
 \end{center}
 
 \subsection{SVD-разложение полученной матрицы}
+Функция для выполнения SVD-разложения матрицы на языке \textit{Python}:
+\begin{center}
+\begin{lstlisting}[label=some-code,caption={SVD-разложение матрицы}]
+U, s, W = np.linalg.svd(matrix_image)
+s = np.diag(s)
+\end{lstlisting}
+\end{center}
+
+Дальше, найдем "укороченные" SVD-разложения этой матрицы, оставив только $k$ первых (наибольших) сингулярных чисел и соотвествующих им векторов. 
 
 
 \newpage
