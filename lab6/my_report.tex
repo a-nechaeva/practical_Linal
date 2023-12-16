@@ -210,9 +210,44 @@ s = np.diag(s)
 \end{lstlisting}
 \end{center}
 
-Дальше, найдем "укороченные" SVD-разложения этой матрицы, оставив только $k$ первых (наибольших) сингулярных чисел и соотвествующих им векторов. 
+Дальше, найдем "укороченные"  SVD-разложения этой матрицы, оставив только $k$ первых (наибольших) сингулярных чисел и соотвествующих им векторов. 
+\begin{center}
+\begin{lstlisting}[label=some-code,caption={Фрагмент кода для нахождения "укороченных"  SVD-разложений и отрисовки результата}]
+k = [20000, 4500, 1000, 250, 150, 100, 50, 20, 10, 5, 1]
+
+for i in k:
+    cut = U[:, :i] @ s[0:i, :i] @ W[:i, :]
+
+    fig, axs = plt.subplots(1, 2)
+    axs[0].axis('off')
+    axs[1].axis('off')
+
+    axs[0].imshow(matrix_image).set_cmap('grey')
+    axs[1].imshow(cut).set_cmap('grey')
+
+    axs[0].set_title('Original')
+    axs[1].set_title('After compression, k=' + str(i))
+    plt.show()
 
 
+\end{lstlisting}
+\end{center}
+
+Результаты выполнения программы представлены ниже.
+
+\begin{figure}[h]
+\begin{minipage}[h]{1\linewidth}
+\center{\includegraphics[width=0.85\linewidth]{graphics/k1.png}} a) \\
+\end{minipage}
+\begin{minipage}[h]{1\linewidth}
+\center{\includegraphics[width=0.85\linewidth]{graphics/k5.png}} b) \\
+\end{minipage}
+\caption{Сжатие: a) k = 1, b) k = 5.}
+\end{figure}
+
+
+\newpage
+\,
 \newpage
 Для визуализации был написан код на языке \textit{Python}. \\
 Код расположен на \href{https://github.com/a-nechaeva/practical_Linal/tree/main/lab4}{\textbf{GitHub}}.
