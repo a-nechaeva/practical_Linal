@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  16 DEC 2023 16:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  17 DEC 2023 01:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1367,7 +1367,7 @@ ine 149.
 (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-<code/red_eye.png, id=31, 476.78125pt x 476.78125pt>
+<code/red_eye.png, id=35, 476.78125pt x 476.78125pt>
 File: code/red_eye.png Graphic file (type png)
 <use code/red_eye.png>
 Package pdftex.def Info: code/red_eye.png  used on input line 174.
@@ -1396,7 +1396,7 @@ been already used, duplicate ignored
                    \relax 
 l.181 from 
            PIL import Image [1 <./code/red_eye.png>]
-<code/bw_red.png, id=40, 476.78125pt x 476.78125pt>
+<code/bw_red.png, id=44, 476.78125pt x 476.78125pt>
 File: code/bw_red.png Graphic file (type png)
 <use code/bw_red.png>
 Package pdftex.def Info: code/bw_red.png  used on input line 193.
@@ -1422,16 +1422,68 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 215--215
 [][][][][][][] 
  []
 
-<graphics/k1.png, id=58, 437.38406pt x 225.09094pt>
-File: graphics/k1.png Graphic file (type png)
-<use graphics/k1.png>
-Package pdftex.def Info: graphics/k1.png  used on input line 240.
-(pdftex.def)             Requested size: 292.6387pt x 150.60062pt.
-<graphics/k5.png, id=59, 436.63126pt x 225.84375pt>
+<graphics/k20000.png, id=62, 436.63126pt x 225.84375pt>
+File: graphics/k20000.png Graphic file (type png)
+<use graphics/k20000.png>
+Package pdftex.def Info: graphics/k20000.png  used on input line 240.
+(pdftex.def)             Requested size: 292.6387pt x 151.36621pt.
+<graphics/k4500.png, id=63, 436.63126pt x 225.84375pt>
+File: graphics/k4500.png Graphic file (type png)
+<use graphics/k4500.png>
+Package pdftex.def Info: graphics/k4500.png  used on input line 243.
+(pdftex.def)             Requested size: 292.6387pt x 151.36621pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<graphics/k1000.png, id=64, 437.38406pt x 225.84375pt>
+File: graphics/k1000.png Graphic file (type png)
+<use graphics/k1000.png>
+Package pdftex.def Info: graphics/k1000.png  used on input line 250.
+(pdftex.def)             Requested size: 292.6387pt x 151.1043pt.
+<graphics/k250.png, id=65, 436.63126pt x 225.84375pt>
+File: graphics/k250.png Graphic file (type png)
+<use graphics/k250.png>
+Package pdftex.def Info: graphics/k250.png  used on input line 253.
+(pdftex.def)             Requested size: 292.6387pt x 151.36621pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<graphics/k100.png, id=66, 436.63126pt x 225.84375pt>
+File: graphics/k100.png Graphic file (type png)
+<use graphics/k100.png>
+Package pdftex.def Info: graphics/k100.png  used on input line 260.
+(pdftex.def)             Requested size: 292.6387pt x 151.36621pt.
+<graphics/k50.png, id=67, 436.63126pt x 225.84375pt>
+File: graphics/k50.png Graphic file (type png)
+<use graphics/k50.png>
+Package pdftex.def Info: graphics/k50.png  used on input line 263.
+(pdftex.def)             Requested size: 292.6387pt x 151.36621pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<graphics/k20.png, id=68, 436.63126pt x 225.84375pt>
+File: graphics/k20.png Graphic file (type png)
+<use graphics/k20.png>
+Package pdftex.def Info: graphics/k20.png  used on input line 270.
+(pdftex.def)             Requested size: 292.6387pt x 151.36621pt.
+<graphics/k10.png, id=69, 436.63126pt x 225.84375pt>
+File: graphics/k10.png Graphic file (type png)
+<use graphics/k10.png>
+Package pdftex.def Info: graphics/k10.png  used on input line 273.
+(pdftex.def)             Requested size: 292.6387pt x 151.36621pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<graphics/k5.png, id=70, 436.63126pt x 225.84375pt>
 File: graphics/k5.png Graphic file (type png)
 <use graphics/k5.png>
-Package pdftex.def Info: graphics/k5.png  used on input line 243.
+Package pdftex.def Info: graphics/k5.png  used on input line 280.
 (pdftex.def)             Requested size: 292.6387pt x 151.36621pt.
+<graphics/k1.png, id=71, 437.38406pt x 225.09094pt>
+File: graphics/k1.png Graphic file (type png)
+<use graphics/k1.png>
+Package pdftex.def Info: graphics/k1.png  used on input line 283.
+(pdftex.def)             Requested size: 292.6387pt x 150.60062pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1446,13 +1498,62 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[4 <./graphics/k1.png> <./graphics/k5.png>]
+[4 <./graphics/k20000.png> <./graphics/k4500.png>]
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 12.0pt, for example:
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
-[5] (./my_report.aux)
+[5 <./graphics/k1000.png> <./graphics/k250.png>]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[6 <./graphics/k100.png> <./graphics/k50.png>]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[7 <./graphics/k20.png> <./graphics/k10.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 296--299
+
+ []
+
+
+Overfull \hbox (28.54948pt too wide) in paragraph at lines 296--299
+\T2A/cmr/m/n/10 Далее про-ана-ли-зи-ру-ем, сколь-ко па-мя-ти мы сэко-но-ми-ли, 
+вы-чис-лим "вес"исходного
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[8 <./graphics/k5.png> <./graphics/k1.png>]
+Overfull \hbox (15.4189pt too wide) in paragraph at lines 303--328
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--335
+
+ []
+
+
+Overfull \hbox (8.41551pt too wide) in paragraph at lines 332--335
+\T2A/cmr/m/n/10 Таким об-ра-зом, мож-но сде-лать вы-вод о том, что при-ме-не-ни
+е SVD-разложения
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 12.0pt, for example:
+(fancyhdr)                \setlength{\footskip}{12.0pt}.
+
+[9] (./my_report.aux)
  ***********
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
@@ -1462,33 +1563,35 @@ L3 programming layer <2023-06-05>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `my_report.out' has not changed.
-(rerunfilecheck)             Checksum: 379CFECF944CEA84DB845278692CA443;803.
+(rerunfilecheck)             Checksum: 1F366A077B8A76A73C9B8D36ACE200E4;1068.
  ) 
 Here is how much of TeX's memory you used:
- 53550 strings out of 475734
- 1317274 string characters out of 5786229
- 2302545 words of memory out of 5000000
- 73614 multiletter control sequences out of 15000+600000
- 532797 words of font info for 80 fonts, out of 8000000 for 9000
+ 53617 strings out of 475734
+ 1318787 string characters out of 5786229
+ 2307547 words of memory out of 5000000
+ 73673 multiletter control sequences out of 15000+600000
+ 531980 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,89p,762b,2191s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/tex
-live/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2023/
-texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist
-/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/typ
-e1/public/cm-super/sfrm0500.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
-cm-super/sfrm0800.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/s
-frm0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pf
-b><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texl
-ive/2023/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2023/t
-exmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb><c:/texlive/2023/texmf-dist/
-fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2023/texmf-dist/fonts/type
-1/public/cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/c
-m-super/sfti1200.pfb>
-Output written on my_report.pdf (6 pages, 657154 bytes).
+live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/typ
+e1/public/cm-super/sfbx1200.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
+cm-super/sfbx1440.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/s
+frm0500.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pf
+b><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/texl
+ive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2023/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/texmf-dist/
+fonts/type1/public/cm-super/sfss0900.pfb><c:/texlive/2023/texmf-dist/fonts/type
+1/public/cm-super/sfsx0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/c
+m-super/sfti0900.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sf
+ti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb
+>
+Output written on my_report.pdf (10 pages, 1150425 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 224 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 105 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -213,20 +213,20 @@ s = np.diag(s)
 Дальше, найдем "укороченные"  SVD-разложения этой матрицы, оставив только $k$ первых (наибольших) сингулярных чисел и соотвествующих им векторов. 
 \begin{center}
 \begin{lstlisting}[label=some-code,caption={Фрагмент кода для нахождения "укороченных"  SVD-разложений и отрисовки результата}]
-k = [20000, 4500, 1000, 250, 150, 100, 50, 20, 10, 5, 1]
+k = [20000, 4500, 1000, 250, 100, 50, 20, 10, 5, 1]
 
 for i in k:
-    cut = U[:, :i] @ s[0:i, :i] @ W[:i, :]
+    cut = np.dot(np.dot(U[:, :i], s[:i, :i]), W[:i, :])
 
     fig, axs = plt.subplots(1, 2)
-    axs[0].axis('off')
-    axs[1].axis('off')
 
     axs[0].imshow(matrix_image).set_cmap('grey')
     axs[1].imshow(cut).set_cmap('grey')
-
+    axs[0].axis('off')
+    axs[1].axis('off')
     axs[0].set_title('Original')
     axs[1].set_title('After compression, k=' + str(i))
+
     plt.show()
 
 
@@ -237,20 +237,102 @@ for i in k:
 
 \begin{figure}[h]
 \begin{minipage}[h]{1\linewidth}
-\center{\includegraphics[width=0.85\linewidth]{graphics/k1.png}} a) \\
+\center{\includegraphics[width=0.85\linewidth]{graphics/k20000.png}} a) \\
 \end{minipage}
 \begin{minipage}[h]{1\linewidth}
-\center{\includegraphics[width=0.85\linewidth]{graphics/k5.png}} b) \\
+\center{\includegraphics[width=0.85\linewidth]{graphics/k4500.png}} b) \\
 \end{minipage}
-\caption{Сжатие: a) k = 1, b) k = 5.}
+\caption{Сжатие: a) k = 20000, b) k = 4500.}
 \end{figure}
 
+\begin{figure}[h]
+\begin{minipage}[h]{1\linewidth}
+\center{\includegraphics[width=0.85\linewidth]{graphics/k1000.png}} a) \\
+\end{minipage}
+\begin{minipage}[h]{1\linewidth}
+\center{\includegraphics[width=0.85\linewidth]{graphics/k250.png}} b) \\
+\end{minipage}
+\caption{Сжатие: a) k = 1000, b) k = 250.}
+\end{figure}
 
+\begin{figure}[h]
+\begin{minipage}[h]{1\linewidth}
+\center{\includegraphics[width=0.85\linewidth]{graphics/k100.png}} a) \\
+\end{minipage}
+\begin{minipage}[h]{1\linewidth}
+\center{\includegraphics[width=0.85\linewidth]{graphics/k50.png}} b) \\
+\end{minipage}
+\caption{Сжатие: a) k = 100, b) k = 50.}
+\end{figure}
+
+\begin{figure}[h]
+\begin{minipage}[h]{1\linewidth}
+\center{\includegraphics[width=0.85\linewidth]{graphics/k20.png}} a) \\
+\end{minipage}
+\begin{minipage}[h]{1\linewidth}
+\center{\includegraphics[width=0.85\linewidth]{graphics/k10.png}} b) \\
+\end{minipage}
+\caption{Сжатие: a) k = 20, b) k = 10.}
+\end{figure}
+
+\begin{figure}[h]
+\begin{minipage}[h]{1\linewidth}
+\center{\includegraphics[width=0.85\linewidth]{graphics/k5.png}} a) \\
+\end{minipage}
+\begin{minipage}[h]{1\linewidth}
+\center{\includegraphics[width=0.85\linewidth]{graphics/k1.png}} b) \\
+\end{minipage}
+\caption{Сжатие: a) k = 5, b) k = 1.}
+\end{figure}
 \newpage
 \,
 \newpage
-Для визуализации был написан код на языке \textit{Python}. \\
-Код расположен на \href{https://github.com/a-nechaeva/practical_Linal/tree/main/lab4}{\textbf{GitHub}}.
+\,
+\newpage
+\,
+\newpage
+\,
+\newpage
+Заметно, что уже при $k \geq 5$ становится возможным различить черты Ивизавра, а при $k \geq 50$ сжатое изображение становится практически неотличимым от оригинала.\\
+\\
+Далее проанализируем, сколько памяти мы сэкономили, вычислим "вес" исходного изображения и сжатого. Результаты представлены в таблице 1.
+\newpage
+\begin{center}
+Таблица 1 -- Сравнительные результаты работы программы\\
+
+\begin{tabular}{ |c|c|c|c|c| } 
+ \hline
+k & Различим ли Ивизавр? & Вес оригинала  & Вес сжатого & \% сжатия \\
+\hline
+$2 \cdot 10^4$ & да, как оригинал & $451725$  & $451725$ & 0.00 \\
+ \hline
+$4500$ & да, как оригинал & $451725$ & $451725$ & 0.00  \\
+ \hline
+$10^3$ & да, как оригинал & $451725$ & $451725$ & 0.00  \\
+ \hline
+$250$ & да, как оригинал & $451725$ & $237750$ & 47.37 \\
+ \hline
+$100$ & да, как оригинал & $451725$ & $95100$ & 78.95 \\
+ \hline
+$50$ & да & $451725$ & $47550$ & 89.47 \\
+ \hline
+$20$ & да, отдаленно & $451725$ & $19020$ & 95.79 \\
+ \hline
+$10$ & да, отдаленно & $451725$ & $9510$ & 97.89 \\
+ \hline
+$5$ & нет & $451725$ & $4755$ & 98.95 \\
+ \hline
+$1$ & нет, совсем & $451725$ & $951$ &  99.79 \\
+ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Анализ результатов и вывод}
+
+Заметим, что при степени сжатия примерно на $90\%$ изображение все еще остается различимым . В частности, при $k \geq 5$ становится возможным различить черты Ивизавра, а при $k \geq 50$ сжатое изображение становится практически неотличимым от оригинала.\\
+\\
+  Таким образом, можно сделать вывод о том, что применение SVD-разложения является довольно эффективным инструментом сжатия изображений с минимальными потерями качества результата.
+
 \end{document}
 
 
